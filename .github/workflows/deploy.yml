@@ -29,7 +29,11 @@ jobs:
         with:
           bun-version: latest
 
-      - name: Install dependencies
+      - name: Install root dependencies
+        run: bun install
+
+
+      - name: Install demo dependencies
         working-directory: ./demo
         run: bun install
 
