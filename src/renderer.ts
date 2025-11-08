@@ -26,7 +26,7 @@ const componentRenderers: Record<
   string,
   (props: any, children?: Component[]) => string
 > = {
-  text: (props, children) => {
+  text: (props) => {
     const validatedProps = TextPropsSchema.parse(props);
     return renderText(validatedProps, renderComponent);
   },
@@ -147,18 +147,6 @@ export function generateEmailHtml(
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   ${subject ? `<title>${escapeHtml(subject)}</title>` : ""}
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-      background-color: #f5f5f5;
-    }
-    table {
-      border-spacing: 0;
-      border-collapse: collapse;
-    }
-  </style>
 </head>
 <body>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0">

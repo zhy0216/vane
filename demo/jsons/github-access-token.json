@@ -15,75 +15,80 @@
           "src": "/github.png",
           "alt": "Github",
           "width": "32",
-          "height": "32"
+          "height": "32",
+          "style": {
+            "display": "block",
+            "marginBottom": "16px"
+          }
         }
       },
       {
         "type": "text",
         "props": {
-          "children": [
-            {
-              "type": "text",
-              "props": {
-                "children": "@alanturing",
-                "fontWeight": "bold"
-              }
-            },
-            ", a personal access was created on your account."
-          ],
           "fontSize": "24px",
           "color": "#24292e",
-          "lineHeight": "1.25"
-        }
+          "lineHeight": "1.25",
+          "marginBottom": "16px"
+        },
+        "children": [
+          {
+            "type": "strong",
+            "children": "@alanturing"
+          },
+          ", a personal access was created on your account."
+        ]
       },
       {
         "type": "section",
         "props": {
           "padding": "24px",
-          "border": "1px solid rgba(0,0,0,0.1)",
-          "borderRadius": "5px",
-          "textAlign": "center"
+          "style": {
+            "border": "1px solid #dedede",
+            "borderRadius": "5px"
+          }
         },
         "children": [
           {
             "type": "text",
             "props": {
-              "children": [
-                "Hey ",
-                {
-                  "type": "text",
-                  "props": {
-                    "children": "alanturing",
-                    "fontWeight": "bold"
-                  }
-                },
-                "!"
-              ],
               "fontSize": "14px",
+              "color": "#24292e",
               "textAlign": "left",
               "marginTop": "0",
               "marginBottom": "10px"
-            }
+            },
+            "children": [
+              "Hey ",
+              {
+                "type": "strong",
+                "children": "alanturing"
+              },
+              "!"
+            ]
           },
           {
             "type": "text",
             "props": {
-              "children": [
-                "A fine-grained personal access token (",
-                {
-                  "type": "link",
-                  "props": {
-                    "href": "#",
-                    "children": "resend"
-                  }
-                },
-                ") was recently added to your account."
-              ],
               "fontSize": "14px",
+              "color": "#24292e",
               "textAlign": "left",
               "marginTop": "0",
-              "marginBottom": "10px"
-            }
+              "marginBottom": "16px"
+            },
+            "children": [
+              "A fine-grained personal access token (",
+              {
+                "type": "link",
+                "props": {
+                  "href": "https://github.com",
+                  "style": {
+                    "color": "#0366d6"
+                  }
+                },
+                "children": "resend"
+              },
+              ") was recently added to your account."
+            ]
           },
           {
             "type": "button",
@@ -94,8 +99,9 @@
                 "backgroundColor": "#28a745",
                 "color": "#ffffff",
                 "fontSize": "14px",
-                "borderRadius": "8px",
-                "padding": "12px 24px"
+                "borderRadius": "5px",
+                "padding": "12px 24px",
+                "fontWeight": "600"
               }
             }
           }
@@ -104,41 +110,49 @@
       {
         "type": "text",
         "props": {
-          "children": [
-            {
-              "type": "link",
-              "props": {
-                "href": "https://github.com",
-                "children": "Your security audit log",
+          "textAlign": "center",
+          "marginTop": "16px",
+          "marginBottom": "16px"
+        },
+        "children": [
+          {
+            "type": "link",
+            "props": {
+              "href": "https://github.com",
+              "style": {
                 "color": "#0366d6",
-                "fontSize": "12px"
+                "fontSize": "12px",
+                "textDecoration": "none"
               }
             },
-            " ・ ",
-            {
-              "type": "link",
-              "props": {
-                "href": "https://github.com",
-                "children": "Contact support",
+            "children": "Your security audit log"
+          },
+          " ・ ",
+          {
+            "type": "link",
+            "props": {
+              "href": "https://github.com",
+              "style": {
                 "color": "#0366d6",
-                "fontSize": "12px"
+                "fontSize": "12px",
+                "textDecoration": "none"
               }
-            }
-          ],
-          "textAlign": "center"
-        }
+            },
+            "children": "Contact support"
+          }
+        ]
       },
       {
         "type": "text",
         "props": {
-          "children": "GitHub, Inc. ・88 Colin P Kelly Jr Street ・San Francisco, CA 94107",
           "fontSize": "12px",
           "color": "#6a737d",
           "lineHeight": "24px",
           "textAlign": "center",
           "marginTop": "60px",
           "marginBottom": "16px"
-        }
+        },
+        "children": "GitHub, Inc. ・88 Colin P Kelly Jr Street ・San Francisco, CA 94107"
       }
     ]
   }

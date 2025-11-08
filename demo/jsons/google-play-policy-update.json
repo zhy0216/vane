@@ -3,7 +3,6 @@
   "component": {
     "type": "container",
     "props": {
-      "backgroundColor": "#dbddde",
       "padding": "30px 0"
     },
     "children": [

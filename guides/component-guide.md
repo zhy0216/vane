@@ -829,8 +829,6 @@ Here's a complete example showing how to structure a full email:
 ## Best Practices
 
 ### 1. Always Wrap Content Properly
-- Start with `html` as root
-- Include `head` and `body` components
 - Use `container` for main content area
 
 ### 2. Use Semantic Components
