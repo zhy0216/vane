@@ -184,12 +184,14 @@
                     "props": {
                       "href": "https://stackoverflow.blog/2019/10/22/",
                       "children": "I need a break",
-                      "backgroundColor": "#0095ff",
-                      "border": "1px solid #0077cc",
-                      "color": "#ffffff",
-                      "fontSize": "17px",
-                      "borderRadius": "5px",
-                      "padding": "13px 17px"
+                      "style": {
+                        "backgroundColor": "#0095ff",
+                        "border": "1px solid #0077cc",
+                        "color": "#ffffff",
+                        "fontSize": "17px",
+                        "borderRadius": "5px",
+                        "padding": "13px 17px"
+                      }
                     }
                   }
                 ]

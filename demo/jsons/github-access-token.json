@@ -90,11 +90,13 @@
             "props": {
               "href": "https://github.com",
               "children": "View your token",
-              "backgroundColor": "#28a745",
-              "color": "#ffffff",
-              "fontSize": "14px",
-              "borderRadius": "8px",
-              "padding": "12px 24px"
+              "style": {
+                "backgroundColor": "#28a745",
+                "color": "#ffffff",
+                "fontSize": "14px",
+                "borderRadius": "8px",
+                "padding": "12px 24px"
+              }
             }
           }
         ]

@@ -59,15 +59,17 @@
                     "props": {
                       "href": "https://nike.com",
                       "children": "Track Package",
-                      "backgroundColor": "transparent",
-                      "border": "1px solid #929292",
-                      "color": "#000000",
-                      "fontSize": "16px",
-                      "fontWeight": "500",
-                      "padding": "10px 0",
-                      "width": "220px",
-                      "textAlign": "center",
-                      "textDecoration": "none"
+                      "style": {
+                        "backgroundColor": "transparent",
+                        "border": "1px solid #929292",
+                        "color": "#000000",
+                        "fontSize": "16px",
+                        "fontWeight": "500",
+                        "padding": "10px 0",
+                        "width": "220px",
+                        "textAlign": "center",
+                        "textDecoration": "none"
+                      }
                     }
                   }
                 ]
@@ -329,15 +331,17 @@
                 "props": {
                   "href": "https://nike.com",
                   "children": "Order Status",
-                  "backgroundColor": "transparent",
-                  "border": "1px solid #929292",
-                  "color": "#000000",
-                  "fontSize": "16px",
-                  "fontWeight": "500",
-                  "padding": "10px 0",
-                  "width": "220px",
-                  "textAlign": "center",
-                  "textDecoration": "none"
+                  "style": {
+                    "backgroundColor": "transparent",
+                    "border": "1px solid #929292",
+                    "color": "#000000",
+                    "fontSize": "16px",
+                    "fontWeight": "500",
+                    "padding": "10px 0",
+                    "width": "220px",
+                    "textAlign": "center",
+                    "textDecoration": "none"
+                  }
                 }
               }
             ]

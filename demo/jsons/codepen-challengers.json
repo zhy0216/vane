@@ -218,12 +218,14 @@
                 "props": {
                   "href": "https://codepen.io",
                   "children": "Go to Challenge Page",
-                  "backgroundColor": "#222222",
-                  "color": "#1155cc",
-                  "fontSize": "26px",
-                  "fontWeight": "bold",
-                  "borderRadius": "5px",
-                  "padding": "15px 30px"
+                  "style": {
+                    "backgroundColor": "#222222",
+                    "color": "#1155cc",
+                    "fontSize": "26px",
+                    "fontWeight": "bold",
+                    "borderRadius": "5px",
+                    "padding": "15px 30px"
+                  }
                 }
               }
             ]

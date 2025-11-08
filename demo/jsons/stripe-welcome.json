@@ -61,14 +61,16 @@
                 "props": {
                   "href": "https://dashboard.stripe.com/login",
                   "children": "View your Stripe Dashboard",
-                  "backgroundColor": "#656ee8",
-                  "color": "#ffffff",
-                  "fontSize": "16px",
-                  "fontWeight": "bold",
-                  "borderRadius": "3px",
-                  "padding": "10px",
-                  "textAlign": "center",
-                  "textDecoration": "none"
+                  "style": {
+                    "backgroundColor": "#656ee8",
+                    "color": "#ffffff",
+                    "fontSize": "16px",
+                    "fontWeight": "bold",
+                    "borderRadius": "3px",
+                    "padding": "10px",
+                    "textAlign": "center",
+                    "textDecoration": "none"
+                  }
                 }
               },
               {

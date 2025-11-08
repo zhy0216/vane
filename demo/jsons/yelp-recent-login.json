@@ -155,13 +155,15 @@
                 "props": {
                   "href": "https://yelp.com",
                   "children": "Learn More",
-                  "backgroundColor": "#e00707",
-                  "border": "1px solid rgba(0,0,0,0.1)",
-                  "color": "#ffffff",
-                  "fontSize": "16px",
-                  "fontWeight": "bold",
-                  "borderRadius": "5px",
-                  "padding": "12px 30px"
+                  "style": {
+                    "backgroundColor": "#e00707",
+                    "border": "1px solid rgba(0,0,0,0.1)",
+                    "color": "#ffffff",
+                    "fontSize": "16px",
+                    "fontWeight": "bold",
+                    "borderRadius": "5px",
+                    "padding": "12px 30px"
+                  }
                 }
               }
             ]

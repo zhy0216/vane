@@ -52,14 +52,16 @@
                 "props": {
                   "href": "https://linear.app",
                   "children": "Login to Linear",
-                  "backgroundColor": "#5e6ad2",
-                  "borderRadius": "5px",
-                  "color": "#ffffff",
-                  "fontSize": "15px",
-                  "fontWeight": "600",
-                  "textDecoration": "none",
-                  "textAlign": "center",
-                  "padding": "11px 23px"
+                  "style": {
+                    "backgroundColor": "#5e6ad2",
+                    "borderRadius": "5px",
+                    "color": "#ffffff",
+                    "fontSize": "15px",
+                    "fontWeight": "600",
+                    "textDecoration": "none",
+                    "textAlign": "center",
+                    "padding": "11px 23px"
+                  }
                 }
               }
             ]

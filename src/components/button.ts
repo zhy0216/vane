@@ -40,18 +40,14 @@ function computeFontWidthAndSpaceCount(expectedWidth: number): [number, number] 
 export function renderButton(props: ButtonProps): string {
   const { href, children, target = "_blank", style = {} } = props;
   
-  // Parse padding values
-  const padding = parsePadding(style.padding as string | number | undefined);
-  const paddingTop = padding.paddingTop ?? 0;
-  const paddingRight = padding.paddingRight ?? 0;
-  const paddingBottom = padding.paddingBottom ?? 0;
-  const paddingLeft = padding.paddingLeft ?? 0;
+  // Parse padding values from style object
+  const { paddingTop, paddingRight, paddingBottom, paddingLeft } = parsePadding(style);
 
-  const y = paddingTop + paddingBottom;
+  const y = (paddingTop ?? 0) + (paddingBottom ?? 0);
   const textRaise = pxToPt(y);
 
-  const [plFontWidth, plSpaceCount] = computeFontWidthAndSpaceCount(paddingLeft);
-  const [prFontWidth, prSpaceCount] = computeFontWidthAndSpaceCount(paddingRight);
+  const [plFontWidth, plSpaceCount] = computeFontWidthAndSpaceCount(paddingLeft ?? 0);
+  const [prFontWidth, prSpaceCount] = computeFontWidthAndSpaceCount(paddingRight ?? 0);
 
   const linkStyle = {
     lineHeight: "100%",
@@ -77,9 +73,9 @@ export function renderButton(props: ButtonProps): string {
   const leftMso = `<!--[if mso]><i style="mso-font-width:${plFontWidth * 100}%;mso-text-raise:${textRaise}" hidden>${'&#8202;'.repeat(plSpaceCount)}</i><![endif]-->`;
   const rightMso = `<!--[if mso]><i style="mso-font-width:${prFontWidth * 100}%" hidden>${'&#8202;'.repeat(prSpaceCount)}&#8203;</i><![endif]-->`;
 
-  return `<a href="${escapeHtml(href)}" target="${target}" style="${styleToString(linkStyle as Record<string, string | number>)}">
+  return `<a href="${escapeHtml(href)}" target="${escapeHtml(target)}" style="${styleToString(linkStyle as Record<string, string | number>)}">
   <span>${leftMso}</span>
-  <span style="${styleToString(innerSpanStyle as Record<string, string | number>)}">${children}</span>
+  <span style="${styleToString(innerSpanStyle as Record<string, string | number>)}">${escapeHtml(children)}</span>
   <span>${rightMso}</span>
 </a>`;
 }

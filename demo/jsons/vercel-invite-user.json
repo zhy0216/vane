@@ -184,13 +184,15 @@
                 "props": {
                   "href": "https://vercel.com",
                   "children": "Join the team",
-                  "backgroundColor": "#000000",
-                  "color": "#ffffff",
-                  "fontSize": "12px",
-                  "fontWeight": "600",
-                  "borderRadius": "5px",
-                  "padding": "12px 20px",
-                  "textDecoration": "none"
+                  "style": {
+                    "backgroundColor": "#000000",
+                    "color": "#ffffff",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "borderRadius": "5px",
+                    "padding": "12px 20px",
+                    "textDecoration": "none"
+                  }
                 }
               }
             ]

@@ -33,9 +33,9 @@ export function styleToString(styles: Record<string, string | number | undefined
 }
 
 /**
- * Parse padding value (supports shorthand)
+ * Parse padding value from string or number (supports shorthand)
  */
-export function parsePadding(padding: string | number | undefined): {
+function parsePaddingValue(padding: string | number | undefined): {
   paddingTop?: number;
   paddingRight?: number;
   paddingBottom?: number;
@@ -100,6 +100,63 @@ export function parsePadding(padding: string | number | undefined): {
   }
 
   return {};
+}
+
+/**
+ * Parse padding from a style object
+ * Handles both shorthand 'padding' and individual properties (paddingTop, paddingRight, etc.)
+ */
+export function parsePadding(style: Record<string, string | number | undefined>): {
+  paddingTop?: number;
+  paddingRight?: number;
+  paddingBottom?: number;
+  paddingLeft?: number;
+} {
+  // First, check for individual padding properties
+  const extractValue = (val: string | number | undefined): number | undefined => {
+    if (val === undefined) return undefined;
+    if (typeof val === 'number') return val;
+    
+    const match = /^([\d.]+)(px|em|rem|%)?$/.exec(val.trim());
+    if (!match) return undefined;
+    
+    const num = parseFloat(match[1]);
+    const unit = match[2];
+    
+    switch (unit) {
+      case 'em':
+      case 'rem':
+        return num * 16;
+      case '%':
+        return (num / 100) * 600;
+      default:
+        return num;
+    }
+  };
+
+  // Start with individual properties if they exist
+  const result: {
+    paddingTop?: number;
+    paddingRight?: number;
+    paddingBottom?: number;
+    paddingLeft?: number;
+  } = {
+    paddingTop: extractValue(style.paddingTop),
+    paddingRight: extractValue(style.paddingRight),
+    paddingBottom: extractValue(style.paddingBottom),
+    paddingLeft: extractValue(style.paddingLeft),
+  };
+
+  // If 'padding' shorthand exists, parse it and fill in any gaps
+  if (style.padding !== undefined) {
+    const shorthand = parsePaddingValue(style.padding);
+    result.paddingTop = result.paddingTop ?? shorthand.paddingTop;
+    result.paddingRight = result.paddingRight ?? shorthand.paddingRight;
+    result.paddingBottom = result.paddingBottom ?? shorthand.paddingBottom;
+    result.paddingLeft = result.paddingLeft ?? shorthand.paddingLeft;
+  }
+
+  return result;
 }
 
 /**

@@ -75,9 +75,6 @@ export function renderComponent(component: Component): string {
     throw new Error(`Unknown component type: ${type}`);
   }
 
-  // 递归渲染子组件
-  const renderedChildren = children?.map((child) => renderComponent(child)) ?? [];
-
   // 调用组件渲染器
   return renderer(props || {}, children);
 }

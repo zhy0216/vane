@@ -48,13 +48,15 @@
             "props": {
               "href": "https://getkoala.com",
               "children": "Get started",
-              "backgroundColor": "#5F51E8",
-              "color": "#ffffff",
-              "fontSize": "16px",
-              "borderRadius": "3px",
-              "padding": "12px",
-              "textAlign": "center",
-              "textDecoration": "none"
+              "style": {
+                "backgroundColor": "#5F51E8",
+                "color": "#ffffff",
+                "fontSize": "16px",
+                "borderRadius": "3px",
+                "padding": "12px",
+                "textAlign": "center",
+                "textDecoration": "none"
+              }
             }
           }
         ]

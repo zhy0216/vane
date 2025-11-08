@@ -62,13 +62,15 @@
             "props": {
               "href": "https://www.papermark.com",
               "children": "Share your stats",
-              "backgroundColor": "#111827",
-              "color": "#ffffff",
-              "fontSize": "14px",
-              "fontWeight": "bold",
-              "borderRadius": "9999px",
-              "padding": "16px 48px",
-              "textDecoration": "none"
+              "style": {
+                "backgroundColor": "#111827",
+                "color": "#ffffff",
+                "fontSize": "14px",
+                "fontWeight": "bold",
+                "borderRadius": "9999px",
+                "padding": "16px 48px",
+                "textDecoration": "none"
+              }
             }
           }
         ]
@@ -284,14 +286,16 @@
             "props": {
               "href": "https://www.papermark.com",
               "children": "Share your stats",
-              "backgroundColor": "#111827",
-              "color": "#ffffff",
-              "fontSize": "14px",
-              "fontWeight": "bold",
-              "borderRadius": "9999px",
-              "padding": "16px 48px",
-              "textDecoration": "none",
-              "marginTop": "16px"
+              "style": {
+                "backgroundColor": "#111827",
+                "color": "#ffffff",
+                "fontSize": "14px",
+                "fontWeight": "bold",
+                "borderRadius": "9999px",
+                "padding": "16px 48px",
+                "textDecoration": "none",
+                "marginTop": "16px"
+              }
             }
           },
           {

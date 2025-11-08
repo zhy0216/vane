@@ -97,13 +97,15 @@
             "props": {
               "href": "https://www.airbnb.com",
               "children": "Send My Feedback",
-              "backgroundColor": "#ff5a5f",
-              "color": "#ffffff",
-              "fontSize": "18px",
-              "borderRadius": "3px",
-              "padding": "19px 30px",
-              "textAlign": "center",
-              "textDecoration": "none"
+              "style": {
+                "backgroundColor": "#ff5a5f",
+                "color": "#ffffff",
+                "fontSize": "18px",
+                "borderRadius": "3px",
+                "padding": "19px 30px",
+                "textAlign": "center",
+                "textDecoration": "none"
+              }
             }
           }
         ]
