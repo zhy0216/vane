@@ -1,5 +1,5 @@
 import { generateEmailHtml } from "../src/renderer";
-import emailData from "./verify-email.json";
+import emailData from "./jsons/verify-email.json";
 
 /**
  * Generate email HTML and save to file
