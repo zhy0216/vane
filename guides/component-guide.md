@@ -73,6 +73,41 @@ Some components accept string content directly in their children property:
 - **image**: No children (self-closing)
 - **hr**: No children (self-closing)
 
+### Using HTML Tags
+
+HTML content is escaped for security. Standard HTML tags (strong, em, span, b, i, u, div, etc.) can be used anywhere as components by specifying them in the type property:
+
+```json
+{
+  "type": "container",
+  "props": {},
+  "children": [
+    {
+      "type": "strong",
+      "children": "This is bold text as a standalone component"
+    },
+    {
+      "type": "text",
+      "props": {},
+      "children": [
+        "Or use inline: ",
+        {
+          "type": "strong",
+          "children": "bold"
+        },
+        " and ",
+        {
+          "type": "em",
+          "children": "italic"
+        }
+      ]
+    }
+  ]
+}
+```
+
+Do NOT write raw HTML like "<strong>text</strong>" - it will be escaped and displayed literally.
+
 ## Component Categories
 
 
@@ -336,24 +371,22 @@ Some components accept string content directly in their children property:
     "fontSize": "14px",
     "color": "#666666",
     "children": [
-      "Read our ",
+      "Your appointment is scheduled for ",
+      {
+        "type": "strong",
+        "children": "5:00 - 6:00 PM"
+      },
+      " on ",
+      {
+        "type": "em",
+        "children": "Monday, January 15th"
+      },
+      ". Read our ",
       {
         "type": "link",
         "props": {
           "href": "https://example.com/privacy",
           "children": "privacy policy",
-          "style": {
-            "color": "#2563eb",
-            "textDecoration": "underline"
-          }
-        }
-      },
-      " and ",
-      {
-        "type": "link",
-        "props": {
-          "href": "https://example.com/terms",
-          "children": "terms of service",
           "style": {
             "color": "#2563eb",
             "textDecoration": "underline"
@@ -372,6 +405,8 @@ Some components accept string content directly in their children property:
 - To display inline text with another text component, add it to this text's children array
 - Supports margin shortcuts (marginTop, marginBottom, etc.)
 - Use align prop for text alignment
+- IMPORTANT: HTML is escaped in text content. Cannot write '<strong>5:00 - 6:00 PM</strong>' directly
+- To use HTML tags like strong, em, span, etc., wrap them with type property: {type: 'strong', children: '5:00 - 6:00 PM'}
 
 
 #### heading

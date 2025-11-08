@@ -1,0 +1,413 @@
+{
+  "subject": "You're Invited: Sui Connect Buenos Aires 🇦🇷",
+  "component": {
+    "type": "html",
+    "props": {
+      "lang": "en"
+    },
+    "children": [
+      {
+        "type": "head",
+        "props": {}
+      },
+      {
+        "type": "body",
+        "props": {
+          "style": {
+            "backgroundColor": "#FFFFFF",
+            "fontFamily": "-apple-system, BlinkMacSystemFont, Inter, Roboto, Helvetica Neue, Arial, Noto Sans, sans-serif"
+          }
+        },
+        "children": [
+          {
+            "type": "preview",
+            "props": {
+              "children": "Join us in Buenos Aires for Sui Connect's debut in LATAM 🇦🇷 - November 18, 2025"
+            }
+          },
+          {
+            "type": "container",
+            "props": {
+              "backgroundColor": "#FFFFFF",
+              "padding": "0",
+              "style": {
+                "maxWidth": "600px"
+              }
+            },
+            "children": [
+              {
+                "type": "section",
+                "props": {
+                  "backgroundColor": "#007AD7",
+                  "padding": "40px 20px",
+                  "textAlign": "center"
+                },
+                "children": [
+                  {
+                    "type": "heading",
+                    "props": {
+                      "as": "h1",
+                      "content": "Sui Connect: Buenos Aires",
+                      "color": "#FFFFFF",
+                      "fontSize": "48px",
+                      "fontWeight": "bold",
+                      "marginBottom": "16px",
+                      "style": {
+                        "lineHeight": "1.2"
+                      }
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Join us for Sui Connect's debut in LATAM 🇦🇷",
+                      "color": "#FFFFFF",
+                      "fontSize": "20px",
+                      "lineHeight": "28px",
+                      "style": {
+                        "margin": "0"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "props": {
+                  "padding": "0"
+                },
+                "children": [
+                  {
+                    "type": "image",
+                    "props": {
+                      "src": "https://images.lumacdn.com/event-covers/5x/40521c0d-315e-4587-939c-e1316626db27.png",
+                      "alt": "Sui Connect Buenos Aires Event",
+                      "width": "600",
+                      "style": {
+                        "width": "100%",
+                        "height": "auto",
+                        "display": "block"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "props": {
+                  "padding": "40px 32px",
+                  "backgroundColor": "#FFFFFF"
+                },
+                "children": [
+                  {
+                    "type": "heading",
+                    "props": {
+                      "as": "h2",
+                      "content": "About the Event",
+                      "color": "#000061",
+                      "fontSize": "24px",
+                      "fontWeight": "bold",
+                      "marginBottom": "16px"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Sui Connect: Buenos Aires brings together developers, founders, and creators from across LATAM to explore the latest innovations in the Sui blockchain ecosystem.",
+                      "color": "#000061",
+                      "fontSize": "16px",
+                      "lineHeight": "24px",
+                      "marginBottom": "16px"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Whether you're building on Sui or curious about Web3 development, this is your chance to connect with the community and learn from industry leaders.",
+                      "color": "#000061",
+                      "fontSize": "16px",
+                      "lineHeight": "24px",
+                      "marginBottom": "24px"
+                    }
+                  },
+                  {
+                    "type": "hr",
+                    "props": {
+                      "color": "#CCCCCC",
+                      "style": {
+                        "margin": "32px 0"
+                      }
+                    }
+                  },
+                  {
+                    "type": "row",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "column",
+                        "props": {
+                          "style": {
+                            "width": "50%",
+                            "paddingRight": "16px"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "heading",
+                            "props": {
+                              "as": "h3",
+                              "content": "📅 When",
+                              "color": "#000061",
+                              "fontSize": "18px",
+                              "fontWeight": "bold",
+                              "marginBottom": "8px"
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "props": {
+                              "children": "November 18, 2025 • 4:30 PM - 9:00 PM GMT-3",
+                              "color": "#000061",
+                              "fontSize": "16px",
+                              "lineHeight": "24px",
+                              "marginBottom": "20px"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "type": "column",
+                        "props": {
+                          "style": {
+                            "width": "50%",
+                            "paddingLeft": "16px"
+                          }
+                        },
+                        "children": [
+                          {
+                            "type": "heading",
+                            "props": {
+                              "as": "h3",
+                              "content": "📍 Where",
+                              "color": "#000061",
+                              "fontSize": "18px",
+                              "fontWeight": "bold",
+                              "marginBottom": "8px"
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "props": {
+                              "children": "u.house • Buenos Aires, Argentina",
+                              "color": "#000061",
+                              "fontSize": "16px",
+                              "lineHeight": "24px",
+                              "marginBottom": "20px"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "hr",
+                    "props": {
+                      "color": "#CCCCCC",
+                      "style": {
+                        "margin": "32px 0"
+                      }
+                    }
+                  },
+                  {
+                    "type": "heading",
+                    "props": {
+                      "as": "h2",
+                      "content": "What to Expect",
+                      "color": "#000061",
+                      "fontSize": "24px",
+                      "fontWeight": "bold",
+                      "marginBottom": "16px"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "🎯 5:00 - 6:00 PM - Developer-focused programming and technical insights",
+                      "color": "#000061",
+                      "fontSize": "16px",
+                      "lineHeight": "24px",
+                      "marginBottom": "12px"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "🤝 6:00 - 9:00 PM - Networking happy hour with the Sui team",
+                      "color": "#000061",
+                      "fontSize": "16px",
+                      "lineHeight": "24px",
+                      "marginBottom": "12px"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "💡 Meet the Sui team, connect with fellow developers, and discover the latest in blockchain innovation",
+                      "color": "#000061",
+                      "fontSize": "16px",
+                      "lineHeight": "24px",
+                      "marginBottom": "32px"
+                    }
+                  },
+                  {
+                    "type": "section",
+                    "props": {
+                      "textAlign": "center",
+                      "padding": "32px 20px",
+                      "backgroundColor": "#F5F7F8",
+                      "style": {
+                        "borderRadius": "15px"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "heading",
+                        "props": {
+                          "as": "h3",
+                          "content": "Ready to Connect?",
+                          "color": "#000061",
+                          "fontSize": "24px",
+                          "fontWeight": "bold",
+                          "marginBottom": "16px"
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "props": {
+                          "children": "Reserve your spot today and be part of the LATAM blockchain community!",
+                          "color": "#000061",
+                          "fontSize": "16px",
+                          "lineHeight": "24px",
+                          "marginBottom": "24px"
+                        }
+                      },
+                      {
+                        "type": "button",
+                        "props": {
+                          "href": "https://luma.com/SuiConnectBuenosAires",
+                          "children": "Register Now",
+                          "style": {
+                            "backgroundColor": "#007AD7",
+                            "color": "#FFFFFF",
+                            "padding": "14px 32px",
+                            "borderRadius": "8px",
+                            "fontWeight": "600",
+                            "fontSize": "16px",
+                            "textDecoration": "none",
+                            "display": "inline-block"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "props": {
+                  "padding": "32px",
+                  "backgroundColor": "#F5F7F8",
+                  "textAlign": "center"
+                },
+                "children": [
+                  {
+                    "type": "heading",
+                    "props": {
+                      "as": "h3",
+                      "content": "Sponsored By",
+                      "color": "#000061",
+                      "fontSize": "18px",
+                      "fontWeight": "bold",
+                      "marginBottom": "16px"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "🥇 Gold Sponsors: Walrus",
+                      "color": "#5C5C9A",
+                      "fontSize": "14px",
+                      "lineHeight": "20px",
+                      "marginBottom": "8px"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "🥈 Silver Sponsors: OpenZeppelin",
+                      "color": "#5C5C9A",
+                      "fontSize": "14px",
+                      "lineHeight": "20px"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "section",
+                "props": {
+                  "padding": "32px",
+                  "textAlign": "center",
+                  "backgroundColor": "#FFFFFF"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Have questions? Reply to this email or contact us at the event page.",
+                      "color": "#5C5C9A",
+                      "fontSize": "14px",
+                      "lineHeight": "20px",
+                      "marginBottom": "16px"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "© 2025 Sui. All rights reserved.",
+                      "color": "#9ca3af",
+                      "fontSize": "12px",
+                      "lineHeight": "18px"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": [
+                        "Powered by ",
+                        {
+                          "type": "link",
+                          "props": {
+                            "href": "https://luma.com",
+                            "children": "Luma",
+                            "style": {
+                              "color": "#007AD7",
+                              "textDecoration": "underline"
+                            }
+                          }
+                        }
+                      ],
+                      "color": "#9ca3af",
+                      "fontSize": "12px",
+                      "lineHeight": "18px",
+                      "marginTop": "8px"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}
