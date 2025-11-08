@@ -25,7 +25,7 @@
               {
                 "type": "image",
                 "props": {
-                  "src": "static/amazon-prime-logo.png",
+                  "src": "/amazon-prime-logo.png",
                   "alt": "Amazon Prime Logo",
                   "width": "109",
                   "height": "48"
@@ -75,7 +75,7 @@
                   {
                     "type": "image",
                     "props": {
-                      "src": "static/amazon-book.jpg",
+                      "src": "/amazon-book.jpg",
                       "alt": "Amazon Book",
                       "width": "274",
                       "height": "350"
@@ -108,7 +108,7 @@
                       {
                         "type": "image",
                         "props": {
-                          "src": "static/amazon-rating.gif",
+                          "src": "/amazon-rating.gif",
                           "alt": "Rating Star",
                           "style": {
                             "display": "inline-block"
@@ -118,7 +118,7 @@
                       {
                         "type": "image",
                         "props": {
-                          "src": "static/amazon-rating.gif",
+                          "src": "/amazon-rating.gif",
                           "alt": "Rating Star",
                           "style": {
                             "display": "inline-block"
@@ -128,7 +128,7 @@
                       {
                         "type": "image",
                         "props": {
-                          "src": "static/amazon-rating.gif",
+                          "src": "/amazon-rating.gif",
                           "alt": "Rating Star",
                           "style": {
                             "display": "inline-block"
@@ -138,7 +138,7 @@
                       {
                         "type": "image",
                         "props": {
-                          "src": "static/amazon-rating.gif",
+                          "src": "/amazon-rating.gif",
                           "alt": "Rating Star",
                           "style": {
                             "display": "inline-block"
@@ -148,7 +148,7 @@
                       {
                         "type": "image",
                         "props": {
-                          "src": "static/amazon-rating.gif",
+                          "src": "/amazon-rating.gif",
                           "alt": "Rating Star",
                           "style": {
                             "display": "inline-block"
@@ -227,7 +227,7 @@
                   {
                     "type": "image",
                     "props": {
-                      "src": "static/amazon-logo.png",
+                      "src": "/amazon-logo.png",
                       "alt": "Amazon Logo",
                       "width": "93",
                       "height": "23"
@@ -244,7 +244,7 @@
                   {
                     "type": "image",
                     "props": {
-                      "src": "static/amazon-instagram.jpg",
+                      "src": "/amazon-instagram.jpg",
                       "alt": "Instagram",
                       "width": "30",
                       "height": "30",
@@ -257,7 +257,7 @@
                   {
                     "type": "image",
                     "props": {
-                      "src": "static/amazon-facebook.jpg",
+                      "src": "/amazon-facebook.jpg",
                       "alt": "Facebook",
                       "width": "30",
                       "height": "30",
@@ -270,7 +270,7 @@
                   {
                     "type": "image",
                     "props": {
-                      "src": "static/amazon-twitter.jpg",
+                      "src": "/amazon-twitter.jpg",
                       "alt": "Twitter",
                       "width": "30",
                       "height": "30",

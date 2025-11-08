@@ -79,7 +79,7 @@
       {
         "type": "image",
         "props": {
-          "src": "static/notion-logo.png",
+          "src": "/notion-logo.png",
           "alt": "Notion's Logo",
           "width": "32",
           "height": "32"

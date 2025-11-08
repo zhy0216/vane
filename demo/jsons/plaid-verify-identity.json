@@ -22,7 +22,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/plaid-logo.png",
+              "src": "/plaid-logo.png",
               "alt": "Plaid",
               "width": "212",
               "height": "88",

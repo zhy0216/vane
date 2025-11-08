@@ -11,7 +11,7 @@
       {
         "type": "image",
         "props": {
-          "src": "static/koala-logo.png",
+          "src": "/koala-logo.png",
           "alt": "Koala",
           "width": "170",
           "height": "50",

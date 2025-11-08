@@ -20,7 +20,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/google-play-header.png",
+              "src": "/google-play-header.png",
               "alt": "Google Play Header",
               "width": "305",
               "height": "28",
@@ -32,7 +32,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/google-play-logo.png",
+              "src": "/google-play-logo.png",
               "alt": "Google Play",
               "width": "155",
               "height": "31",
@@ -204,7 +204,7 @@
                           {
                             "type": "image",
                             "props": {
-                              "src": "static/google-play-chat.png",
+                              "src": "/google-play-chat.png",
                               "alt": "Chat",
                               "width": "28",
                               "height": "28"
@@ -227,7 +227,7 @@
                           {
                             "type": "image",
                             "props": {
-                              "src": "static/google-play-icon.png",
+                              "src": "/google-play-icon.png",
                               "alt": "Icon",
                               "width": "28",
                               "height": "28"
@@ -250,7 +250,7 @@
                           {
                             "type": "image",
                             "props": {
-                              "src": "static/google-play-academy.png",
+                              "src": "/google-play-academy.png",
                               "alt": "Academy",
                               "width": "28",
                               "height": "28"
@@ -265,7 +265,7 @@
               {
                 "type": "image",
                 "props": {
-                  "src": "static/google-play-footer.png",
+                  "src": "/google-play-footer.png",
                   "alt": "Footer",
                   "width": "540",
                   "height": "48",

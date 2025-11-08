@@ -187,20 +187,20 @@
         <div class="sidebar-title">🎨 Vane Demo</div>
         <div class="sidebar-subtitle">Email Templates</div>
       </div>
-      <div class="templates-list">
-        {{TEMPLATES_LIST}}
+      <div class="templates-list" id="templates-list">
+        <!-- Templates will be loaded dynamically -->
       </div>
     </div>
     <div class="content">
       <div class="content-header">
-        <div class="content-title">{{CURRENT_TEMPLATE_TITLE}}</div>
+        <div class="content-title" id="content-title">Loading...</div>
         <div class="view-toggle">
-          <button class="view-btn active" onclick="showView('preview')">Preview</button>
-          <button class="view-btn" onclick="showView('json')">JSON</button>
+          <button class="view-btn active" id="preview-btn">Preview</button>
+          <button class="view-btn" id="json-btn">JSON</button>
         </div>
       </div>
       <div class="iframe-container" id="preview-view">
-        <iframe src="/email?template={{CURRENT_TEMPLATE}}"></iframe>
+        <iframe id="email-iframe"></iframe>
       </div>
       <div class="json-container" id="json-view">
         <pre id="json-content">Loading...</pre>
@@ -208,33 +208,6 @@
     </div>
   </div>
   
-  <script>
-    function showView(view) {
-      const previewView = document.getElementById('preview-view');
-      const jsonView = document.getElementById('json-view');
-      const buttons = document.querySelectorAll('.view-btn');
-      
-      buttons.forEach(btn => btn.classList.remove('active'));
-      
-      if (view === 'preview') {
-        previewView.style.display = 'block';
-        jsonView.style.display = 'none';
-        buttons[0].classList.add('active');
-      } else {
-        previewView.style.display = 'none';
-        jsonView.style.display = 'block';
-        buttons[1].classList.add('active');
-        loadJson();
-      }
-    }
-    
-    async function loadJson() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const template = urlParams.get('template') || '{{FIRST_TEMPLATE}}';
-      const response = await fetch('/json?template=' + template);
-      const data = await response.json();
-      document.getElementById('json-content').textContent = JSON.stringify(data, null, 2);
-    }
-  </script>
+  <script type="module" src="/app.ts"></script>
 </body>
 </html>

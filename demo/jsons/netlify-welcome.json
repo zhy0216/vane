@@ -9,7 +9,7 @@
       {
         "type": "image",
         "props": {
-          "src": "static/netlify-logo.png",
+          "src": "/netlify-logo.png",
           "alt": "Netlify",
           "width": "184",
           "height": "75",

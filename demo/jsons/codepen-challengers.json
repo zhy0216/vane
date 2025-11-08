@@ -18,7 +18,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/codepen-challengers.png",
+              "src": "/codepen-challengers.png",
               "alt": "CodePen",
               "width": "600",
               "style": {
@@ -41,14 +41,16 @@
           {
             "type": "text",
             "props": {
-              "children": {
-                "type": "link",
-                "props": {
-                  "href": "https://codepen.io",
-                  "children": "View this Challenge on CodePen",
-                  "color": "#ffffff"
+              "children": [
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://codepen.io",
+                    "children": "View this Challenge on CodePen",
+                    "color": "#ffffff"
+                  }
                 }
-              },
+              ],
               "backgroundColor": "#505050",
               "textAlign": "center",
               "padding": "10px",
@@ -146,7 +148,7 @@
               {
                 "type": "image",
                 "props": {
-                  "src": "static/codepen-cube.png",
+                  "src": "/codepen-cube.png",
                   "alt": "CodePen Cube",
                   "width": "600",
                   "style": {

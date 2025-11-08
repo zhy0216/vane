@@ -23,7 +23,7 @@
               {
                 "type": "image",
                 "props": {
-                  "src": "static/stripe-logo.png",
+                  "src": "/stripe-logo.png",
                   "alt": "Stripe",
                   "width": "49",
                   "height": "21"

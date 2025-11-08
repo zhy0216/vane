@@ -18,7 +18,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/linear-logo.png",
+              "src": "/linear-logo.png",
               "alt": "Linear",
               "width": "42",
               "height": "42",

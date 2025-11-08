@@ -1,43 +1,49 @@
-# Vane Demo - Verification Email
+# Vane Demo - Email Templates
 
-This is a standalone demo app that renders a verification email template using Vane's JSON-based email component system.
+This is a standalone demo app that renders email templates using Vane's JSON-based email component system.
 
 ## 📁 Files
 
-- `verify-email.json` - Email template in JSON format (similar to AWS verify email)
-- `index.ts` - Development server to preview the email in browser
-- `generate.ts` - Script to generate HTML file
+- `jsons/*.json` - Email templates in JSON format
+- `index.html` - Demo UI entry point
+- `app.ts` - Client-side application logic
+- `vite.config.ts` - Vite configuration
 - `package.json` - Dependencies and scripts
+- `server.ts` - (Optional) Standalone API server if you need backend endpoints
 
 ## 🚀 Quick Start
 
 ### 1. Install Dependencies
 
 ```bash
-bun install
+npm install
+# or
+pnpm install
+# or
+yarn install
 ```
 
 ### 2. Run the Development Server
 
-```bash
-bun start
-```
-
-This will start a server at `http://localhost:3001` where you can preview the email.
-
-**Endpoints:**
-- `http://localhost:3001/` or `/email` - View rendered email HTML
-- `http://localhost:3001/json` - View the JSON template
-
-### 3. Generate HTML File (Optional)
-
-To generate a standalone HTML file:
+Simply start Vite:
 
 ```bash
-bun generate
+npm run dev
 ```
 
-This will create `output.html` that you can open in any browser.
+This will start the Vite dev server at `http://localhost:3001`. All JSON templates are bundled directly into the frontend - no backend server needed!
+
+Open `http://localhost:3001` in your browser to view the demo.
+
+### 3. Build for Production (Optional)
+
+To build a static production version:
+
+```bash
+npm run build
+```
+
+This will create a `dist` folder with the optimized build that can be deployed to any static hosting service (Netlify, Vercel, GitHub Pages, etc.).
 
 ## 📧 Email Template Structure
 
@@ -65,45 +71,35 @@ The email is defined in `verify-email.json` using Vane's component system:
 
 ## 🔧 Customization
 
-Edit `verify-email.json` to customize:
+Edit any JSON file in the `jsons/` directory to customize:
 - Email subject
-- Verification code
+- Content and text
 - Colors and styling
-- Content and layout
+- Layout and structure
 
-The changes will be reflected immediately when you refresh the browser (with `bun --watch`).
+The changes will be reflected immediately in the demo UI. Just refresh your browser to see the updates.
 
-## 📝 Example: Changing the Verification Code
+## 📝 Example: Editing Templates
 
-In `verify-email.json`, find:
+The demo includes multiple email templates in the `jsons/` directory:
+- `airbnb-review.json` - Airbnb review request
+- `amazon-review.json` - Amazon order review
+- `apple-receipt.json` - Apple receipt email
+- And many more...
 
-```json
-{
-  "type": "text",
-  "props": {
-    "content": "596853",
-    ...
-  }
-}
-```
-
-Change `"596853"` to your desired code.
+You can edit any of these files or create your own. Changes will be visible immediately in the demo.
 
 ## 🏗️ How It Works
 
-1. JSON template defines the email structure
-2. Vane's renderer processes each component recursively
-3. Components generate email-compatible HTML (tables, inline styles)
-4. Final HTML is email-client friendly (Gmail, Outlook, etc.)
+1. JSON templates are imported directly into the frontend using Vite's `import.meta.glob`
+2. All templates are bundled at build time (no runtime API calls needed)
+3. Vane's renderer processes each component recursively in the browser
+4. Components generate email-compatible HTML (tables, inline styles)
+5. Final HTML is email-client friendly (Gmail, Outlook, etc.)
 
-## 🔗 Integration
+## ✨ Benefits
 
-To use this with the main Vane service:
-
-```bash
-curl -X POST http://localhost:3000/generate \
-  -H "Content-Type: application/json" \
-  -d @verify-email.json
-```
-
-This sends the JSON template to the Vane service and returns rendered HTML.
+- **No Backend Required** - Pure frontend static site
+- **Fast Loading** - All templates bundled at build time
+- **Easy Deployment** - Deploy to any static hosting
+- **Simple Development** - Just run `npm run dev`

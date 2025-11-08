@@ -15,7 +15,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/yelp-logo.png",
+              "src": "/yelp-logo.png",
               "alt": "Yelp logo"
             }
           }
@@ -32,7 +32,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/yelp-header.png",
+              "src": "/yelp-header.png",
               "alt": "Yelp header illustration",
               "width": "620",
               "style": {
@@ -177,7 +177,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/yelp-footer.png",
+              "src": "/yelp-footer.png",
               "alt": "Yelp footer decoration",
               "width": "620",
               "style": {

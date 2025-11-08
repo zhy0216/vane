@@ -16,7 +16,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/airbnb-logo.png",
+              "src": "/airbnb-logo.png",
               "alt": "Airbnb",
               "width": "96",
               "height": "30"
@@ -33,7 +33,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/airbnb-review-user.jpg",
+              "src": "/airbnb-review-user.jpg",
               "alt": "Alex",
               "width": "96",
               "height": "96",

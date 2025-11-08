@@ -25,7 +25,7 @@
               {
                 "type": "image",
                 "props": {
-                  "src": "static/stack-overflow-logo.png",
+                  "src": "/stack-overflow-logo.png",
                   "alt": "Stack Overflow",
                   "width": "146"
                 }
@@ -80,7 +80,7 @@
                       {
                         "type": "image",
                         "props": {
-                          "src": "static/stack-overflow-header.png",
+                          "src": "/stack-overflow-header.png",
                           "alt": "Header",
                           "width": "340",
                           "style": {
@@ -278,7 +278,7 @@
           {
             "type": "image",
             "props": {
-              "src": "static/stack-overflow-logo-sm.png",
+              "src": "/stack-overflow-logo-sm.png",
               "alt": "Stack Overflow",
               "width": "111"
             }
