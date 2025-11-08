@@ -5,6 +5,7 @@ import { renderSection, SectionPropsSchema } from "./components/section";
 import { renderHeading, HeadingPropsSchema } from "./components/heading";
 import { renderImg, ImgPropsSchema } from "./components/img";
 import { renderHr, HrPropsSchema } from "./components/hr";
+import { renderLink, LinkPropsSchema } from "./components/link";
 
 /**
  * 组件渲染器映射表
@@ -13,9 +14,9 @@ const componentRenderers: Record<
   string,
   (props: any, children?: Component[]) => string
 > = {
-  text: (props) => {
+  text: (props, children) => {
     const validatedProps = TextPropsSchema.parse(props);
-    return renderText(validatedProps);
+    return renderText(validatedProps, renderComponent);
   },
   container: (props, children) => {
     const childrenHtml = children?.map(renderComponent).join("") || "";
@@ -39,6 +40,10 @@ const componentRenderers: Record<
     const validatedProps = HrPropsSchema.parse(props);
     return renderHr(validatedProps);
   },
+  link: (props) => {
+    const validatedProps = LinkPropsSchema.parse(props);
+    return renderLink(validatedProps);
+  },
 };
 
 /**
@@ -54,7 +59,7 @@ export function renderComponent(component: Component): string {
   }
 
   // 递归渲染子组件
-  const renderedChildren = children?.map((child) => renderComponent(child));
+  const renderedChildren = children?.map((child) => renderComponent(child)) ?? [];
 
   // 调用组件渲染器
   return renderer(props || {}, children);
