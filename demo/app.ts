@@ -74,6 +74,34 @@ function renderTemplatesList() {
 }
 
 /**
+ * Fix image paths to include the base URL
+ */
+function fixImagePaths(component: any): any {
+  if (!component) return component;
+  
+  const fixed = { ...component };
+  
+  // Fix image src if this is an image component
+  if (fixed.type === 'image' && fixed.props?.src) {
+    const src = fixed.props.src;
+    // Only fix paths that start with / and are not already prefixed with base URL
+    if (src.startsWith('/') && !src.startsWith(import.meta.env.BASE_URL)) {
+      fixed.props = {
+        ...fixed.props,
+        src: import.meta.env.BASE_URL + src.slice(1), // Remove leading / and add base URL
+      };
+    }
+  }
+  
+  // Recursively fix children
+  if (fixed.children && Array.isArray(fixed.children)) {
+    fixed.children = fixed.children.map(fixImagePaths);
+  }
+  
+  return fixed;
+}
+
+/**
  * Load the email preview
  */
 function loadEmailPreview() {
@@ -82,7 +110,9 @@ function loadEmailPreview() {
   
   if (iframe && templateData[currentTemplate]) {
     const data = templateData[currentTemplate];
-    const html = generateEmailHtml(data.component, data.subject);
+    // Fix image paths before rendering
+    const fixedComponent = fixImagePaths(data.component);
+    const html = generateEmailHtml(fixedComponent, data.subject);
     
     // Write HTML directly to iframe
     const iframeDoc = iframe.contentDocument || iframe.contentWindow?.document;
