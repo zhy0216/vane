@@ -1,0 +1,409 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`Section Component Basic Rendering should render a simple section 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><p>Hello World</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Basic Rendering should include table structure 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><div>Content</div></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Basic Rendering should have email-safe table attributes 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><div>Test</div></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Basic Rendering should not include style attribute when no styles provided 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Background Color should apply backgroundColor prop 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #f0f0f0">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Background Color should handle hex color codes 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #ff5a5f">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Background Color should handle named colors 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: lightblue">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Background Color should handle rgba colors 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: rgba(255, 255, 255, 0.8)">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Padding should apply padding prop 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding: 20px">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Padding should handle complex padding values 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding: 10px 20px 30px 40px">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Padding should handle shorthand padding 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding: 15px 30px">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Padding should handle rem units 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding: 2rem">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Text Align should apply textAlign prop 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="text-align: center">
+  <tbody>
+    <tr>
+      <td><p>Centered text</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Text Align should handle left alignment 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="text-align: left">
+  <tbody>
+    <tr>
+      <td><p>Left aligned</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Text Align should handle right alignment 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="text-align: right">
+  <tbody>
+    <tr>
+      <td><p>Right aligned</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Text Align should handle justify alignment 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="text-align: justify">
+  <tbody>
+    <tr>
+      <td><p>Justified text</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Custom Styles should apply custom style properties 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-radius: 8px; border: 2px solid #ccc">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Custom Styles should handle numeric style values 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-width: 1px; opacity: 0.95">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Custom Styles should merge all style sources 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border: 1px solid #e0e0e0; background-color: #ffffff; padding: 20px; text-align: center">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Custom Styles should allow style to override backgroundColor 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #ffffff">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Combined Props should apply all props together 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border: 1px solid #ddd; border-radius: 4px; background-color: #f9f9f9; padding: 30px 20px; text-align: center">
+  <tbody>
+    <tr>
+      <td><h2>Section Title</h2><p>Section content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Combined Props should handle subset of optional props 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background-color: #f0f0f0; text-align: left">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component HTML Safety should preserve children HTML content 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><p>This is <em>italic</em> and <strong>bold</strong></p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component HTML Safety should handle children with special characters 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><p>Use & to separate items</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component HTML Safety should handle complex nested structures 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td>
+          <div class="content">
+            <h3>Heading</h3>
+            <div class="inner">
+              <p>Paragraph</p>
+            </div>
+          </div>
+        </td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component HTML Safety should handle children with inline styles 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><p style="color: red;">Red text</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Edge Cases should handle empty children 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Edge Cases should handle whitespace-only children 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td>   
+	   </td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Edge Cases should handle minimal props with no optional fields 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><p>Basic</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Edge Cases should handle very long content 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><p>Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content Text content </p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Edge Cases should handle empty style object 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Edge Cases should handle style with many properties 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0 auto; border: 2px solid #333; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.2); background-color: #fefefe; padding: 25px; text-align: center">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Edge Cases should handle zero values 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="margin: 0px; border-width: 0px; padding: 0">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Real-world Use Cases should render email header section 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="color: #ffffff; background-color: #4a90e2; padding: 40px 20px; text-align: center">
+  <tbody>
+    <tr>
+      <td><img src='logo.png' alt='Logo' /><h1>Welcome!</h1></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Real-world Use Cases should render content section with styling 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="border: 1px solid #e5e5e5; border-radius: 8px; background-color: white; padding: 30px">
+  <tbody>
+    <tr>
+      <td><p>This is the main content of the email.</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Real-world Use Cases should render footer section 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="font-size: 12px; color: #666666; background-color: #f4f4f4; padding: 20px; text-align: center">
+  <tbody>
+    <tr>
+      <td><p>© 2024 Company Name. All rights reserved.</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Real-world Use Cases should render CTA section 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding: 40px 20px; text-align: center">
+  <tbody>
+    <tr>
+      <td><a href="#" style="display: inline-block; padding: 15px 30px; background-color: #28a745; color: white; text-decoration: none; border-radius: 5px;">Get Started</a></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Differences from Container should not include max-width by default (unlike container) 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Differences from Container should support textAlign prop (unlike container) 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="text-align: right">
+  <tbody>
+    <tr>
+      <td><p>Aligned content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Section Component Differences from Container should omit style attribute when no styles (unlike container which always has max-width) 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation">
+  <tbody>
+    <tr>
+      <td><p>Content</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;

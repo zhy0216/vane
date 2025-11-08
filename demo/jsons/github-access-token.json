@@ -5,8 +5,10 @@
     "props": {
       "backgroundColor": "#ffffff",
       "padding": "20px 0 48px",
-      "maxWidth": "480px",
-      "margin": "0 auto"
+      "style": {
+        "maxWidth": "480px",
+        "margin": "0 auto"
+      }
     },
     "children": [
       {

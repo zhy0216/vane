@@ -1,0 +1,153 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`Button Component Airbnb Review Button - User Specific Case should render button with all styling properties from Airbnb review JSON 1`] = `
+"<a href="https://www.airbnb.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px; background-color: #ff5a5f; color: #ffffff; font-size: 18px; border-radius: 3px; padding: 19px 30px; text-align: center; padding-top: 19px; padding-right: 30px; padding-bottom: 19px; padding-left: 30px">
+  <span><!--[if mso]><i style="mso-font-width:500%;mso-text-raise:28.5" hidden>&#8202;&#8202;&#8202;</i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px; mso-text-raise: 14.25px">Send My Feedback</span>
+  <span><!--[if mso]><i style="mso-font-width:500%" hidden>&#8202;&#8202;&#8202;&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Basic Rendering should render a simple button 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px">
+  <span><!--[if mso]><i style="mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px">Click me</span>
+  <span><!--[if mso]><i style="mso-font-width:0%" hidden>&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Basic Rendering should use custom target attribute 1`] = `
+"<a href="https://example.com" target="_self" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px">
+  <span><!--[if mso]><i style="mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px">Click me</span>
+  <span><!--[if mso]><i style="mso-font-width:0%" hidden>&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Style Handling should apply custom styles 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px; background-color: #007bff; color: #ffffff; font-size: 16px; font-weight: bold">
+  <span><!--[if mso]><i style="mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px">Styled Button</span>
+  <span><!--[if mso]><i style="mso-font-width:0%" hidden>&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Style Handling should handle numeric style values 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px; font-size: 20px; padding: 10px 20px; padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px">
+  <span><!--[if mso]><i style="mso-font-width:500%;mso-text-raise:15" hidden>&#8202;&#8202;</i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px; mso-text-raise: 7.5px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:500%" hidden>&#8202;&#8202;&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Padding Handling should parse shorthand padding (2 values) 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px; padding: 10px 20px; padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px">
+  <span><!--[if mso]><i style="mso-font-width:500%;mso-text-raise:15" hidden>&#8202;&#8202;</i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px; mso-text-raise: 7.5px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:500%" hidden>&#8202;&#8202;&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Padding Handling should parse shorthand padding (4 values) 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px; padding: 10px 15px 20px 25px; padding-top: 10px; padding-right: 15px; padding-bottom: 20px; padding-left: 25px">
+  <span><!--[if mso]><i style="mso-font-width:416.6666666666667%;mso-text-raise:22.5" hidden>&#8202;&#8202;&#8202;</i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px; mso-text-raise: 15px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:375%" hidden>&#8202;&#8202;&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Padding Handling should parse single value padding 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px; padding: 15px; padding-top: 15px; padding-right: 15px; padding-bottom: 15px; padding-left: 15px">
+  <span><!--[if mso]><i style="mso-font-width:375%;mso-text-raise:22.5" hidden>&#8202;&#8202;</i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px; mso-text-raise: 11.25px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:375%" hidden>&#8202;&#8202;&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Padding Handling should handle individual padding properties 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px; padding-top: 10px; padding-right: 20px; padding-bottom: 10px; padding-left: 20px">
+  <span><!--[if mso]><i style="mso-font-width:500%;mso-text-raise:15" hidden>&#8202;&#8202;</i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px; mso-text-raise: 7.5px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:500%" hidden>&#8202;&#8202;&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component MSO (Outlook) Compatibility should include MSO conditional comments 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px; padding: 15px 25px; padding-top: 15px; padding-right: 25px; padding-bottom: 15px; padding-left: 25px">
+  <span><!--[if mso]><i style="mso-font-width:416.6666666666667%;mso-text-raise:22.5" hidden>&#8202;&#8202;&#8202;</i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px; mso-text-raise: 11.25px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:416.6666666666667%" hidden>&#8202;&#8202;&#8202;&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component MSO (Outlook) Compatibility should calculate mso-text-raise based on vertical padding 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px; padding: 20px 30px; padding-top: 20px; padding-right: 30px; padding-bottom: 20px; padding-left: 30px">
+  <span><!--[if mso]><i style="mso-font-width:500%;mso-text-raise:30" hidden>&#8202;&#8202;&#8202;</i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px; mso-text-raise: 15px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:500%" hidden>&#8202;&#8202;&#8202;&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component MSO (Outlook) Compatibility should include zero-width characters for MSO padding workaround 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px; padding: 15px 30px; padding-top: 15px; padding-right: 30px; padding-bottom: 15px; padding-left: 30px">
+  <span><!--[if mso]><i style="mso-font-width:500%;mso-text-raise:22.5" hidden>&#8202;&#8202;&#8202;</i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px; mso-text-raise: 11.25px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:500%" hidden>&#8202;&#8202;&#8202;&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component HTML Safety should escape HTML in href 1`] = `
+"<a href="https://example.com?foo=bar&amp;baz=qux&quot;onclick=&quot;alert(1)&quot;" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px">
+  <span><!--[if mso]><i style="mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:0%" hidden>&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component HTML Safety should escape HTML in children text 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px">
+  <span><!--[if mso]><i style="mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px">&lt;script&gt;alert(&quot;xss&quot;)&lt;/script&gt;</span>
+  <span><!--[if mso]><i style="mso-font-width:0%" hidden>&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component HTML Safety should escape HTML in target attribute 1`] = `
+"<a href="https://example.com" target="_blank&quot; onclick=&quot;alert(1)" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px">
+  <span><!--[if mso]><i style="mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:0%" hidden>&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Edge Cases should handle button with no padding 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px">
+  <span><!--[if mso]><i style="mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:0%" hidden>&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Edge Cases should handle empty style object 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px">
+  <span><!--[if mso]><i style="mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px">Button</span>
+  <span><!--[if mso]><i style="mso-font-width:0%" hidden>&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Edge Cases should handle long text content 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px">
+  <span><!--[if mso]><i style="mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px">This is a very long button text that might wrap</span>
+  <span><!--[if mso]><i style="mso-font-width:0%" hidden>&#8203;</i><![endif]--></span>
+</a>"
+`;
+
+exports[`Button Component Edge Cases should handle special characters in text 1`] = `
+"<a href="https://example.com" target="_blank" style="line-height: 100%; text-decoration: none; display: inline-block; max-width: 100%; mso-padding-alt: 0px">
+  <span><!--[if mso]><i style="mso-font-width:0%;mso-text-raise:0" hidden></i><![endif]--></span>
+  <span style="max-width: 100%; display: inline-block; line-height: 120%; mso-padding-alt: 0px">Subscribe &amp; Save 20%</span>
+  <span><!--[if mso]><i style="mso-font-width:0%" hidden>&#8203;</i><![endif]--></span>
+</a>"
+`;

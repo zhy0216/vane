@@ -1,6 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { renderButton } from "./button";
-import { ButtonPropsSchema } from "./schema";
+import { renderButton } from "../components/button";
+import { ButtonPropsSchema } from "../components/schema";
 
 describe("Button Component", () => {
   describe("Airbnb Review Button - User Specific Case", () => {
@@ -20,41 +20,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      // Check that the link has correct href
-      expect(html).toContain('href="https://www.airbnb.com"');
-      
-      // Check target attribute (default is _blank)
-      expect(html).toContain('target="_blank"');
-      
-      // Check button text content
-      expect(html).toContain("Send My Feedback");
-      
-      // Check that all style properties are included
-      expect(html).toContain("background-color: #ff5a5f");
-      expect(html).toContain("color: #ffffff");
-      expect(html).toContain("font-size: 18px");
-      expect(html).toContain("border-radius: 3px");
-      expect(html).toContain("text-align: center");
-      expect(html).toContain("text-decoration: none");
-      
-      // Check padding is correctly parsed (19px top/bottom, 30px left/right)
-      expect(html).toContain("padding-top: 19px");
-      expect(html).toContain("padding-right: 30px");
-      expect(html).toContain("padding-bottom: 19px");
-      expect(html).toContain("padding-left: 30px");
-      
-      // Check default styles are applied
-      expect(html).toContain("line-height: 100%");
-      expect(html).toContain("display: inline-block");
-      expect(html).toContain("max-width: 100%");
-      expect(html).toContain("mso-padding-alt: 0px");
-      
-      // Check MSO conditional comments for Outlook compatibility
-      expect(html).toContain("<!--[if mso]>");
-      expect(html).toContain("<![endif]-->");
-      expect(html).toContain("mso-font-width:");
-      expect(html).toContain("mso-text-raise:");
+      expect(html).toMatchSnapshot();
     });
 
     test("should validate props schema for Airbnb button", () => {
@@ -85,10 +51,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain('href="https://example.com"');
-      expect(html).toContain("Click me");
-      expect(html).toContain('target="_blank"');
+      expect(html).toMatchSnapshot();
     });
 
     test("should use custom target attribute", () => {
@@ -99,8 +62,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain('target="_self"');
+      expect(html).toMatchSnapshot();
     });
   });
 
@@ -118,11 +80,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain("background-color: #007bff");
-      expect(html).toContain("color: #ffffff");
-      expect(html).toContain("font-size: 16px");
-      expect(html).toContain("font-weight: bold");
+      expect(html).toMatchSnapshot();
     });
 
     test("should handle numeric style values", () => {
@@ -136,8 +94,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain("font-size: 20px");
+      expect(html).toMatchSnapshot();
     });
   });
 
@@ -152,11 +109,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain("padding-top: 10px");
-      expect(html).toContain("padding-right: 20px");
-      expect(html).toContain("padding-bottom: 10px");
-      expect(html).toContain("padding-left: 20px");
+      expect(html).toMatchSnapshot();
     });
 
     test("should parse shorthand padding (4 values)", () => {
@@ -169,11 +122,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain("padding-top: 10px");
-      expect(html).toContain("padding-right: 15px");
-      expect(html).toContain("padding-bottom: 20px");
-      expect(html).toContain("padding-left: 25px");
+      expect(html).toMatchSnapshot();
     });
 
     test("should parse single value padding", () => {
@@ -186,11 +135,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain("padding-top: 15px");
-      expect(html).toContain("padding-right: 15px");
-      expect(html).toContain("padding-bottom: 15px");
-      expect(html).toContain("padding-left: 15px");
+      expect(html).toMatchSnapshot();
     });
 
     test("should handle individual padding properties", () => {
@@ -206,11 +151,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain("padding-top: 10px");
-      expect(html).toContain("padding-right: 20px");
-      expect(html).toContain("padding-bottom: 10px");
-      expect(html).toContain("padding-left: 20px");
+      expect(html).toMatchSnapshot();
     });
   });
 
@@ -225,9 +166,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain("<!--[if mso]>");
-      expect(html).toContain("<![endif]-->");
+      expect(html).toMatchSnapshot();
     });
 
     test("should calculate mso-text-raise based on vertical padding", () => {
@@ -240,10 +179,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      // Total vertical padding: 20px + 20px = 40px
-      // mso-text-raise should be in pt: 40 * 3/4 = 30pt
-      expect(html).toContain("mso-text-raise:");
+      expect(html).toMatchSnapshot();
     });
 
     test("should include zero-width characters for MSO padding workaround", () => {
@@ -256,8 +192,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain("&#8202;");
+      expect(html).toMatchSnapshot();
     });
   });
 
@@ -269,9 +204,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).not.toContain('onclick="alert(1)"');
-      expect(html).toContain("&quot;");
+      expect(html).toMatchSnapshot();
     });
 
     test("should escape HTML in children text", () => {
@@ -281,9 +214,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).not.toContain("<script>");
-      expect(html).toContain("&lt;script&gt;");
+      expect(html).toMatchSnapshot();
     });
 
     test("should escape HTML in target attribute", () => {
@@ -294,9 +225,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).not.toContain('onclick="alert(1)');
-      expect(html).toContain("&quot;");
+      expect(html).toMatchSnapshot();
     });
   });
 
@@ -361,9 +290,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain('href="https://example.com"');
-      expect(html).toContain("Button");
+      expect(html).toMatchSnapshot();
     });
 
     test("should handle empty style object", () => {
@@ -374,10 +301,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      // Should still include default styles
-      expect(html).toContain("line-height: 100%");
-      expect(html).toContain("display: inline-block");
+      expect(html).toMatchSnapshot();
     });
 
     test("should handle long text content", () => {
@@ -387,8 +311,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain("This is a very long button text that might wrap");
+      expect(html).toMatchSnapshot();
     });
 
     test("should handle special characters in text", () => {
@@ -398,8 +321,7 @@ describe("Button Component", () => {
       };
 
       const html = renderButton(props);
-
-      expect(html).toContain("Subscribe &amp; Save 20%");
+      expect(html).toMatchSnapshot();
     });
   });
 });
