@@ -72,26 +72,17 @@ const componentRenderers: Record<
   },
 };
 
-/**
- * 渲染单个组件
- */
 export function renderComponent(component: Component): string {
   const { type, props, children } = component;
 
-  // 查找对应的渲染器
   const renderer = componentRenderers[type];
   if (!renderer) {
-    // Fallback: treat as normal HTML tag
     return renderHtmlTag(type, props, children);
   }
 
-  // 调用组件渲染器
   return renderer(props || {}, children);
 }
 
-/**
- * 渲染普通 HTML 标签的通用处理器
- */
 function renderHtmlTag(
   tag: string,
   props?: Record<string, any>,

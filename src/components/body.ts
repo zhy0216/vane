@@ -1,5 +1,5 @@
 import { styleToString } from "./utils";
-import { BodyPropsSchema, type BodyProps } from "./schema";
+import { type BodyProps } from "./schema";
 
 /**
  * Body component - Email body with table wrapper for client compatibility

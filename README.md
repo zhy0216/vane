@@ -165,6 +165,21 @@ bun run dev
 
 Open your browser to preview all available templates with a side-by-side JSON view.
 
+## Component Guide Generation
+
+Generate a comprehensive component guide with schemas and examples:
+
+```bash
+# Generate guide to default location (guides/component-guide.md)
+bun run scripts/generateGuide.ts
+```
+
+The generated guide includes:
+- Complete component schemas with type definitions
+- Usage examples for all 18 components
+- Best practices and common patterns
+- LLM-friendly documentation format
+
 ## Email Client Compatibility
 
 Vane generates HTML that works across all major email clients:
