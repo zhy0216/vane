@@ -3,7 +3,13 @@ import { styleToString } from "./utils";
 
 export const HeadingPropsSchema = z.object({
   as: z.enum(["h1", "h2", "h3", "h4", "h5", "h6"]).optional(),
-  children: z.string(),
+  level: z.number().optional(),
+  content: z.string().optional(),
+  children: z.string().optional(),
+  color: z.string().optional(),
+  fontSize: z.string().optional(),
+  fontWeight: z.string().optional(),
+  marginBottom: z.string().optional(),
   m: z.union([z.string(), z.number()]).optional(),
   mx: z.union([z.string(), z.number()]).optional(),
   my: z.union([z.string(), z.number()]).optional(),
@@ -56,17 +62,43 @@ function withMargin(props: {
  * Heading component - H1-H6 with margin shortcuts
  */
 export function renderHeading(props: HeadingProps): string {
-  const { as = "h1", children, m, mx, my, mt, mr, mb, ml, style = {} } = props;
+  const { 
+    as, 
+    level, 
+    content, 
+    children, 
+    color,
+    fontSize,
+    fontWeight,
+    marginBottom,
+    m, 
+    mx, 
+    my, 
+    mt, 
+    mr, 
+    mb, 
+    ml, 
+    style = {} 
+  } = props;
+  
+  // Determine the heading tag
+  const tag = as || (level ? `h${level}` : "h1");
+  const text = content || children || "";
   
   const margins = withMargin({ m, mx, my, mt, mr, mb, ml });
-  const finalStyle = {
+  const finalStyle: Record<string, string | number> = {
     ...margins,
     ...style,
   };
   
+  if (color) finalStyle.color = color;
+  if (fontSize) finalStyle.fontSize = fontSize;
+  if (fontWeight) finalStyle.fontWeight = fontWeight;
+  if (marginBottom) finalStyle.marginBottom = marginBottom;
+  
   const styleAttr = Object.keys(finalStyle).length > 0 
-    ? ` style="${styleToString(finalStyle as Record<string, string | number>)}"` 
+    ? ` style="${styleToString(finalStyle)}"` 
     : "";
   
-  return `<${as}${styleAttr}>${children}</${as}>`;
+  return `<${tag}${styleAttr}>${text}</${tag}>`;
 }

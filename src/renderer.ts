@@ -1,5 +1,10 @@
 import { Component } from "./types";
 import { renderText, TextPropsSchema } from "./components/text";
+import { renderContainer, ContainerPropsSchema } from "./components/container";
+import { renderSection, SectionPropsSchema } from "./components/section";
+import { renderHeading, HeadingPropsSchema } from "./components/heading";
+import { renderImg, ImgPropsSchema } from "./components/img";
+import { renderHr, HrPropsSchema } from "./components/hr";
 
 /**
  * 组件渲染器映射表
@@ -8,9 +13,31 @@ const componentRenderers: Record<
   string,
   (props: any, children?: Component[]) => string
 > = {
-  text: (props, children) => {
+  text: (props) => {
     const validatedProps = TextPropsSchema.parse(props);
-    return renderText(validatedProps, children);
+    return renderText(validatedProps);
+  },
+  container: (props, children) => {
+    const childrenHtml = children?.map(renderComponent).join("") || "";
+    const validatedProps = ContainerPropsSchema.parse({ ...props, children: childrenHtml });
+    return renderContainer(validatedProps);
+  },
+  section: (props, children) => {
+    const childrenHtml = children?.map(renderComponent).join("") || "";
+    const validatedProps = SectionPropsSchema.parse({ ...props, children: childrenHtml });
+    return renderSection(validatedProps);
+  },
+  heading: (props) => {
+    const validatedProps = HeadingPropsSchema.parse(props);
+    return renderHeading(validatedProps);
+  },
+  image: (props) => {
+    const validatedProps = ImgPropsSchema.parse(props);
+    return renderImg(validatedProps);
+  },
+  hr: (props) => {
+    const validatedProps = HrPropsSchema.parse(props);
+    return renderHr(validatedProps);
   },
 };
 

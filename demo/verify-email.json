@@ -1,0 +1,137 @@
+{
+  "subject": "Verify your email address",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#eee",
+      "padding": "20px"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "#ffffff",
+          "padding": "0"
+        },
+        "children": [
+          {
+            "type": "section",
+            "props": {
+              "backgroundColor": "#252f3d",
+              "padding": "20px",
+              "textAlign": "center"
+            },
+            "children": [
+              {
+                "type": "image",
+                "props": {
+                  "src": "https://placehold.co/150x90/252f3d/white?text=LOGO",
+                  "alt": "Company Logo",
+                  "width": "150",
+                  "height": "90"
+                }
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "props": {
+              "padding": "25px 35px"
+            },
+            "children": [
+              {
+                "type": "heading",
+                "props": {
+                  "content": "Verify your email address",
+                  "level": 1,
+                  "fontSize": "20px",
+                  "fontWeight": "bold",
+                  "color": "#333333",
+                  "marginBottom": "15px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "content": "Thanks for starting the new account creation process. We want to make sure it's really you. Please enter the following verification code when prompted. If you don't want to create an account, you can ignore this message.",
+                  "fontSize": "14px",
+                  "color": "#333333",
+                  "lineHeight": "24px"
+                }
+              },
+              {
+                "type": "section",
+                "props": {
+                  "padding": "20px 0",
+                  "textAlign": "center"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "content": "Verification code",
+                      "fontSize": "14px",
+                      "fontWeight": "bold",
+                      "color": "#333333",
+                      "align": "center"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "content": "596853",
+                      "fontSize": "36px",
+                      "fontWeight": "bold",
+                      "color": "#333333",
+                      "align": "center"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "content": "(This code is valid for 10 minutes)",
+                      "fontSize": "14px",
+                      "color": "#333333",
+                      "align": "center"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "hr",
+            "props": {
+              "color": "#cccccc"
+            }
+          },
+          {
+            "type": "section",
+            "props": {
+              "padding": "25px 35px"
+            },
+            "children": [
+              {
+                "type": "text",
+                "props": {
+                  "content": "We will never email you and ask you to disclose or verify your password, credit card, or banking account number.",
+                  "fontSize": "14px",
+                  "color": "#333333"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "props": {
+          "content": "This message was produced and distributed by Your Company, Inc. © 2024, All rights reserved.",
+          "fontSize": "12px",
+          "color": "#666666",
+          "lineHeight": "18px"
+        }
+      }
+    ]
+  }
+}
