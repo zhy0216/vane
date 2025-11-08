@@ -1,197 +1,279 @@
-# Vane - Email HTML Generator
+# Vane
 
-一个使用 Bun 构建的高性能微服务，将 JSON 数据转换为兼容邮件客户端的 HTML。
+**Van**illa **E**mail - A lightweight JSON-to-HTML email generator
 
-## 🚀 快速开始
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue.svg)](https://www.typescriptlang.org/)
+[![Bun](https://img.shields.io/badge/Bun-Runtime-orange.svg)](https://bun.sh/)
+[![Zod](https://img.shields.io/badge/Zod-Schema-green.svg)](https://zod.dev/)
 
-### 安装依赖
+## Why Vane?
+
+[react-email](https://react.email/) is a great project, but email doesn't need much reactivity. **Vane** takes a simpler approach: accept JSON, generate pure HTML directly. No React runtime, no JSX compilation, just fast and predictable email generation.
+
+## Features
+
+- 🚀 **Pure HTML Generation** - No React runtime overhead
+- 📦 **JSON-based Templates** - Define emails as JSON structures
+- 🔒 **Type-Safe** - Zod schemas + TypeScript for runtime validation
+- 📧 **Email Client Compatible** - MSO conditional comments, table-based layouts, inline styles
+- ⚡ **Fast** - Built with Bun for blazing-fast performance
+- 🎨 **Demo Viewer** - Visual template browser included
+
+## Quick Start
+
+### Installation
 
 ```bash
-bun install
+# Clone the repository
+git clone https://github.com/zhy0216/vane.git
+cd vane
+
+# Install dependencies
+bun i
 ```
 
-### 启动开发服务器
+### Run the Server
 
 ```bash
-bun dev
+# Development mode (with hot reload)
+bun run dev
+
+# Production mode
+bun run start
 ```
 
-### 启动生产服务器
+The service will start on `http://localhost:3000` (or the port specified in `PORT` environment variable).
 
-```bash
-bun start
+## API Usage
+
+### Generate Email HTML
+
+**Endpoint:** `POST /generate`
+
+**Request Body:**
+```json
+{
+  "subject": "Welcome to Vane",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff",
+      "padding": "20px"
+    },
+    "children": [
+      {
+        "type": "heading",
+        "props": {
+          "children": "Welcome!",
+          "fontSize": "32px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Thanks for trying Vane."
+        }
+      },
+      {
+        "type": "button",
+        "props": {
+          "href": "https://example.com",
+          "children": "Get Started",
+          "backgroundColor": "#007bff",
+          "color": "#ffffff"
+        }
+      }
+    ]
+  }
+}
 ```
 
-服务器默认运行在 `http://localhost:3000`
+**Response:**
+```html
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to Vane</title>
+  <!-- ... -->
+</head>
+<body>
+  <!-- Rendered email HTML -->
+</body>
+</html>
+```
 
-## 📡 API 端点
+### Health Check
 
-### `GET /health`
+**Endpoint:** `GET /health`
 
-健康检查端点。
-
-**响应示例：**
+**Response:**
 ```json
 {
   "status": "ok",
-  "timestamp": "2025-11-08T11:00:00.000Z"
+  "timestamp": "2025-01-08T13:50:00.000Z"
 }
 ```
 
-### `POST /generate`
+## Available Components
 
-生成 Email HTML。
+Vane includes 18 components ported from React Email:
 
-**请求体：**
-```json
-{
-  "subject": "邮件主题（可选）",
-  "component": {
-    "type": "组件类型",
-    "props": {
-      "属性名": "属性值"
-    },
-    "children": []
-  }
-}
-```
+| Component | Description | Example Props |
+|-----------|-------------|---------------|
+| `container` | Centered container (max-width 37.5em) | `backgroundColor`, `padding` |
+| `section` | Table-based section wrapper | `padding`, `textAlign` |
+| `row` | Table row for column layouts | `style` |
+| `column` | Table cell for responsive columns | `width`, `align` |
+| `text` | Paragraph element | `fontSize`, `color`, `lineHeight` |
+| `heading` | H1-H6 headings | `as`, `fontSize`, `fontWeight`, `mt`, `mb` |
+| `button` | Email-safe button with MSO support | `href`, `backgroundColor`, `padding` |
+| `link` | Anchor element | `href`, `color`, `textDecoration` |
+| `image` | Optimized image element | `src`, `alt`, `width`, `height` |
+| `hr` | Horizontal rule | `color`, `margin` |
+| `html` | Root HTML element | `lang`, `dir` |
+| `head` | HTML head with meta tags | - |
+| `body` | Email body with table wrapper | `backgroundColor` |
+| `preview` | Email preview text | `children` |
+| `font` | Font-face definition | `fontFamily`, `src` |
+| `code-inline` | Inline code with Orange.fr fix | `children` |
+| `code-block` | Code blocks | `code`, `language` |
+| `markdown` | Simplified markdown parser | `children` |
 
-**响应：** 完整的 HTML 邮件内容
 
-## 🧩 组件系统
+## Example Templates
 
-### 组件结构
+Vane comes with 22 pre-built email templates in the `demo/jsons/` directory:
 
-所有组件遵循统一的结构：
+- **airbnb-review** - User review notification
+- **amazon-review** - Product review request
+- **apple-receipt** - Purchase receipt
+- **github-access-token** - Security notification
+- **linear-login-code** - Magic link login
+- **slack-confirm** - Email confirmation
+- **stripe-welcome** - Welcome email
+- And 15 more...
 
-```typescript
-{
-  type: string;          // 组件类型
-  props?: object;        // 组件属性
-  children?: Component[]; // 子组件（支持嵌套）
-}
-```
+## Demo Viewer
 
-### Text 组件
-
-渲染文本内容。
-
-**类型：** `text`
-
-**Props：**
-
-| 属性       | 类型   | 必填 | 默认值    | 说明           |
-| ---------- | ------ | ---- | --------- | -------------- |
-| content    | string | ✅   | -         | 文本内容       |
-| color      | string | ❌   | #000000   | 文字颜色       |
-| fontSize   | string | ❌   | 14px      | 字体大小       |
-| fontWeight | string | ❌   | normal    | 字体粗细       |
-| align      | string | ❌   | left      | 对齐方式       |
-| lineHeight | string | ❌   | 1.5       | 行高           |
-
-**示例：**
-
-```json
-{
-  "subject": "欢迎",
-  "component": {
-    "type": "text",
-    "props": {
-      "content": "Hello, World!",
-      "color": "#333333",
-      "fontSize": "16px",
-      "align": "center"
-    }
-  }
-}
-```
-
-## 📝 使用示例
-
-### 使用 curl
+Start the demo viewer to browse all templates:
 
 ```bash
-curl -X POST http://localhost:3000/generate \
-  -H "Content-Type: application/json" \
-  -d @examples/simple-text.json
+cd demo
+bun run dev
 ```
 
-### 使用 JavaScript/TypeScript
+Open your browser to preview all available templates with a side-by-side JSON view.
 
-```typescript
-const response = await fetch("http://localhost:3000/generate", {
-  method: "POST",
-  headers: {
-    "Content-Type": "application/json",
-  },
-  body: JSON.stringify({
-    subject: "Test Email",
-    component: {
-      type: "text",
-      props: {
-        content: "Hello from Vane!",
-        fontSize: "18px",
-        color: "#007bff",
-      },
-    },
-  }),
-});
+## Email Client Compatibility
 
-const html = await response.text();
-console.log(html);
+Vane generates HTML that works across all major email clients:
+
+- ✅ **Outlook** - MSO conditional comments for proper rendering
+- ✅ **Gmail** - Table-based layouts for stability
+- ✅ **Apple Mail** - Inline styles and semantic HTML
+- ✅ **Yahoo/AOL** - Body conversion handling
+- ✅ **Orange.fr** - Special code-inline workarounds
+
+## Architecture
+
+```
+┌─────────────────┐
+│   JSON Input    │
+│  (Component)    │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Zod Validation │
+│  (Type Safety)  │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│   Renderer      │
+│  (Recursive)    │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│   Pure HTML     │
+│   (Output)      │
+└─────────────────┘
 ```
 
-## 🛠️ 技术栈
+## Development
 
-- **运行时：** [Bun](https://bun.sh/) - 快速的 JavaScript 运行时
-- **语言：** TypeScript
-- **验证：** Zod v4 - 类型安全的 schema 验证
-
-## 📦 项目结构
+### Project Structure
 
 ```
 vane/
 ├── src/
-│   ├── components/      # 组件实现
-│   │   └── text.ts      # Text 组件
-│   ├── types.ts         # 类型定义和 Schema
-│   ├── renderer.ts      # 渲染引擎
-│   └── index.ts         # HTTP 服务入口
-├── examples/            # 示例 JSON 文件
-│   └── simple-text.json
-├── package.json
-├── tsconfig.json
-└── README.md
+│   ├── components/      # 18 email components
+│   ├── index.ts         # HTTP server
+│   ├── renderer.ts      # Component renderer
+│   └── types.ts         # Zod schemas
+├── demo/
+│   ├── jsons/          # Example templates
+│   ├── static/         # Image assets
+│   └── app.ts          # Demo viewer app
+└── guides/             # Documentation
 ```
 
-## 🔒 安全特性
+### Adding New Components
 
-- ✅ HTML 转义，防止 XSS 攻击
-- ✅ 输入验证使用 Zod schema
-- ✅ CORS 支持
+1. Create a new component file in `src/components/`
+2. Define Zod schema for props validation
+3. Export render function that returns HTML string
+4. Register component in `renderer.ts`
 
-## 📧 邮件客户端兼容性
+Example:
+```typescript
+// src/components/my-component.ts
+import { z } from "zod";
 
-生成的 HTML 兼容主流邮件客户端：
+export const MyComponentPropsSchema = z.object({
+  text: z.string(),
+  color: z.string().optional()
+});
 
-- ✅ Gmail
-- ✅ Outlook
-- ✅ Apple Mail
-- ✅ Yahoo Mail
-- ✅ 其他主流客户端
+export function renderMyComponent(props: z.infer<typeof MyComponentPropsSchema>) {
+  const { text, color = "#000" } = props;
+  return `<div style="color: ${color}">${text}</div>`;
+}
+```
 
-使用表格布局和内联样式确保最佳兼容性。
+## Comparison with React Email
 
-## 🚧 后续开发
+| Feature | React Email | Vane |
+|---------|-------------|------|
+| **Rendering** | JSX → React.createElement | Direct HTML generation |
+| **Runtime** | React required | No runtime dependencies |
+| **Props** | React props | Zod schemas |
+| **Validation** | TypeScript only | Runtime + TypeScript |
+| **Build Time** | Slower (JSX compilation) | Faster (no compilation) |
+| **Output** | Same HTML | Same HTML ✅ |
+| **Email Compatibility** | Excellent | Excellent ✅ |
 
-计划支持更多组件：
-- Container（容器）
-- Button（按钮）
-- Image（图片）
-- Divider（分隔线）
-- Heading（标题）
-- 等等...
+## Performance
 
-## 📄 许可证
+- ⚡ **No React overhead** - Pure string concatenation
+- 🚀 **Fast builds** - No JSX compilation step
+- 💾 **Small bundle** - Only Zod as dependency
+- 🔥 **Bun runtime** - Optimized JavaScript execution
+
+## Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## License
 
 MIT
+
+## Credits
+
+Components are ported from [react-email](https://github.com/resend/react-email) with modifications for pure HTML generation. All credit for the original component designs goes to the React Email team.
+
+---
+
+**Built with ❤️ and Bun**
