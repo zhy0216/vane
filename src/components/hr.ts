@@ -1,12 +1,5 @@
-import { z } from "zod";
 import { styleToString } from "./utils";
-
-export const HrPropsSchema = z.object({
-  color: z.string().optional(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type HrProps = z.infer<typeof HrPropsSchema>;
+import { HrPropsSchema, type HrProps } from "./schema";
 
 /**
  * Hr component - Horizontal rule with email-safe defaults

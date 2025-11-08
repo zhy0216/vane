@@ -1,18 +1,27 @@
 import { Component } from "./types";
-import { renderText, TextPropsSchema } from "./components/text";
-import { renderContainer, ContainerPropsSchema } from "./components/container";
-import { renderSection, SectionPropsSchema } from "./components/section";
-import { renderHeading, HeadingPropsSchema } from "./components/heading";
-import { renderImg, ImgPropsSchema } from "./components/img";
-import { renderHr, HrPropsSchema } from "./components/hr";
-import { renderLink, LinkPropsSchema } from "./components/link";
-import { renderButton, ButtonPropsSchema } from "./components/button";
-import { renderRow, RowPropsSchema } from "./components/row";
-import { renderColumn, ColumnPropsSchema } from "./components/column";
+import { renderText } from "./components/text";
+import { renderContainer } from "./components/container";
+import { renderSection } from "./components/section";
+import { renderHeading } from "./components/heading";
+import { renderImg } from "./components/img";
+import { renderHr } from "./components/hr";
+import { renderLink } from "./components/link";
+import { renderButton } from "./components/button";
+import { renderRow } from "./components/row";
+import { renderColumn } from "./components/column";
+import {
+  TextPropsSchema,
+  ContainerPropsSchema,
+  SectionPropsSchema,
+  HeadingPropsSchema,
+  ImgPropsSchema,
+  HrPropsSchema,
+  LinkPropsSchema,
+  ButtonPropsSchema,
+  RowPropsSchema,
+  ColumnPropsSchema,
+} from "./components/schema";
 
-/**
- * 组件渲染器映射表
- */
 const componentRenderers: Record<
   string,
   (props: any, children?: Component[]) => string
@@ -72,11 +81,63 @@ export function renderComponent(component: Component): string {
   // 查找对应的渲染器
   const renderer = componentRenderers[type];
   if (!renderer) {
-    throw new Error(`Unknown component type: ${type}`);
+    // Fallback: treat as normal HTML tag
+    return renderHtmlTag(type, props, children);
   }
 
   // 调用组件渲染器
   return renderer(props || {}, children);
+}
+
+/**
+ * 渲染普通 HTML 标签的通用处理器
+ */
+function renderHtmlTag(
+  tag: string,
+  props?: Record<string, any>,
+  children?: Component[]
+): string {
+  // Convert props to HTML attributes
+  const attributes = props
+    ? Object.entries(props)
+        .map(([key, value]) => {
+          // Convert camelCase to kebab-case for CSS properties in style
+          if (key === "style" && typeof value === "object") {
+            const styleString = Object.entries(value)
+              .map(([styleProp, styleValue]) => {
+                const kebabProp = styleProp.replace(
+                  /[A-Z]/g,
+                  (match) => `-${match.toLowerCase()}`
+                );
+                return `${kebabProp}: ${styleValue}`;
+              })
+              .join("; ");
+            return `style="${styleString}"`;
+          }
+          // For other attributes, escape and render
+          if (typeof value === "string") {
+            return `${key}="${escapeHtml(value)}"`;
+          } else if (typeof value === "boolean") {
+            return value ? key : "";
+          }
+          return `${key}="${String(value)}"`;
+        })
+        .filter((attr) => attr)
+        .join(" ")
+    : "";
+
+  // Render children recursively
+  const childrenHtml = children?.map(renderComponent).join("") || "";
+
+  // Self-closing tags
+  const selfClosingTags = ["img", "br", "hr", "input", "meta", "link"];
+  if (selfClosingTags.includes(tag.toLowerCase())) {
+    return attributes ? `<${tag} ${attributes} />` : `<${tag} />`;
+  }
+
+  // Regular tags with opening and closing
+  const openTag = attributes ? `<${tag} ${attributes}>` : `<${tag}>`;
+  return `${openTag}${childrenHtml}</${tag}>`;
 }
 
 /**

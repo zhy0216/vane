@@ -1,26 +1,5 @@
-import { z } from "zod";
 import { styleToString } from "./utils";
-
-export const HeadingPropsSchema = z.object({
-  as: z.enum(["h1", "h2", "h3", "h4", "h5", "h6"]).optional(),
-  level: z.number().optional(),
-  content: z.string().optional(),
-  children: z.string().optional(),
-  color: z.string().optional(),
-  fontSize: z.string().optional(),
-  fontWeight: z.string().optional(),
-  marginBottom: z.string().optional(),
-  m: z.union([z.string(), z.number()]).optional(),
-  mx: z.union([z.string(), z.number()]).optional(),
-  my: z.union([z.string(), z.number()]).optional(),
-  mt: z.union([z.string(), z.number()]).optional(),
-  mr: z.union([z.string(), z.number()]).optional(),
-  mb: z.union([z.string(), z.number()]).optional(),
-  ml: z.union([z.string(), z.number()]).optional(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type HeadingProps = z.infer<typeof HeadingPropsSchema>;
+import { HeadingPropsSchema, type HeadingProps } from "./schema";
 
 /**
  * Convert margin shorthand to CSS properties

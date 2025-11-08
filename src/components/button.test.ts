@@ -1,5 +1,6 @@
 import { describe, expect, test } from "bun:test";
-import { renderButton, ButtonPropsSchema } from "./button";
+import { renderButton } from "./button";
+import { ButtonPropsSchema } from "./schema";
 
 describe("Button Component", () => {
   describe("Airbnb Review Button - User Specific Case", () => {

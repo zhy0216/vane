@@ -1,15 +1,5 @@
-import { z } from "zod";
 import { styleToString } from "./utils";
-
-export const SectionPropsSchema = z.object({
-  children: z.string(),
-  backgroundColor: z.string().optional(),
-  padding: z.string().optional(),
-  textAlign: z.string().optional(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type SectionProps = z.infer<typeof SectionPropsSchema>;
+import { SectionPropsSchema, type SectionProps } from "./schema";
 
 /**
  * Section component - Table-based section wrapper for email layout

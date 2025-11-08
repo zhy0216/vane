@@ -1,15 +1,5 @@
-import { z } from "zod";
 import { styleToString, escapeHtml } from "./utils";
-
-export const ImgPropsSchema = z.object({
-  src: z.string(),
-  alt: z.string(),
-  width: z.union([z.string(), z.number()]).optional(),
-  height: z.union([z.string(), z.number()]).optional(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type ImgProps = z.infer<typeof ImgPropsSchema>;
+import { ImgPropsSchema, type ImgProps } from "./schema";
 
 /**
  * Img component - Image with email-safe defaults

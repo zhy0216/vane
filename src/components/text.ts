@@ -1,24 +1,7 @@
-import { z } from "zod";
-import { Component, ComponentSchema } from "../types";
+import { Component } from "../types";
+import { TextPropsSchema, type TextProps } from "./schema";
 
 // Text 组件的 props
-export const TextPropsSchema = z.object({
-  children: z.union([
-    z.string(),
-    z.array(z.union([z.string(), ComponentSchema]))
-  ]).optional(),
-  color: z.string().optional(),
-  fontSize: z.string().optional(),
-  fontWeight: z.string().optional(),
-  align: z.enum(["left", "center", "right"]).optional(),
-  lineHeight: z.string().optional(),
-  marginTop: z.string().optional(),
-  marginBottom: z.string().optional(),
-  marginLeft: z.string().optional(),
-  marginRight: z.string().optional(),
-});
-
-export type TextProps = z.infer<typeof TextPropsSchema>;
 
 /**
  * Text 组件 - 渲染文本内容

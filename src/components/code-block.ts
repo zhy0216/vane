@@ -1,5 +1,5 @@
-import { z } from "zod";
 import { styleToString, escapeHtml } from "./utils";
+import { CodeBlockPropsSchema, type CodeBlockProps } from "./schema";
 
 /**
  * Note: Full implementation requires Prismjs library for syntax highlighting.
@@ -10,17 +10,6 @@ import { styleToString, escapeHtml } from "./utils";
  * 2. Importing required languages and themes
  * 3. Using Prism.tokenize() for syntax highlighting
  */
-
-export const CodeBlockPropsSchema = z.object({
-  code: z.string(),
-  language: z.string().optional(),
-  lineNumbers: z.boolean().optional(),
-  fontFamily: z.string().optional(),
-  theme: z.record(z.string(), z.any()).optional(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type CodeBlockProps = z.infer<typeof CodeBlockPropsSchema>;
 
 /**
  * Default theme for code blocks

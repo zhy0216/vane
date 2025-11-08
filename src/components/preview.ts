@@ -1,11 +1,5 @@
-import { z } from "zod";
 import { escapeHtml } from "./utils";
-
-export const PreviewPropsSchema = z.object({
-  children: z.union([z.string(), z.array(z.string())]),
-});
-
-export type PreviewProps = z.infer<typeof PreviewPropsSchema>;
+import { PreviewPropsSchema, type PreviewProps } from "./schema";
 
 const PREVIEW_MAX_LENGTH = 150;
 const whiteSpaceCodes = '\xa0\u200C\u200B\u200D\u200E\u200F\uFEFF';

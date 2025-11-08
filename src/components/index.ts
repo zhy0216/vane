@@ -3,6 +3,9 @@
  * Ported from React Email packages to server-side rendering
  */
 
+// Component schemas and types
+export * from "./schema";
+
 // Utility functions
 export * from "./utils";
 

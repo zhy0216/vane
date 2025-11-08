@@ -98,6 +98,7 @@
               "href": "https://www.airbnb.com",
               "children": "Send My Feedback",
               "style": {
+                "display": "block",
                 "backgroundColor": "#ff5a5f",
                 "color": "#ffffff",
                 "fontSize": "18px",

@@ -1,26 +1,4 @@
-import { z } from "zod";
-
-const FallbackFontSchema = z.enum([
-  "Arial", "Helvetica", "Verdana", "Georgia", "Times New Roman",
-  "serif", "sans-serif", "monospace", "cursive", "fantasy"
-]);
-
-const FontFormatSchema = z.enum([
-  "woff", "woff2", "truetype", "opentype", "embedded-opentype", "svg"
-]);
-
-export const FontPropsSchema = z.object({
-  fontFamily: z.string(),
-  fallbackFontFamily: z.union([FallbackFontSchema, z.array(FallbackFontSchema)]),
-  webFont: z.object({
-    url: z.string(),
-    format: FontFormatSchema,
-  }).optional(),
-  fontStyle: z.string().optional(),
-  fontWeight: z.union([z.string(), z.number()]).optional(),
-});
-
-export type FontProps = z.infer<typeof FontPropsSchema>;
+import { FontPropsSchema, type FontProps } from "./schema";
 
 /**
  * Font component - Defines font-face and applies it globally

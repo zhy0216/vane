@@ -1,12 +1,5 @@
-import { z } from "zod";
 import { styleToString } from "./utils";
-
-export const RowPropsSchema = z.object({
-  children: z.string(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type RowProps = z.infer<typeof RowPropsSchema>;
+import { RowPropsSchema, type RowProps } from "./schema";
 
 /**
  * Row component - Table row wrapper for column layouts

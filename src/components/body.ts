@@ -1,12 +1,5 @@
-import { z } from "zod";
 import { styleToString } from "./utils";
-
-export const BodyPropsSchema = z.object({
-  children: z.string(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type BodyProps = z.infer<typeof BodyPropsSchema>;
+import { BodyPropsSchema, type BodyProps } from "./schema";
 
 /**
  * Body component - Email body with table wrapper for client compatibility

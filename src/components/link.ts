@@ -1,18 +1,6 @@
-import { z } from "zod";
-import { Component, ComponentSchema } from "../types";
+import { Component } from "../types";
 import { styleToString, escapeHtml } from "./utils";
-
-export const LinkPropsSchema = z.object({
-  href: z.string(),
-  children: z.union([
-    z.string(),
-    z.array(z.union([z.string(), ComponentSchema]))
-  ]).optional(),
-  target: z.string().optional(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type LinkProps = z.infer<typeof LinkPropsSchema>;
+import { LinkPropsSchema, type LinkProps } from "./schema";
 
 /**
  * Link component - Anchor tag with email-safe defaults

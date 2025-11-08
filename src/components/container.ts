@@ -1,14 +1,5 @@
-import { z } from "zod";
 import { styleToString } from "./utils";
-
-export const ContainerPropsSchema = z.object({
-  children: z.string(),
-  backgroundColor: z.string().optional(),
-  padding: z.string().optional(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type ContainerProps = z.infer<typeof ContainerPropsSchema>;
+import { ContainerPropsSchema, type ContainerProps } from "./schema";
 
 /**
  * Container component - Centered table with max-width for email layout

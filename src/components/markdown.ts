@@ -1,4 +1,4 @@
-import { z } from "zod";
+import { MarkdownPropsSchema, type MarkdownProps } from "./schema";
 
 /**
  * Note: Full implementation requires 'marked' library for markdown parsing.
@@ -9,14 +9,6 @@ import { z } from "zod";
  * 2. Import: import { marked, Renderer } from 'marked';
  * 3. Customize renderer for email-safe HTML output
  */
-
-export const MarkdownPropsSchema = z.object({
-  children: z.string(),
-  markdownCustomStyles: z.record(z.string(), z.any()).optional(),
-  markdownContainerStyles: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type MarkdownProps = z.infer<typeof MarkdownPropsSchema>;
 
 /**
  * Default styles for markdown elements

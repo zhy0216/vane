@@ -63,12 +63,27 @@
             "type": "text",
             "props": {
               "children": [
-                "Save 3% on all your Apple purchases with Apple Card. ",
+                "Save 3% on all your Apple purchases with Apple Card.",
+                {
+                  "type": "sup",
+                  "props": {
+                    "children": "1",
+                    "fontWeight": "300"
+                  }
+                },
+                " ",
                 {
                   "type": "link",
                   "props": {
                     "href": "https://www.apple.com/apple-card/",
                     "children": "Apply and use in minutes"
+                  }
+                },
+                {
+                  "type": "sup",
+                  "props": {
+                    "children": "2",
+                    "fontWeight": "300"
                   }
                 }
               ],
@@ -197,6 +212,36 @@
                   {
                     "type": "text",
                     "props": {
+                      "children": "DOCUMENT NO.",
+                      "fontSize": "10px",
+                      "color": "#666666",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "186623754793",
+                      "fontSize": "12px"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "props": {},
+            "children": [
+              {
+                "type": "column",
+                "props": {
+                  "width": "100%"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
                       "children": "BILLED TO",
                       "fontSize": "10px",
                       "color": "#666666",
@@ -206,8 +251,41 @@
                   {
                     "type": "text",
                     "props": {
-                      "children": "Visa .... 7461 (Apple Pay)\nAlan Turing\n2125 Chestnut St\nSan Francisco, CA 94123\nUSA",
-                      "fontSize": "12px"
+                      "children": "Visa .... 7461 (Apple Pay)",
+                      "fontSize": "12px",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Alan Turing",
+                      "fontSize": "12px",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "2125 Chestnut St",
+                      "fontSize": "12px",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "San Francisco, CA 94123",
+                      "fontSize": "12px",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "USA",
+                      "fontSize": "12px",
+                      "margin": "0"
                     }
                   }
                 ]
@@ -398,9 +476,229 @@
         }
       },
       {
+        "type": "section",
+        "props": {
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "/apple-card-icon.png",
+              "alt": "Apple Card",
+              "width": "60",
+              "height": "17"
+            }
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "textAlign": "center",
+          "marginTop": "15px"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "Save 3% on all your Apple purchases.",
+              "fontSize": "24px",
+              "fontWeight": "500",
+              "lineHeight": "1",
+              "margin": "0"
+            }
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "textAlign": "center",
+          "marginTop": "10px"
+        },
+        "children": [
+          {
+            "type": "link",
+            "props": {
+              "href": "https://www.apple.com/",
+              "children": [
+                {
+                  "type": "image",
+                  "props": {
+                    "src": "/apple-wallet.png",
+                    "alt": "Apple Wallet",
+                    "width": "28",
+                    "height": "28",
+                    "style": {
+                      "display": "inline",
+                      "paddingRight": "8px",
+                      "verticalAlign": "middle"
+                    }
+                  }
+                },
+                {
+                  "type": "text",
+                  "props": {
+                    "children": "Apply and use in minutes",
+                    "fontSize": "14px",
+                    "fontWeight": "400",
+                    "textDecoration": "none"
+                  }
+                }
+              ],
+              "color": "#007eff",
+              "textDecoration": "none"
+            }
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "marginTop": "65px",
+          "marginBottom": "20px"
+        }
+      },
+      {
         "type": "text",
         "props": {
-          "children": "Get help with subscriptions and purchases. Visit Apple Support.",
+          "children": "1. 3% savings is earned as Daily Cash and is transferred to your Apple Cash card when transactions post to your Apple Card account. If you do not have an Apple Cash card, Daily Cash can be applied by you as a credit on your statement balance. 3% is the total amount of Daily Cash earned for these purchases. See the Apple Card Customer Agreement for more details on Daily Cash and qualifying transactions.",
+          "fontSize": "12px",
+          "color": "#666666",
+          "lineHeight": "normal",
+          "margin": "0 0 16px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "2. Subject to credit approval.",
+          "fontSize": "12px",
+          "color": "#666666",
+          "lineHeight": "normal",
+          "margin": "0 0 16px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "To access and use all the features of Apple Card, you must add Apple Card to Wallet on an iPhone or iPad with iOS or iPadOS 13.2 or later. Update to the latest version of iOS or iPadOS by going to Settings > General > Software Update. Tap Download and Install.",
+          "fontSize": "12px",
+          "color": "#666666",
+          "lineHeight": "normal",
+          "margin": "0 0 16px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Available for qualifying applicants in the United States.",
+          "fontSize": "12px",
+          "color": "#666666",
+          "lineHeight": "normal",
+          "margin": "0 0 16px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Apple Card is issued by Goldman Sachs Bank USA, Salt Lake City Branch.",
+          "fontSize": "12px",
+          "color": "#666666",
+          "lineHeight": "normal",
+          "margin": "0 0 16px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "If you reside in the US territories, please call Goldman Sachs at 877-255-5923 with questions about Apple Card.",
+          "fontSize": "12px",
+          "color": "#666666",
+          "lineHeight": "normal",
+          "margin": "0 0 16px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": [
+            "Privacy: We use a ",
+            {
+              "type": "link",
+              "props": {
+                "href": "https://www.apple.com/",
+                "children": "Subscriber ID",
+                "color": "#0073ff"
+              }
+            },
+            " to provide reports to developers."
+          ],
+          "fontSize": "12px",
+          "color": "#666666",
+          "textAlign": "center",
+          "lineHeight": "normal",
+          "margin": "20px 0"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": [
+            "Get help with subscriptions and purchases. ",
+            {
+              "type": "link",
+              "props": {
+                "href": "https://www.apple.com/",
+                "children": "Visit Apple Support.",
+                "color": "#0073ff"
+              }
+            }
+          ],
+          "fontSize": "12px",
+          "color": "#666666",
+          "textAlign": "center",
+          "lineHeight": "normal",
+          "margin": "20px 0"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": [
+            "Learn how to ",
+            {
+              "type": "link",
+              "props": {
+                "href": "https://www.apple.com/",
+                "children": "manage your password preferences",
+                "color": "#0073ff"
+              }
+            },
+            " for iTunes, Apple Books, and App Store purchases."
+          ],
+          "fontSize": "12px",
+          "color": "#666666",
+          "textAlign": "center",
+          "lineHeight": "normal",
+          "margin": "20px 0"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": [
+            "You have the option to stop receiving email receipts for your subscription renewals. If you have opted out, you can still view your receipts in your account under Purchase History. To manage receipts or to opt in again, go to ",
+            {
+              "type": "link",
+              "props": {
+                "href": "https://www.apple.com/",
+                "children": "Account Settings.",
+                "color": "#0073ff"
+              }
+            }
+          ],
           "fontSize": "12px",
           "color": "#666666",
           "textAlign": "center",
@@ -467,7 +765,21 @@
       {
         "type": "text",
         "props": {
-          "children": "Copyright © 2023 Apple Inc. All rights reserved",
+          "children": [
+            "Copyright © 2023 Apple Inc.",
+            {
+              "type": "br"
+            },
+            " ",
+            {
+              "type": "link",
+              "props": {
+                "href": "https://www.apple.com/legal/",
+                "children": "All rights reserved",
+                "color": "#666666"
+              }
+            }
+          ],
           "fontSize": "12px",
           "color": "#666666",
           "textAlign": "center",

@@ -1,13 +1,5 @@
-import { z } from "zod";
 import { styleToString } from "./utils";
-
-export const CodeInlinePropsSchema = z.object({
-  children: z.string(),
-  className: z.string().optional(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type CodeInlineProps = z.infer<typeof CodeInlinePropsSchema>;
+import { CodeInlinePropsSchema, type CodeInlineProps } from "./schema";
 
 /**
  * CodeInline component - Inline code with Orange.fr email client workaround

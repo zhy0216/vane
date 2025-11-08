@@ -1,10 +1,4 @@
-import { z } from "zod";
-
-export const HeadPropsSchema = z.object({
-  children: z.string().optional(),
-});
-
-export type HeadProps = z.infer<typeof HeadPropsSchema>;
+import { HeadPropsSchema, type HeadProps } from "./schema";
 
 /**
  * Head component - HTML head with essential meta tags for email

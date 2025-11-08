@@ -1,14 +1,5 @@
-import { z } from "zod";
 import { styleToString, escapeHtml, parsePadding, pxToPt } from "./utils";
-
-export const ButtonPropsSchema = z.object({
-  href: z.string(),
-  children: z.string(),
-  target: z.string().optional(),
-  style: z.record(z.string(), z.union([z.string(), z.number()])).optional(),
-});
-
-export type ButtonProps = z.infer<typeof ButtonPropsSchema>;
+import { ButtonPropsSchema, type ButtonProps } from "./schema";
 
 /**
  * Compute font width and space count for MSO padding workaround
