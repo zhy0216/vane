@@ -272,8 +272,4 @@ MIT
 
 ## Credits
 
-Components are ported from [react-email](https://github.com/resend/react-email) with modifications for pure HTML generation. All credit for the original component designs goes to the React Email team.
-
----
-
-**Built with ❤️ and Bun**
+* [react-email](https://github.com/resend/react-email)
