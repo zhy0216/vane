@@ -1,0 +1,238 @@
+{
+  "subject": "Join Enigma on Vercel",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff",
+      "padding": "8px"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "maxWidth": "465px",
+          "margin": "40px auto",
+          "border": "1px solid #eaeaea",
+          "borderRadius": "5px",
+          "padding": "20px"
+        },
+        "children": [
+          {
+            "type": "section",
+            "props": {
+              "marginTop": "32px",
+              "textAlign": "center"
+            },
+            "children": [
+              {
+                "type": "image",
+                "props": {
+                  "src": "static/vercel-logo.png",
+                  "alt": "Vercel Logo",
+                  "width": "40",
+                  "height": "37",
+                  "style": {
+                    "margin": "0 auto"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "props": {
+              "content": "Join Enigma on Vercel",
+              "level": 1,
+              "fontSize": "24px",
+              "fontWeight": "normal",
+              "color": "#000000",
+              "textAlign": "center",
+              "margin": "30px 0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "Hello alanturing,",
+              "fontSize": "14px",
+              "color": "#000000",
+              "lineHeight": "24px"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": [
+                {
+                  "type": "text",
+                  "props": {
+                    "children": "Alan",
+                    "fontWeight": "bold"
+                  }
+                },
+                " (",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "mailto:alan.turing@example.com",
+                    "children": "alan.turing@example.com",
+                    "color": "#2563eb",
+                    "textDecoration": "none"
+                  }
+                },
+                ") has invited you to the ",
+                {
+                  "type": "text",
+                  "props": {
+                    "children": "Enigma",
+                    "fontWeight": "bold"
+                  }
+                },
+                " team on ",
+                {
+                  "type": "text",
+                  "props": {
+                    "children": "Vercel",
+                    "fontWeight": "bold"
+                  }
+                },
+                "."
+              ],
+              "fontSize": "14px",
+              "color": "#000000",
+              "lineHeight": "24px"
+            }
+          },
+          {
+            "type": "section",
+            "props": {},
+            "children": [
+              {
+                "type": "row",
+                "props": {},
+                "children": [
+                  {
+                    "type": "column",
+                    "props": {
+                      "textAlign": "right"
+                    },
+                    "children": [
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/vercel-user.png",
+                          "alt": "alanturing's profile picture",
+                          "width": "64",
+                          "height": "64",
+                          "style": {
+                            "borderRadius": "50%"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "column",
+                    "props": {
+                      "textAlign": "center"
+                    },
+                    "children": [
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/vercel-arrow.png",
+                          "alt": "Arrow",
+                          "width": "12",
+                          "height": "9"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "column",
+                    "props": {
+                      "textAlign": "left"
+                    },
+                    "children": [
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/vercel-team.png",
+                          "alt": "Enigma team logo",
+                          "width": "64",
+                          "height": "64",
+                          "style": {
+                            "borderRadius": "50%"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "props": {
+              "margin": "32px 0",
+              "textAlign": "center"
+            },
+            "children": [
+              {
+                "type": "button",
+                "props": {
+                  "href": "https://vercel.com",
+                  "children": "Join the team",
+                  "backgroundColor": "#000000",
+                  "color": "#ffffff",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "borderRadius": "5px",
+                  "padding": "12px 20px",
+                  "textDecoration": "none"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": [
+                "or copy and paste this URL into your browser: ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://vercel.com",
+                    "children": "https://vercel.com",
+                    "color": "#2563eb",
+                    "textDecoration": "none"
+                  }
+                }
+              ],
+              "fontSize": "14px",
+              "color": "#000000",
+              "lineHeight": "24px"
+            }
+          },
+          {
+            "type": "hr",
+            "props": {
+              "color": "#eaeaea",
+              "margin": "26px 0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "This invitation was intended for alanturing. This invite was sent from 204.13.186.218 located in São Paulo, Brazil. If you were not expecting this invitation, you can ignore this email.",
+              "fontSize": "12px",
+              "color": "#666666",
+              "lineHeight": "24px"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

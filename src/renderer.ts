@@ -6,6 +6,9 @@ import { renderHeading, HeadingPropsSchema } from "./components/heading";
 import { renderImg, ImgPropsSchema } from "./components/img";
 import { renderHr, HrPropsSchema } from "./components/hr";
 import { renderLink, LinkPropsSchema } from "./components/link";
+import { renderButton, ButtonPropsSchema } from "./components/button";
+import { renderRow, RowPropsSchema } from "./components/row";
+import { renderColumn, ColumnPropsSchema } from "./components/column";
 
 /**
  * 组件渲染器映射表
@@ -40,9 +43,23 @@ const componentRenderers: Record<
     const validatedProps = HrPropsSchema.parse(props);
     return renderHr(validatedProps);
   },
-  link: (props) => {
+  link: (props, children) => {
     const validatedProps = LinkPropsSchema.parse(props);
-    return renderLink(validatedProps);
+    return renderLink(validatedProps, renderComponent);
+  },
+  button: (props) => {
+    const validatedProps = ButtonPropsSchema.parse(props);
+    return renderButton(validatedProps);
+  },
+  row: (props, children) => {
+    const childrenHtml = children?.map(renderComponent).join("") || "";
+    const validatedProps = RowPropsSchema.parse({ ...props, children: childrenHtml });
+    return renderRow(validatedProps);
+  },
+  column: (props, children) => {
+    const childrenHtml = children?.map(renderComponent).join("") || "";
+    const validatedProps = ColumnPropsSchema.parse({ ...props, children: childrenHtml });
+    return renderColumn(validatedProps);
   },
 };
 

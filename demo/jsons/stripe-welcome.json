@@ -1,0 +1,197 @@
+{
+  "subject": "You're now ready to make live transactions with Stripe!",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#f6f9fc"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "#ffffff",
+          "margin": "0 auto 64px",
+          "padding": "20px 0 48px"
+        },
+        "children": [
+          {
+            "type": "section",
+            "props": {
+              "padding": "0 48px"
+            },
+            "children": [
+              {
+                "type": "image",
+                "props": {
+                  "src": "static/stripe-logo.png",
+                  "alt": "Stripe",
+                  "width": "49",
+                  "height": "21"
+                }
+              },
+              {
+                "type": "hr",
+                "props": {
+                  "color": "#e6ebf1",
+                  "margin": "20px 0"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "Thanks for submitting your account information. You're now ready to make live transactions with Stripe!",
+                  "fontSize": "16px",
+                  "color": "#525f7f",
+                  "lineHeight": "24px",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "You can view your payments and a variety of other information about your account right from your dashboard.",
+                  "fontSize": "16px",
+                  "color": "#525f7f",
+                  "lineHeight": "24px",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "button",
+                "props": {
+                  "href": "https://dashboard.stripe.com/login",
+                  "children": "View your Stripe Dashboard",
+                  "backgroundColor": "#656ee8",
+                  "color": "#ffffff",
+                  "fontSize": "16px",
+                  "fontWeight": "bold",
+                  "borderRadius": "3px",
+                  "padding": "10px",
+                  "textAlign": "center",
+                  "textDecoration": "none"
+                }
+              },
+              {
+                "type": "hr",
+                "props": {
+                  "color": "#e6ebf1",
+                  "margin": "20px 0"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": [
+                    "If you haven't finished your integration, you might find our ",
+                    {
+                      "type": "link",
+                      "props": {
+                        "href": "https://docs.stripe.com/dashboard/basics",
+                        "children": "docs",
+                        "color": "#556cd6"
+                      }
+                    },
+                    " handy."
+                  ],
+                  "fontSize": "16px",
+                  "color": "#525f7f",
+                  "lineHeight": "24px",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": [
+                    "Once you're ready to start accepting payments, you'll just need to use your live ",
+                    {
+                      "type": "link",
+                      "props": {
+                        "href": "https://dashboard.stripe.com/login?redirect=%2Fapikeys",
+                        "children": "API keys",
+                        "color": "#556cd6"
+                      }
+                    },
+                    " instead of your test API keys."
+                  ],
+                  "fontSize": "16px",
+                  "color": "#525f7f",
+                  "lineHeight": "24px",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": [
+                    "Finally, we've put together a ",
+                    {
+                      "type": "link",
+                      "props": {
+                        "href": "https://docs.stripe.com/get-started/checklist/website",
+                        "children": "quick checklist",
+                        "color": "#556cd6"
+                      }
+                    },
+                    " to ensure your website conforms to card network standards."
+                  ],
+                  "fontSize": "16px",
+                  "color": "#525f7f",
+                  "lineHeight": "24px",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": [
+                    "We'll be here to help you with any step along the way. You can find answers to most questions and get in touch with us on our ",
+                    {
+                      "type": "link",
+                      "props": {
+                        "href": "https://support.stripe.com",
+                        "children": "support site",
+                        "color": "#556cd6"
+                      }
+                    },
+                    "."
+                  ],
+                  "fontSize": "16px",
+                  "color": "#525f7f",
+                  "lineHeight": "24px",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "— The Stripe team",
+                  "fontSize": "16px",
+                  "color": "#525f7f",
+                  "lineHeight": "24px",
+                  "textAlign": "left"
+                }
+              },
+              {
+                "type": "hr",
+                "props": {
+                  "color": "#e6ebf1",
+                  "margin": "20px 0"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "Stripe, 354 Oyster Point Blvd, South San Francisco, CA 94080",
+                  "fontSize": "12px",
+                  "color": "#8898aa",
+                  "lineHeight": "16px"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

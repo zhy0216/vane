@@ -1,0 +1,252 @@
+{
+  "subject": "Confirm your email address",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff",
+      "padding": "0 20px"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "marginTop": "32px"
+        },
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "static/slack-logo.png",
+              "alt": "Slack",
+              "width": "120",
+              "height": "36"
+            }
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "props": {
+          "content": "Confirm your email address",
+          "level": 1,
+          "fontSize": "36px",
+          "fontWeight": "bold",
+          "color": "#1d1c1d",
+          "lineHeight": "42px",
+          "margin": "30px 0"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Your confirmation code is below - enter it in your open browser window and we'll help you get signed in.",
+          "fontSize": "20px",
+          "marginBottom": "30px"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "rgb(245,244,245)",
+          "borderRadius": "5px",
+          "marginBottom": "30px",
+          "padding": "40px 10px"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "DJZ-TLX",
+              "fontSize": "30px",
+              "lineHeight": "24px",
+              "textAlign": "center"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "If you didn't request this email, there's nothing to worry about, you can safely ignore it.",
+          "fontSize": "14px",
+          "color": "#000000",
+          "lineHeight": "24px"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "marginBottom": "32px",
+          "padding": "0 8px"
+        },
+        "children": [
+          {
+            "type": "row",
+            "props": {},
+            "children": [
+              {
+                "type": "column",
+                "props": {
+                  "width": "66.666%"
+                },
+                "children": [
+                  {
+                    "type": "image",
+                    "props": {
+                      "src": "static/slack-logo.png",
+                      "alt": "Slack",
+                      "width": "120",
+                      "height": "36"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "width": "33.333%",
+                  "textAlign": "right"
+                },
+                "children": [
+                  {
+                    "type": "link",
+                    "props": {
+                      "href": "/",
+                      "children": "",
+                      "style": {
+                        "display": "inline-block",
+                        "marginLeft": "8px"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/slack-twitter.png",
+                          "alt": "Slack Twitter",
+                          "width": "32",
+                          "height": "32"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "link",
+                    "props": {
+                      "href": "/",
+                      "children": "",
+                      "style": {
+                        "display": "inline-block",
+                        "marginLeft": "8px"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/slack-facebook.png",
+                          "alt": "Slack Facebook",
+                          "width": "32",
+                          "height": "32"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "link",
+                    "props": {
+                      "href": "/",
+                      "children": "",
+                      "style": {
+                        "display": "inline-block",
+                        "marginLeft": "8px"
+                      }
+                    },
+                    "children": [
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/slack-linkedin.png",
+                          "alt": "Slack LinkedIn",
+                          "width": "32",
+                          "height": "32"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {},
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": [
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://slackhq.com",
+                    "children": "Our blog",
+                    "color": "#b7b7b7",
+                    "textDecoration": "underline",
+                    "target": "_blank"
+                  }
+                },
+                " | ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://slack.com/legal",
+                    "children": "Policies",
+                    "color": "#b7b7b7",
+                    "textDecoration": "underline",
+                    "target": "_blank"
+                  }
+                },
+                " | ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://slack.com/help",
+                    "children": "Help center",
+                    "color": "#b7b7b7",
+                    "textDecoration": "underline",
+                    "target": "_blank"
+                  }
+                },
+                " | ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://slack.com/community",
+                    "children": "Slack Community",
+                    "color": "#b7b7b7",
+                    "textDecoration": "underline",
+                    "target": "_blank"
+                  }
+                }
+              ],
+              "fontSize": "14px"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "©2022 Slack Technologies, LLC, a Salesforce company.\n500 Howard Street, San Francisco, CA 94105, USA\n\nAll rights reserved.",
+              "fontSize": "12px",
+              "lineHeight": "15px",
+              "color": "#b7b7b7",
+              "marginBottom": "50px"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,196 @@
+{
+  "subject": "Read Alex's review",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff",
+      "padding": "20px 0 48px",
+      "maxWidth": "580px",
+      "margin": "0 auto"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {},
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "static/airbnb-logo.png",
+              "alt": "Airbnb",
+              "width": "96",
+              "height": "30"
+            }
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "static/airbnb-review-user.jpg",
+              "alt": "Alex",
+              "width": "96",
+              "height": "96",
+              "style": {
+                "borderRadius": "50%",
+                "margin": "0 auto 16px"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "paddingBottom": "20px"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "Here's what Alex wrote",
+              "fontSize": "32px",
+              "fontWeight": "bold",
+              "color": "#484848",
+              "lineHeight": "1.3"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "\"Alan was a great guest! Easy communication, the apartment was left in great condition, very polite, and respectful of all house rules. He's welcome back anytime and would easily recommend him to any host!\"",
+              "fontSize": "18px",
+              "color": "#484848",
+              "lineHeight": "1.4",
+              "backgroundColor": "#f2f3f3",
+              "padding": "24px",
+              "borderRadius": "5px"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "Now that the review period is over, we've posted Alex's review to your Airbnb profile.",
+              "fontSize": "18px",
+              "color": "#484848",
+              "lineHeight": "1.4"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "While it's too late to write a review of your own, you can send your feedback to Alex using your Airbnb message thread.",
+              "fontSize": "18px",
+              "color": "#484848",
+              "lineHeight": "1.4",
+              "paddingBottom": "16px"
+            }
+          },
+          {
+            "type": "button",
+            "props": {
+              "href": "https://www.airbnb.com",
+              "children": "Send My Feedback",
+              "backgroundColor": "#ff5a5f",
+              "color": "#ffffff",
+              "fontSize": "18px",
+              "borderRadius": "3px",
+              "padding": "19px 30px",
+              "textAlign": "center",
+              "textDecoration": "none"
+            }
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "color": "#cccccc",
+          "margin": "20px 0"
+        }
+      },
+      {
+        "type": "section",
+        "props": {},
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "Common questions",
+              "fontSize": "18px",
+              "fontWeight": "bold",
+              "color": "#484848",
+              "lineHeight": "1.4"
+            }
+          },
+          {
+            "type": "link",
+            "props": {
+              "href": "https://www.airbnb.com",
+              "children": "How do reviews work?",
+              "fontSize": "18px",
+              "color": "#ff5a5f",
+              "lineHeight": "1.4",
+              "display": "block"
+            }
+          },
+          {
+            "type": "link",
+            "props": {
+              "href": "https://www.airbnb.com",
+              "children": "How do star ratings work?",
+              "fontSize": "18px",
+              "color": "#ff5a5f",
+              "lineHeight": "1.4",
+              "display": "block"
+            }
+          },
+          {
+            "type": "link",
+            "props": {
+              "href": "https://www.airbnb.com",
+              "children": "Can I leave a review after 14 days?",
+              "fontSize": "18px",
+              "color": "#ff5a5f",
+              "lineHeight": "1.4",
+              "display": "block"
+            }
+          },
+          {
+            "type": "hr",
+            "props": {
+              "color": "#cccccc",
+              "margin": "20px 0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "Airbnb, Inc., 888 Brannan St, San Francisco, CA 94103",
+              "fontSize": "14px",
+              "color": "#9ca299",
+              "lineHeight": "24px",
+              "marginBottom": "10px"
+            }
+          },
+          {
+            "type": "link",
+            "props": {
+              "href": "https://www.airbnb.com",
+              "children": "Report unsafe behavior",
+              "fontSize": "14px",
+              "color": "#9ca299",
+              "textDecoration": "underline"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

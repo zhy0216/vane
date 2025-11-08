@@ -4,6 +4,7 @@ import { join } from "path";
 
 const PORT = 3001;
 const JSONS_DIR = join(import.meta.dir, "jsons");
+const STATIC_DIR = join(import.meta.dir, "static");
 
 /**
  * Get all available JSON email templates
@@ -135,6 +136,20 @@ const server = Bun.serve({
             headers: { "Content-Type": "application/json" },
           }
         );
+      }
+    }
+
+    // Serve static files
+    if (url.pathname.startsWith("/static/")) {
+      try {
+        const filePath = join(STATIC_DIR, url.pathname.replace("/static/", ""));
+        const file = Bun.file(filePath);
+        
+        if (await file.exists()) {
+          return new Response(file);
+        }
+      } catch (error) {
+        console.error("Error serving static file:", error);
       }
     }
 

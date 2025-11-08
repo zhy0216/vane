@@ -1,0 +1,313 @@
+{
+  "subject": "Google Play Policy Update",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#dbddde",
+      "padding": "30px 0"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "#ffffff",
+          "borderRadius": "5px",
+          "maxWidth": "600px",
+          "margin": "0 auto",
+          "overflow": "hidden"
+        },
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "static/google-play-header.png",
+              "alt": "Google Play Header",
+              "width": "305",
+              "height": "28",
+              "style": {
+                "marginTop": "-1px"
+              }
+            }
+          },
+          {
+            "type": "image",
+            "props": {
+              "src": "static/google-play-logo.png",
+              "alt": "Google Play",
+              "width": "155",
+              "height": "31",
+              "style": {
+                "padding": "0 40px"
+              }
+            }
+          },
+          {
+            "type": "section",
+            "props": {
+              "padding": "0 40px"
+            },
+            "children": [
+              {
+                "type": "hr",
+                "props": {
+                  "color": "#e8eaed",
+                  "margin": "20px 0"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "DEVELOPER UPDATE",
+                  "fontSize": "14px",
+                  "fontWeight": "bold",
+                  "color": "#004dcf",
+                  "lineHeight": "26px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "Hello Google Play Developer,",
+                  "fontSize": "14px",
+                  "color": "#3c4043",
+                  "lineHeight": "22px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "We strive to make Google Play a safe and trusted experience for users.",
+                  "fontSize": "14px",
+                  "color": "#3c4043",
+                  "lineHeight": "22px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": [
+                    "We've added clarifications to our ",
+                    {
+                      "type": "link",
+                      "props": {
+                        "href": "https://notifications.google.com",
+                        "children": "Target API Level policy",
+                        "color": "#004dcf",
+                        "fontSize": "14px"
+                      }
+                    },
+                    ". Because this is a clarification, our enforcement standards and practices for this policy remain the same."
+                  ],
+                  "fontSize": "14px",
+                  "color": "#3c4043",
+                  "lineHeight": "22px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": [
+                    "We're noting exceptions to the ",
+                    {
+                      "type": "link",
+                      "props": {
+                        "href": "https://notifications.google.com",
+                        "children": "Target API Level policy",
+                        "color": "#004dcf",
+                        "fontSize": "14px"
+                      }
+                    },
+                    ", which can be found in our updated ",
+                    {
+                      "type": "link",
+                      "props": {
+                        "href": "https://notifications.google.com",
+                        "children": "Help Center article.",
+                        "color": "#004dcf",
+                        "fontSize": "14px"
+                      }
+                    }
+                  ],
+                  "fontSize": "14px",
+                  "color": "#3c4043",
+                  "lineHeight": "22px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "We're also extending the deadline to give you more time to adjust to these changes. Now, apps that target API level 29 or below will start experiencing reduced distribution starting Jan 31, 2023 instead of Nov 1, 2022.",
+                  "fontSize": "14px",
+                  "color": "#3c4043",
+                  "lineHeight": "22px"
+                }
+              },
+              {
+                "type": "hr",
+                "props": {
+                  "color": "#e8eaed",
+                  "margin": "20px 0"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "Thank you,",
+                  "fontSize": "14px",
+                  "color": "#3c4043",
+                  "lineHeight": "22px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "The Google Play team",
+                  "fontSize": "20px",
+                  "color": "#3c4043",
+                  "lineHeight": "22px"
+                }
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "props": {
+              "backgroundColor": "#f0fcff",
+              "borderRadius": "5px",
+              "margin": "0 5%",
+              "padding": "20px"
+            },
+            "children": [
+              {
+                "type": "text",
+                "props": {
+                  "children": "Connect with us",
+                  "fontSize": "14px",
+                  "color": "#3c4043",
+                  "lineHeight": "22px"
+                }
+              },
+              {
+                "type": "row",
+                "props": {},
+                "children": [
+                  {
+                    "type": "column",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "link",
+                        "props": {
+                          "href": "https://notifications.google.com"
+                        },
+                        "children": [
+                          {
+                            "type": "image",
+                            "props": {
+                              "src": "static/google-play-chat.png",
+                              "alt": "Chat",
+                              "width": "28",
+                              "height": "28"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "column",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "link",
+                        "props": {
+                          "href": "https://notifications.google.com"
+                        },
+                        "children": [
+                          {
+                            "type": "image",
+                            "props": {
+                              "src": "static/google-play-icon.png",
+                              "alt": "Icon",
+                              "width": "28",
+                              "height": "28"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "type": "column",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "link",
+                        "props": {
+                          "href": "https://notifications.google.com"
+                        },
+                        "children": [
+                          {
+                            "type": "image",
+                            "props": {
+                              "src": "static/google-play-academy.png",
+                              "alt": "Academy",
+                              "width": "28",
+                              "height": "28"
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "type": "image",
+                "props": {
+                  "src": "static/google-play-footer.png",
+                  "alt": "Footer",
+                  "width": "540",
+                  "height": "48",
+                  "style": {
+                    "maxWidth": "100%"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "props": {
+              "padding": "0 40px 30px"
+            },
+            "children": [
+              {
+                "type": "text",
+                "props": {
+                  "children": "© 2022 Google LLC 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA",
+                  "fontSize": "12px",
+                  "color": "#3c4043",
+                  "textAlign": "center",
+                  "lineHeight": "22px",
+                  "margin": "0"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "You have received this mandatory email service announcement to update you about important changes to your Google Play Developer account.",
+                  "fontSize": "12px",
+                  "color": "#3c4043",
+                  "textAlign": "center",
+                  "lineHeight": "22px",
+                  "margin": "0"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

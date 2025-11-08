@@ -1,0 +1,202 @@
+{
+  "subject": "Yelp Recent Login",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "padding": "30px 20px"
+        },
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "static/yelp-logo.png",
+              "alt": "Yelp logo"
+            }
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "border": "1px solid rgba(0,0,0,0.1)",
+          "borderRadius": "5px",
+          "overflow": "hidden"
+        },
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "static/yelp-header.png",
+              "alt": "Yelp header illustration",
+              "width": "620",
+              "style": {
+                "maxWidth": "100%"
+              }
+            }
+          },
+          {
+            "type": "section",
+            "props": {
+              "padding": "20px 20px 0"
+            },
+            "children": [
+              {
+                "type": "heading",
+                "props": {
+                  "content": "Hi Alan,",
+                  "level": 1,
+                  "fontSize": "32px",
+                  "fontWeight": "bold",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "type": "heading",
+                "props": {
+                  "content": "We noticed a recent login to your Yelp account.",
+                  "level": 2,
+                  "fontSize": "26px",
+                  "fontWeight": "bold",
+                  "textAlign": "center"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": [
+                    {
+                      "type": "text",
+                      "props": {
+                        "children": "Time: ",
+                        "fontWeight": "bold"
+                      }
+                    },
+                    "September 7, 2022, 10:58 AM"
+                  ],
+                  "fontSize": "16px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": [
+                    {
+                      "type": "text",
+                      "props": {
+                        "children": "Device: ",
+                        "fontWeight": "bold"
+                      }
+                    },
+                    "Chrome on Mac OS X"
+                  ],
+                  "fontSize": "16px",
+                  "marginTop": "-5px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": [
+                    {
+                      "type": "text",
+                      "props": {
+                        "children": "Location: ",
+                        "fontWeight": "bold"
+                      }
+                    },
+                    "Upland, California, United States"
+                  ],
+                  "fontSize": "16px",
+                  "marginTop": "-5px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "*Approximate geographic location based on IP address: 47.149.53.167",
+                  "fontSize": "14px",
+                  "color": "rgba(0,0,0,0.5)",
+                  "lineHeight": "24px",
+                  "marginTop": "-5px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "If this was you, there's nothing else you need to do.",
+                  "fontSize": "16px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "If this wasn't you or if you have additional questions, please see our support page.",
+                  "fontSize": "16px",
+                  "marginTop": "-5px"
+                }
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "props": {
+              "padding": "0 20px 20px",
+              "textAlign": "center"
+            },
+            "children": [
+              {
+                "type": "button",
+                "props": {
+                  "href": "https://yelp.com",
+                  "children": "Learn More",
+                  "backgroundColor": "#e00707",
+                  "border": "1px solid rgba(0,0,0,0.1)",
+                  "color": "#ffffff",
+                  "fontSize": "16px",
+                  "fontWeight": "bold",
+                  "borderRadius": "5px",
+                  "padding": "12px 30px"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "paddingTop": "45px"
+        },
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "static/yelp-footer.png",
+              "alt": "Yelp footer decoration",
+              "width": "620",
+              "style": {
+                "maxWidth": "100%"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "© 2022 | Yelp Inc., 350 Mission Street, San Francisco, CA 94105, U.S.A. | www.yelp.com",
+          "fontSize": "12px",
+          "color": "rgba(0,0,0,0.7)",
+          "lineHeight": "24px",
+          "textAlign": "center"
+        }
+      }
+    ]
+  }
+}

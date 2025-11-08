@@ -1,0 +1,115 @@
+{
+  "subject": "Log in with this magic link",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff",
+      "padding": "20px 25px 48px",
+      "backgroundImage": "url('static/raycast-bg.png')",
+      "backgroundPosition": "bottom",
+      "backgroundRepeat": "no-repeat"
+    },
+    "children": [
+      {
+        "type": "image",
+        "props": {
+          "src": "static/raycast-logo.png",
+          "alt": "Raycast",
+          "width": "48",
+          "height": "48"
+        }
+      },
+      {
+        "type": "heading",
+        "props": {
+          "content": "🪄 Your magic link",
+          "level": 1,
+          "fontSize": "28px",
+          "fontWeight": "bold",
+          "marginTop": "48px"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "margin": "24px 0"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": [
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://raycast.com",
+                    "children": "👉 Click here to sign in 👈",
+                    "color": "#FF6363"
+                  }
+                }
+              ],
+              "fontSize": "16px",
+              "lineHeight": "26px"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "If you didn't request this, please ignore this email.",
+              "fontSize": "16px",
+              "lineHeight": "26px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Best,\n- Raycast Team",
+          "fontSize": "16px",
+          "lineHeight": "26px"
+        }
+      },
+      {
+        "type": "hr",
+        "props": {
+          "color": "#dddddd",
+          "marginTop": "48px"
+        }
+      },
+      {
+        "type": "image",
+        "props": {
+          "src": "static/raycast-logo.png",
+          "alt": "Raycast",
+          "width": "32",
+          "height": "32",
+          "style": {
+            "filter": "grayscale(100%)",
+            "margin": "20px 0"
+          }
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Raycast Technologies Inc.",
+          "fontSize": "12px",
+          "color": "#8898aa",
+          "lineHeight": "24px",
+          "marginLeft": "4px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "2093 Philadelphia Pike #3222, Claymont, DE 19703",
+          "fontSize": "12px",
+          "color": "#8898aa",
+          "lineHeight": "24px",
+          "marginLeft": "4px"
+        }
+      }
+    ]
+  }
+}

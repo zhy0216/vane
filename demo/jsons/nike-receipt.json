@@ -1,0 +1,451 @@
+{
+  "subject": "Your Nike Order Confirmation",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff",
+      "border": "1px solid #E5E5E5",
+      "maxWidth": "600px",
+      "margin": "10px auto"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "#F7F7F7",
+          "padding": "22px 40px"
+        },
+        "children": [
+          {
+            "type": "row",
+            "props": {},
+            "children": [
+              {
+                "type": "column",
+                "props": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Tracking Number",
+                      "fontSize": "14px",
+                      "fontWeight": "bold",
+                      "lineHeight": "2",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "1ZV218970300071628",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "color": "#6F6F6F",
+                      "lineHeight": "1.4",
+                      "marginTop": "12px",
+                      "marginBottom": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "textAlign": "right"
+                },
+                "children": [
+                  {
+                    "type": "button",
+                    "props": {
+                      "href": "https://nike.com",
+                      "children": "Track Package",
+                      "backgroundColor": "transparent",
+                      "border": "1px solid #929292",
+                      "color": "#000000",
+                      "fontSize": "16px",
+                      "fontWeight": "500",
+                      "padding": "10px 0",
+                      "width": "220px",
+                      "textAlign": "center",
+                      "textDecoration": "none"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "color": "#E5E5E5",
+          "margin": "0"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "padding": "40px 74px",
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "static/nike-logo.png",
+              "alt": "Nike",
+              "width": "66",
+              "height": "22",
+              "style": {
+                "margin": "0 auto"
+              }
+            }
+          },
+          {
+            "type": "heading",
+            "props": {
+              "content": "It's On Its Way.",
+              "level": 1,
+              "fontSize": "32px",
+              "fontWeight": "bold",
+              "lineHeight": "1.3",
+              "letterSpacing": "-1px",
+              "textAlign": "center"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "You order's is on its way. Use the link above to track its progress.",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "color": "#747474",
+              "lineHeight": "2",
+              "margin": "0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "We've also charged your payment method for the cost of your order and will be removing any authorization holds. For payment details, please visit your Orders page on Nike.com or in the Nike app.",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "color": "#747474",
+              "lineHeight": "2",
+              "marginTop": "24px",
+              "margin": "0"
+            }
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "color": "#E5E5E5",
+          "margin": "0"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "padding": "22px 40px"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "Shipping to: Alan Turing",
+              "fontSize": "15px",
+              "fontWeight": "bold",
+              "lineHeight": "2",
+              "margin": "0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "2125 Chestnut St, San Francisco, CA 94123",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "color": "#747474",
+              "lineHeight": "2",
+              "margin": "0"
+            }
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "color": "#E5E5E5",
+          "margin": "0"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "padding": "40px 40px"
+        },
+        "children": [
+          {
+            "type": "row",
+            "props": {},
+            "children": [
+              {
+                "type": "column",
+                "props": {},
+                "children": [
+                  {
+                    "type": "image",
+                    "props": {
+                      "src": "static/nike-product.png",
+                      "alt": "Brazil 2022/23 Stadium Away Women's Nike Dri-FIT Soccer Jersey",
+                      "width": "260"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "paddingLeft": "12px"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Brazil 2022/23 Stadium Away Women's Nike Dri-FIT Soccer Jersey",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "lineHeight": "2",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Size L (12–14)",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "color": "#747474",
+                      "lineHeight": "2",
+                      "margin": "0"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "color": "#E5E5E5",
+          "margin": "0"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "padding": "22px 40px"
+        },
+        "children": [
+          {
+            "type": "row",
+            "props": {
+              "marginBottom": "40px"
+            },
+            "children": [
+              {
+                "type": "column",
+                "props": {
+                  "width": "170px"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Order Number",
+                      "fontSize": "14px",
+                      "fontWeight": "bold",
+                      "lineHeight": "2",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "C0106373851",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "color": "#6F6F6F",
+                      "lineHeight": "1.4",
+                      "marginTop": "12px",
+                      "marginBottom": "0"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Order Date",
+                      "fontSize": "14px",
+                      "fontWeight": "bold",
+                      "lineHeight": "2",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Sep 22, 2022",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "color": "#6F6F6F",
+                      "lineHeight": "1.4",
+                      "marginTop": "12px",
+                      "marginBottom": "0"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "props": {
+              "textAlign": "center"
+            },
+            "children": [
+              {
+                "type": "button",
+                "props": {
+                  "href": "https://nike.com",
+                  "children": "Order Status",
+                  "backgroundColor": "transparent",
+                  "border": "1px solid #929292",
+                  "color": "#000000",
+                  "fontSize": "16px",
+                  "fontWeight": "500",
+                  "padding": "10px 0",
+                  "width": "220px",
+                  "textAlign": "center",
+                  "textDecoration": "none"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "color": "#E5E5E5",
+          "margin": "0"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "#F7F7F7",
+          "padding": "20px"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "Get Help",
+              "fontSize": "16px",
+              "fontWeight": "bold",
+              "padding": "0 20px"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": [
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://www.nike.com/",
+                    "children": "Shipping Status",
+                    "fontSize": "13.5px",
+                    "fontWeight": "500",
+                    "color": "#000000"
+                  }
+                },
+                " | ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://www.nike.com/",
+                    "children": "Returns & Exchanges",
+                    "fontSize": "13.5px",
+                    "fontWeight": "500",
+                    "color": "#000000"
+                  }
+                },
+                " | ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://www.nike.com/",
+                    "children": "Contact Options",
+                    "fontSize": "13.5px",
+                    "fontWeight": "500",
+                    "color": "#000000"
+                  }
+                }
+              ],
+              "fontSize": "13.5px",
+              "padding": "22px 20px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "color": "#E5E5E5",
+          "margin": "0"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "padding": "22px",
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "© 2022 Nike, Inc. All Rights Reserved.",
+              "fontSize": "13px",
+              "color": "#AFAFAF",
+              "textAlign": "center",
+              "margin": "0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "NIKE, INC. One Bowerman Drive, Beaverton, Oregon 97005, USA.",
+              "fontSize": "13px",
+              "color": "#AFAFAF",
+              "textAlign": "center",
+              "margin": "0"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

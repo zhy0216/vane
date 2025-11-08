@@ -1,0 +1,145 @@
+{
+  "subject": "Verify Your Identity",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "#ffffff",
+          "border": "1px solid #eeeeee",
+          "borderRadius": "5px",
+          "boxShadow": "0 5px 10px rgba(20,50,70,.2)",
+          "maxWidth": "360px",
+          "margin": "20px auto 0",
+          "paddingTop": "68px",
+          "paddingBottom": "130px"
+        },
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "static/plaid-logo.png",
+              "alt": "Plaid",
+              "width": "212",
+              "height": "88",
+              "style": {
+                "margin": "0 auto",
+                "display": "block"
+              }
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "VERIFY YOUR IDENTITY",
+              "fontSize": "11px",
+              "fontWeight": "bold",
+              "color": "#0a85ea",
+              "textAlign": "center",
+              "textTransform": "uppercase",
+              "letterSpacing": "0",
+              "lineHeight": "16px",
+              "marginTop": "16px",
+              "marginBottom": "8px",
+              "padding": "0 8px"
+            }
+          },
+          {
+            "type": "heading",
+            "props": {
+              "content": "Enter the following code to finish linking Venmo.",
+              "level": 2,
+              "fontSize": "20px",
+              "fontWeight": "500",
+              "color": "#000000",
+              "textAlign": "center",
+              "lineHeight": "24px",
+              "margin": "0"
+            }
+          },
+          {
+            "type": "section",
+            "props": {
+              "backgroundColor": "rgba(0,0,0,.05)",
+              "borderRadius": "5px",
+              "margin": "16px auto 14px",
+              "width": "280px"
+            },
+            "children": [
+              {
+                "type": "text",
+                "props": {
+                  "children": "144833",
+                  "fontSize": "32px",
+                  "fontWeight": "bold",
+                  "color": "#000000",
+                  "textAlign": "center",
+                  "letterSpacing": "6px",
+                  "lineHeight": "40px",
+                  "padding": "8px 0"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "Not expecting this email?",
+              "fontSize": "15px",
+              "color": "#444444",
+              "textAlign": "center",
+              "lineHeight": "23px",
+              "letterSpacing": "0",
+              "padding": "0 40px",
+              "margin": "0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": [
+                "Contact ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "mailto:login@plaid.com",
+                    "children": "login@plaid.com",
+                    "color": "#444444",
+                    "textDecoration": "underline"
+                  }
+                },
+                " if you did not request this code."
+              ],
+              "fontSize": "15px",
+              "color": "#444444",
+              "textAlign": "center",
+              "lineHeight": "23px",
+              "letterSpacing": "0",
+              "padding": "0 40px",
+              "margin": "0"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "SECURELY POWERED BY PLAID.",
+          "fontSize": "12px",
+          "fontWeight": "800",
+          "color": "#000000",
+          "textAlign": "center",
+          "textTransform": "uppercase",
+          "letterSpacing": "0",
+          "lineHeight": "23px",
+          "marginTop": "20px",
+          "margin": "20px 0 0"
+        }
+      }
+    ]
+  }
+}

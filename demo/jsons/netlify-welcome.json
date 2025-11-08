@@ -1,0 +1,235 @@
+{
+  "subject": "Welcome to Netlify",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#fafbfb"
+    },
+    "children": [
+      {
+        "type": "image",
+        "props": {
+          "src": "static/netlify-logo.png",
+          "alt": "Netlify",
+          "width": "184",
+          "height": "75",
+          "style": {
+            "margin": "80px auto",
+            "display": "block"
+          }
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "#ffffff",
+          "padding": "45px"
+        },
+        "children": [
+          {
+            "type": "heading",
+            "props": {
+              "content": "Welcome to Netlify",
+              "level": 1,
+              "fontSize": "32px",
+              "textAlign": "center",
+              "lineHeight": "32px",
+              "margin": "0"
+            }
+          },
+          {
+            "type": "section",
+            "props": {},
+            "children": [
+              {
+                "type": "text",
+                "props": {
+                  "children": "Congratulations! You're joining over 3 million developers around the world who use Netlify to build and ship sites, stores, and apps.",
+                  "fontSize": "16px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "Here's how to get started:",
+                  "fontSize": "16px"
+                }
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "• Deploy your first project. Connect to Git, choose a template, or manually deploy a project you've been working on locally.\n\n• Check your deploy logs. Find out what's included in your build and watch for errors or failed deploys.\n\n• Choose an integration. Quickly discover, connect, and configure the right tools for your project with 150+ integrations to choose from.\n\n• Set up a custom domain. You can register a new domain and buy it through Netlify or assign a domain you already own to your site.",
+              "fontSize": "16px",
+              "lineHeight": "24px",
+              "marginBottom": "20px"
+            }
+          },
+          {
+            "type": "section",
+            "props": {
+              "textAlign": "center"
+            },
+            "children": [
+              {
+                "type": "button",
+                "props": {
+                  "href": "https://www.netlify.com",
+                  "children": "Go to your dashboard",
+                  "backgroundColor": "#2250f4",
+                  "color": "#ffffff",
+                  "fontSize": "16px",
+                  "borderRadius": "8px",
+                  "padding": "12px 18px",
+                  "textDecoration": "none"
+                }
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "props": {
+              "marginTop": "45px"
+            },
+            "children": [
+              {
+                "type": "row",
+                "props": {},
+                "children": [
+                  {
+                    "type": "column",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "link",
+                        "props": {
+                          "href": "https://www.netlify.com",
+                          "children": "Visit the forums",
+                          "fontWeight": "bold",
+                          "color": "#000000",
+                          "textDecoration": "underline"
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "props": {
+                          "children": " →",
+                          "color": "#00ff00",
+                          "display": "inline"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "column",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "link",
+                        "props": {
+                          "href": "https://www.netlify.com",
+                          "children": "Read the docs",
+                          "fontWeight": "bold",
+                          "color": "#000000",
+                          "textDecoration": "underline"
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "props": {
+                          "children": " →",
+                          "color": "#00ff00",
+                          "display": "inline"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "column",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "link",
+                        "props": {
+                          "href": "https://www.netlify.com",
+                          "children": "Contact an expert",
+                          "fontWeight": "bold",
+                          "color": "#000000",
+                          "textDecoration": "underline"
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "props": {
+                          "children": " →",
+                          "color": "#00ff00",
+                          "display": "inline"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "marginTop": "20px"
+        },
+        "children": [
+          {
+            "type": "row",
+            "props": {},
+            "children": [
+              {
+                "type": "column",
+                "props": {
+                  "textAlign": "right",
+                  "paddingRight": "20px"
+                },
+                "children": [
+                  {
+                    "type": "link",
+                    "props": {
+                      "href": "#",
+                      "children": "Unsubscribe"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "textAlign": "left"
+                },
+                "children": [
+                  {
+                    "type": "link",
+                    "props": {
+                      "href": "#",
+                      "children": "Manage Preferences"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "Netlify, 44 Montgomery Street, Suite 300 San Francisco, CA",
+              "fontSize": "14px",
+              "color": "#9ca3af",
+              "textAlign": "center",
+              "marginBottom": "45px"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

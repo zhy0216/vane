@@ -1,0 +1,480 @@
+{
+  "subject": "Apple Receipt",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff",
+      "padding": "20px 0 48px",
+      "maxWidth": "660px",
+      "margin": "0 auto"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {},
+        "children": [
+          {
+            "type": "row",
+            "props": {},
+            "children": [
+              {
+                "type": "column",
+                "props": {},
+                "children": [
+                  {
+                    "type": "image",
+                    "props": {
+                      "src": "static/apple-logo.png",
+                      "alt": "Apple Logo",
+                      "width": "42",
+                      "height": "42"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "textAlign": "right"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Receipt",
+                      "fontSize": "32px",
+                      "fontWeight": "300",
+                      "color": "#888888",
+                      "lineHeight": "24px",
+                      "margin": "16px 0"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {},
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": [
+                "Save 3% on all your Apple purchases with Apple Card. ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "https://www.apple.com/apple-card/",
+                    "children": "Apply and use in minutes"
+                  }
+                }
+              ],
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "color": "#111111",
+              "lineHeight": "24px",
+              "textAlign": "center",
+              "margin": "36px 0 40px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "#fafafa",
+          "borderRadius": "3px",
+          "padding": "20px",
+          "fontSize": "12px",
+          "color": "#333333"
+        },
+        "children": [
+          {
+            "type": "row",
+            "props": {
+              "marginBottom": "12px"
+            },
+            "children": [
+              {
+                "type": "column",
+                "props": {},
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "APPLE ID",
+                      "fontSize": "10px",
+                      "color": "#666666",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "props": {
+                      "href": "mailto:alan.turing@gmail.com",
+                      "children": "alan.turing@gmail.com",
+                      "fontSize": "12px",
+                      "color": "#1155cc",
+                      "textDecoration": "underline"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "props": {
+              "marginBottom": "12px"
+            },
+            "children": [
+              {
+                "type": "column",
+                "props": {
+                  "width": "50%"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "INVOICE DATE",
+                      "fontSize": "10px",
+                      "color": "#666666",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "18 Jan 2023",
+                      "fontSize": "12px"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "row",
+            "props": {},
+            "children": [
+              {
+                "type": "column",
+                "props": {
+                  "width": "50%"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "ORDER ID",
+                      "fontSize": "10px",
+                      "color": "#666666",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "link",
+                    "props": {
+                      "href": "#",
+                      "children": "ML4F5L8522",
+                      "fontSize": "12px",
+                      "color": "#1155cc",
+                      "textDecoration": "underline"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "width": "50%"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "BILLED TO",
+                      "fontSize": "10px",
+                      "color": "#666666",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Visa .... 7461 (Apple Pay)\nAlan Turing\n2125 Chestnut St\nSan Francisco, CA 94123\nUSA",
+                      "fontSize": "12px"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "#fafafa",
+          "borderRadius": "3px",
+          "padding": "10px",
+          "marginTop": "30px",
+          "marginBottom": "15px"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "App Store",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "lineHeight": "24px",
+              "margin": "0"
+            }
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {},
+        "children": [
+          {
+            "type": "row",
+            "props": {},
+            "children": [
+              {
+                "type": "column",
+                "props": {
+                  "width": "64px"
+                },
+                "children": [
+                  {
+                    "type": "image",
+                    "props": {
+                      "src": "static/apple-hbo-max-icon.jpeg",
+                      "alt": "HBO Max",
+                      "width": "64",
+                      "height": "64",
+                      "style": {
+                        "borderRadius": "14px",
+                        "border": "1px solid #f2f2f2",
+                        "marginLeft": "20px"
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "paddingLeft": "22px"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "HBO Max: Stream TV & Movies",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "HBO Max Ad-Free (Monthly)",
+                      "fontSize": "12px",
+                      "color": "#666666",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Renews Aug 20, 2023",
+                      "fontSize": "12px",
+                      "color": "#666666",
+                      "margin": "0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": [
+                        {
+                          "type": "link",
+                          "props": {
+                            "href": "https://www.apple.com/",
+                            "children": "Write a Review",
+                            "fontSize": "12px",
+                            "color": "#0070c9",
+                            "textDecoration": "none"
+                          }
+                        },
+                        " | ",
+                        {
+                          "type": "link",
+                          "props": {
+                            "href": "https://www.apple.com/",
+                            "children": "Report a Problem",
+                            "fontSize": "12px",
+                            "color": "#0070c9",
+                            "textDecoration": "none"
+                          }
+                        }
+                      ],
+                      "fontSize": "12px"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "width": "100px",
+                  "textAlign": "right"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "$14.99",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "lineHeight": "24px",
+                      "margin": "0"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "marginTop": "30px",
+          "marginBottom": "0"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "textAlign": "right"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "TOTAL",
+              "fontSize": "10px",
+              "fontWeight": "600",
+              "color": "#666666",
+              "textAlign": "right",
+              "paddingRight": "30px"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "$14.99",
+              "fontSize": "16px",
+              "fontWeight": "600",
+              "textAlign": "right",
+              "marginRight": "20px"
+            }
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "marginBottom": "75px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Get help with subscriptions and purchases. Visit Apple Support.",
+          "fontSize": "12px",
+          "color": "#666666",
+          "textAlign": "center",
+          "lineHeight": "normal",
+          "margin": "20px 0"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "textAlign": "center",
+          "marginTop": "40px"
+        },
+        "children": [
+          {
+            "type": "image",
+            "props": {
+              "src": "static/apple-logo.png",
+              "alt": "Apple",
+              "width": "26",
+              "height": "26",
+              "style": {
+                "margin": "0 auto"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": [
+            {
+              "type": "link",
+              "props": {
+                "href": "https://www.apple.com/",
+                "children": "Account Settings"
+              }
+            },
+            " • ",
+            {
+              "type": "link",
+              "props": {
+                "href": "https://www.apple.com/",
+                "children": "Terms of Sale"
+              }
+            },
+            " • ",
+            {
+              "type": "link",
+              "props": {
+                "href": "https://www.apple.com/legal/privacy/",
+                "children": "Privacy Policy"
+              }
+            }
+          ],
+          "fontSize": "12px",
+          "color": "#666666",
+          "textAlign": "center",
+          "lineHeight": "24px",
+          "marginTop": "8px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Copyright © 2023 Apple Inc. All rights reserved",
+          "fontSize": "12px",
+          "color": "#666666",
+          "textAlign": "center",
+          "lineHeight": "24px",
+          "marginTop": "25px"
+        }
+      }
+    ]
+  }
+}

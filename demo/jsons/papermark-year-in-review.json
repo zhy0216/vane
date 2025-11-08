@@ -1,0 +1,314 @@
+{
+  "subject": "See your stats from 2024",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff",
+      "maxWidth": "600px",
+      "margin": "0 auto",
+      "padding": "0"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "padding": "32px",
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "Papermark",
+              "fontSize": "24px",
+              "fontWeight": "bold",
+              "textAlign": "center",
+              "letterSpacing": "-0.05em",
+              "margin": "16px 0 32px"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "2024 IN REVIEW",
+              "fontSize": "14px",
+              "fontWeight": "normal",
+              "textTransform": "uppercase",
+              "letterSpacing": "0.1em"
+            }
+          },
+          {
+            "type": "heading",
+            "props": {
+              "content": "Your Year with Papermark",
+              "level": 1,
+              "fontSize": "36px",
+              "fontWeight": "500",
+              "lineHeight": "1.2",
+              "margin": "16px 0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "What a year it's been! Let's take a look at how you've used Papermark to share your important documents.",
+              "fontSize": "18px",
+              "lineHeight": "32px",
+              "marginBottom": "32px"
+            }
+          },
+          {
+            "type": "button",
+            "props": {
+              "href": "https://www.papermark.com",
+              "children": "Share your stats",
+              "backgroundColor": "#111827",
+              "color": "#ffffff",
+              "fontSize": "14px",
+              "fontWeight": "bold",
+              "borderRadius": "9999px",
+              "padding": "16px 48px",
+              "textDecoration": "none"
+            }
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "rgba(251,122,0,0.1)",
+          "backgroundImage": "radial-gradient(circle at bottom right, #fb7a00 0%, transparent 60%)",
+          "borderRadius": "16px",
+          "padding": "32px",
+          "margin": "24px 0",
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "heading",
+            "props": {
+              "content": "Viewers spent",
+              "level": 2,
+              "fontSize": "30px",
+              "fontWeight": "500",
+              "color": "#a63b00",
+              "margin": "0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "1234",
+              "fontSize": "72px",
+              "fontWeight": "bold",
+              "color": "#111827",
+              "lineHeight": "1",
+              "margin": "16px 0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "minutes on your documents",
+              "fontSize": "30px",
+              "fontWeight": "500",
+              "color": "#111827",
+              "marginBottom": "16px"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "That's a lot of engagement! Your documents are resonating with your visitors.",
+              "fontSize": "14px",
+              "color": "#111827",
+              "lineHeight": "20px"
+            }
+          },
+          {
+            "type": "hr",
+            "props": {
+              "color": "#fb7a00",
+              "marginTop": "24px"
+            }
+          },
+          {
+            "type": "heading",
+            "props": {
+              "content": "YOUR ACTIVITY",
+              "level": 3,
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "color": "#111827",
+              "textTransform": "uppercase",
+              "letterSpacing": "0.1em",
+              "paddingTop": "20px"
+            }
+          },
+          {
+            "type": "row",
+            "props": {
+              "marginTop": "20px"
+            },
+            "children": [
+              {
+                "type": "column",
+                "props": {
+                  "width": "33.333%",
+                  "textAlign": "center"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "You uploaded",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "color": "#a63b00"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "25",
+                      "fontSize": "36px",
+                      "fontWeight": "bold",
+                      "color": "#111827",
+                      "margin": "4px 0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "documents",
+                      "fontSize": "24px",
+                      "color": "#111827"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "width": "33.333%",
+                  "textAlign": "center"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "You shared",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "color": "#a63b00"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "50",
+                      "fontSize": "36px",
+                      "fontWeight": "bold",
+                      "color": "#111827",
+                      "margin": "4px 0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "links",
+                      "fontSize": "24px",
+                      "color": "#111827"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "width": "33.333%",
+                  "textAlign": "center"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "You received",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "color": "#a63b00"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "500",
+                      "fontSize": "36px",
+                      "fontWeight": "bold",
+                      "color": "#111827",
+                      "margin": "4px 0"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "views",
+                      "fontSize": "24px",
+                      "color": "#111827"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "padding": "24px",
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "We're excited to support you next year!\nHappy Holidays from the Papermark team :)",
+              "fontSize": "20px",
+              "color": "#111827",
+              "lineHeight": "32px"
+            }
+          },
+          {
+            "type": "button",
+            "props": {
+              "href": "https://www.papermark.com",
+              "children": "Share your stats",
+              "backgroundColor": "#111827",
+              "color": "#ffffff",
+              "fontSize": "14px",
+              "fontWeight": "bold",
+              "borderRadius": "9999px",
+              "padding": "16px 48px",
+              "textDecoration": "none",
+              "marginTop": "16px"
+            }
+          },
+          {
+            "type": "link",
+            "props": {
+              "href": "https://www.papermark.com",
+              "children": "Go to your dashboard",
+              "color": "#111827",
+              "fontSize": "14px",
+              "fontWeight": "bold",
+              "textDecoration": "none",
+              "display": "block",
+              "marginTop": "16px"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

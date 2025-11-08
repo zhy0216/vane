@@ -1,0 +1,87 @@
+{
+  "subject": "Welcome to Koala",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff",
+      "padding": "20px 0 48px",
+      "margin": "0 auto"
+    },
+    "children": [
+      {
+        "type": "image",
+        "props": {
+          "src": "static/koala-logo.png",
+          "alt": "Koala",
+          "width": "170",
+          "height": "50",
+          "style": {
+            "margin": "0 auto",
+            "display": "block"
+          }
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Hi Alan,",
+          "fontSize": "16px",
+          "lineHeight": "26px"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Welcome to Koala, the sales intelligence platform that helps you uncover qualified leads and close deals faster.",
+          "fontSize": "16px",
+          "lineHeight": "26px"
+        }
+      },
+      {
+        "type": "section",
+        "props": {
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "button",
+            "props": {
+              "href": "https://getkoala.com",
+              "children": "Get started",
+              "backgroundColor": "#5F51E8",
+              "color": "#ffffff",
+              "fontSize": "16px",
+              "borderRadius": "3px",
+              "padding": "12px",
+              "textAlign": "center",
+              "textDecoration": "none"
+            }
+          }
+        ]
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "Best,\nThe Koala team",
+          "fontSize": "16px",
+          "lineHeight": "26px"
+        }
+      },
+      {
+        "type": "hr",
+        "props": {
+          "color": "#cccccc",
+          "margin": "20px 0"
+        }
+      },
+      {
+        "type": "text",
+        "props": {
+          "children": "470 Noor Ave STE B #1148, South San Francisco, CA 94080",
+          "fontSize": "12px",
+          "color": "#8898aa"
+        }
+      }
+    ]
+  }
+}

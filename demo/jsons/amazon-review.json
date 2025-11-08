@@ -1,0 +1,306 @@
+{
+  "subject": "Your opinion is important!",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#ffffff",
+      "borderTop": "4px solid #FF9900",
+      "padding": "20px",
+      "maxWidth": "640px",
+      "margin": "0 auto"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "link",
+            "props": {
+              "href": "https://www.amazon.com"
+            },
+            "children": [
+              {
+                "type": "image",
+                "props": {
+                  "src": "static/amazon-prime-logo.png",
+                  "alt": "Amazon Prime Logo",
+                  "width": "109",
+                  "height": "48"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "Your opinion is important!",
+              "fontSize": "36px",
+              "color": "#232f3e",
+              "lineHeight": "38px",
+              "fontWeight": "normal",
+              "margin": "20px 0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "Alan Turing, do you have a moment? We would like to know if everything went well for you. Take a moment to review your most recent purchases."
+            }
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {},
+        "children": [
+          {
+            "type": "row",
+            "props": {},
+            "children": [
+              {
+                "type": "column",
+                "props": {},
+                "children": [
+                  {
+                    "type": "image",
+                    "props": {
+                      "src": "static/amazon-book.jpg",
+                      "alt": "Amazon Book",
+                      "width": "274",
+                      "height": "350"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "paddingLeft": "30px"
+                },
+                "children": [
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "14 Habits of Highly Productive Developers (English Edition)"
+                    }
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": "Start with rating this product"
+                    }
+                  },
+                  {
+                    "type": "section",
+                    "props": {},
+                    "children": [
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/amazon-rating.gif",
+                          "alt": "Rating Star",
+                          "style": {
+                            "display": "inline-block"
+                          }
+                        }
+                      },
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/amazon-rating.gif",
+                          "alt": "Rating Star",
+                          "style": {
+                            "display": "inline-block"
+                          }
+                        }
+                      },
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/amazon-rating.gif",
+                          "alt": "Rating Star",
+                          "style": {
+                            "display": "inline-block"
+                          }
+                        }
+                      },
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/amazon-rating.gif",
+                          "alt": "Rating Star",
+                          "style": {
+                            "display": "inline-block"
+                          }
+                        }
+                      },
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/amazon-rating.gif",
+                          "alt": "Rating Star",
+                          "style": {
+                            "display": "inline-block"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "text",
+                    "props": {
+                      "children": [
+                        "Your reviews will be posted on Amazon using your public name. ",
+                        {
+                          "type": "link",
+                          "props": {
+                            "href": "#",
+                            "children": "Check your public name."
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "textAlign": "center"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": [
+                "How about evaluating a previous purchase? ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "#",
+                    "children": "View more",
+                    "color": "#ffffff",
+                    "textDecoration": "underline"
+                  }
+                }
+              ],
+              "backgroundColor": "#008296",
+              "color": "#ffffff",
+              "padding": "8px 0"
+            }
+          }
+        ]
+      },
+      {
+        "type": "hr",
+        "props": {
+          "color": "#cccccc"
+        }
+      },
+      {
+        "type": "section",
+        "props": {},
+        "children": [
+          {
+            "type": "row",
+            "props": {},
+            "children": [
+              {
+                "type": "column",
+                "props": {},
+                "children": [
+                  {
+                    "type": "image",
+                    "props": {
+                      "src": "static/amazon-logo.png",
+                      "alt": "Amazon Logo",
+                      "width": "93",
+                      "height": "23"
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "column",
+                "props": {
+                  "textAlign": "right"
+                },
+                "children": [
+                  {
+                    "type": "image",
+                    "props": {
+                      "src": "static/amazon-instagram.jpg",
+                      "alt": "Instagram",
+                      "width": "30",
+                      "height": "30",
+                      "style": {
+                        "display": "inline-block",
+                        "marginLeft": "10px"
+                      }
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "props": {
+                      "src": "static/amazon-facebook.jpg",
+                      "alt": "Facebook",
+                      "width": "30",
+                      "height": "30",
+                      "style": {
+                        "display": "inline-block",
+                        "marginLeft": "10px"
+                      }
+                    }
+                  },
+                  {
+                    "type": "image",
+                    "props": {
+                      "src": "static/amazon-twitter.jpg",
+                      "alt": "Twitter",
+                      "width": "30",
+                      "height": "30",
+                      "style": {
+                        "display": "inline-block",
+                        "marginLeft": "10px"
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {},
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "© 2023 Amazon.com, Inc. or its affiliates. Amazon and all associated marks are trademarks of Amazon.com, Inc. or its affiliates.",
+              "fontSize": "10px",
+              "color": "#666666",
+              "margin": "8px 0"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}

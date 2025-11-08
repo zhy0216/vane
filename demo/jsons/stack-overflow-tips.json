@@ -1,0 +1,301 @@
+{
+  "subject": "Stack Overflow Tips for Searching",
+  "component": {
+    "type": "container",
+    "props": {
+      "backgroundColor": "#f3f3f5",
+      "padding": "0"
+    },
+    "children": [
+      {
+        "type": "section",
+        "props": {
+          "backgroundColor": "#ffffff",
+          "maxWidth": "680px",
+          "margin": "0 auto"
+        },
+        "children": [
+          {
+            "type": "section",
+            "props": {
+              "backgroundColor": "#f3f3f5",
+              "padding": "20px 30px"
+            },
+            "children": [
+              {
+                "type": "image",
+                "props": {
+                  "src": "static/stack-overflow-logo.png",
+                  "alt": "Stack Overflow",
+                  "width": "146"
+                }
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "props": {
+              "backgroundColor": "#2b2d6e",
+              "borderRadius": "6px 6px 0 0"
+            },
+            "children": [
+              {
+                "type": "row",
+                "props": {},
+                "children": [
+                  {
+                    "type": "column",
+                    "props": {
+                      "padding": "20px 30px 15px"
+                    },
+                    "children": [
+                      {
+                        "type": "heading",
+                        "props": {
+                          "content": "Find what you want, faster",
+                          "level": 1,
+                          "color": "#ffffff",
+                          "fontSize": "27px",
+                          "fontWeight": "bold",
+                          "lineHeight": "27px"
+                        }
+                      },
+                      {
+                        "type": "text",
+                        "props": {
+                          "children": "Tips and tricks for searching on Stack Overflow",
+                          "color": "#ffffff",
+                          "fontSize": "17px",
+                          "lineHeight": "24px"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "type": "column",
+                    "props": {
+                      "padding": "30px 10px"
+                    },
+                    "children": [
+                      {
+                        "type": "image",
+                        "props": {
+                          "src": "static/stack-overflow-header.png",
+                          "alt": "Header",
+                          "width": "340",
+                          "style": {
+                            "maxWidth": "100%"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "type": "section",
+            "props": {
+              "padding": "30px 30px 40px"
+            },
+            "children": [
+              {
+                "type": "heading",
+                "props": {
+                  "content": "Searching for solutions",
+                  "level": 2,
+                  "fontSize": "21px",
+                  "fontWeight": "bold",
+                  "color": "#0c0d0e",
+                  "marginBottom": "15px",
+                  "marginTop": "0"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "With more than 18 million questions, it's possible that someone has already provided a solution to the problem you're facing.",
+                  "fontSize": "15px",
+                  "color": "#3c3f44",
+                  "lineHeight": "21px"
+                }
+              },
+              {
+                "type": "hr",
+                "props": {
+                  "margin": "30px 0"
+                }
+              },
+              {
+                "type": "heading",
+                "props": {
+                  "content": "Use the search bar at the top of the page to find what you need",
+                  "level": 2,
+                  "fontSize": "21px",
+                  "fontWeight": "bold",
+                  "color": "#0c0d0e",
+                  "marginBottom": "15px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "Here are a few simple search tips to get you started:",
+                  "fontSize": "15px",
+                  "color": "#3c3f44",
+                  "lineHeight": "21px"
+                }
+              },
+              {
+                "type": "text",
+                "props": {
+                  "children": "• To find a specific phrase, enter it in quotes: \"local storage\"\n• To search within specific tag(s), enter them in square brackets: [javascript]\n• Combine them to get even more precise results - [javascript] \"local storage\" searches for the phrase \"local storage\" in questions that have the [javascript] tag",
+                  "fontSize": "15px",
+                  "color": "#3c3f44",
+                  "lineHeight": "21px"
+                }
+              },
+              {
+                "type": "hr",
+                "props": {
+                  "margin": "30px 0"
+                }
+              },
+              {
+                "type": "heading",
+                "props": {
+                  "content": "Take a break and read about the worst coder in the world",
+                  "level": 2,
+                  "fontSize": "21px",
+                  "fontWeight": "bold",
+                  "color": "#0c0d0e",
+                  "marginBottom": "16px"
+                }
+              },
+              {
+                "type": "section",
+                "props": {
+                  "marginTop": "24px"
+                },
+                "children": [
+                  {
+                    "type": "button",
+                    "props": {
+                      "href": "https://stackoverflow.blog/2019/10/22/",
+                      "children": "I need a break",
+                      "backgroundColor": "#0095ff",
+                      "border": "1px solid #0077cc",
+                      "color": "#ffffff",
+                      "fontSize": "17px",
+                      "borderRadius": "5px",
+                      "padding": "13px 17px"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "section",
+        "props": {
+          "maxWidth": "680px",
+          "margin": "32px auto 0",
+          "padding": "0 30px"
+        },
+        "children": [
+          {
+            "type": "text",
+            "props": {
+              "children": "You're receiving this email because your Stack Overflow activity triggered this tip or reminder.",
+              "fontSize": "12px",
+              "color": "#9199a1",
+              "lineHeight": "15px",
+              "margin": "0"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": [
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "/",
+                    "children": "Unsubscribe from emails like this",
+                    "color": "#9199a1",
+                    "textDecoration": "underline",
+                    "fontSize": "12px"
+                  }
+                },
+                " | ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "/",
+                    "children": "Edit email settings",
+                    "color": "#9199a1",
+                    "textDecoration": "underline",
+                    "fontSize": "12px"
+                  }
+                },
+                " | ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "/",
+                    "children": "Contact us",
+                    "color": "#9199a1",
+                    "textDecoration": "underline",
+                    "fontSize": "12px"
+                  }
+                },
+                " | ",
+                {
+                  "type": "link",
+                  "props": {
+                    "href": "/",
+                    "children": "Privacy",
+                    "color": "#9199a1",
+                    "textDecoration": "underline",
+                    "fontSize": "12px"
+                  }
+                }
+              ],
+              "fontSize": "12px",
+              "marginTop": "8px"
+            }
+          },
+          {
+            "type": "hr",
+            "props": {
+              "color": "#d6d8db",
+              "margin": "30px 0"
+            }
+          },
+          {
+            "type": "image",
+            "props": {
+              "src": "static/stack-overflow-logo-sm.png",
+              "alt": "Stack Overflow",
+              "width": "111"
+            }
+          },
+          {
+            "type": "text",
+            "props": {
+              "children": "Stack Overflow, 110 William Street, 28th Floor, New York, NY 10038",
+              "fontSize": "12px",
+              "color": "#9199a1",
+              "lineHeight": "15px",
+              "marginTop": "4px",
+              "marginBottom": "32px"
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
