@@ -12,22 +12,22 @@ describe("renderComponent", () => {
         {
           type: "text",
           props: {
-            children: [
-              "How about evaluating a previous purchase? ",
-              {
-                type: "link",
-                props: {
-                  href: "#",
-                  children: "View more",
-                  color: "#ffffff",
-                  textDecoration: "underline",
-                },
-              },
-            ],
             backgroundColor: "#008296",
             color: "#ffffff",
             padding: "8px 0",
           },
+          children: [
+            "How about evaluating a previous purchase? ",
+            {
+              type: "link",
+              props: {
+                href: "#",
+                color: "#ffffff",
+                textDecoration: "underline",
+              },
+              children: "View more",
+            },
+          ],
         },
       ],
     };

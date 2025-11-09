@@ -1,6 +1,4 @@
-import { Component } from "../types";
-import { TextPropsSchema, type TextProps } from "./schema";
-import { renderComponent } from "../renderer";
+import { type TextProps } from "./schema";
 
 // Text 组件的 props
 
@@ -9,7 +7,7 @@ import { renderComponent } from "../renderer";
  * 生成兼容邮件客户端的 HTML
  */
 export function renderText(
-  props: TextProps
+  props: Omit<TextProps, 'children'> & {children: string}
 ): string {
   const {
     children,
@@ -26,22 +24,8 @@ export function renderText(
     padding,
   } = props;
 
-  // Process children - can be string or array of strings/components
-  let text = "";
-  if (typeof children === "string") {
-    text = children;
-  } else if (Array.isArray(children)) {
-    text = children
-      .map((child) => {
-        if (typeof child === "string") {
-          return child;
-        } else {
-          // Render component children (e.g., inline links)
-          return renderComponent(child);
-        }
-      })
-      .join("");
-  }
+  // children is already rendered HTML by the renderer
+  const text = children || "";
 
   // 内联样式，确保邮件客户端兼容性
   const styles: string[] = [
@@ -74,17 +58,3 @@ export function renderText(
   return `<p style="${styles.join("; ")}">${text}</p>`;
 }
 
-/**
- * 转义 HTML 特殊字符，防止 XSS
- */
-function escapeHtml(text: string): string {
-  const htmlEscapeMap: Record<string, string> = {
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#39;",
-  };
-
-  return text.replace(/[&<>"']/g, (char) => htmlEscapeMap[char]);
-}

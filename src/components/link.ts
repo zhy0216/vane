@@ -1,13 +1,11 @@
-import { Component } from "../types";
 import { styleToString, escapeHtml } from "./utils";
 import { type LinkProps } from "./schema";
-import { renderComponent } from "../renderer";
 
 /**
  * Link component - Anchor tag with email-safe defaults
  */
 export function renderLink(
-  props: LinkProps
+  props: Omit<LinkProps, 'children'> & {children: string}
 ): string {
   const { 
     href, 
@@ -18,22 +16,8 @@ export function renderLink(
     style = {} 
   } = props;
   
-  // Process children - can be string or array of strings/components
-  let content = "";
-  if (typeof children === "string") {
-    content = children;
-  } else if (Array.isArray(children)) {
-    content = children
-      .map((child) => {
-        if (typeof child === "string") {
-          return child;
-        } else {
-          // Render component children (e.g., nested components)
-          return renderComponent(child);
-        }
-      })
-      .join("");
-  }
+  // children is already rendered HTML by the renderer
+  const content = children || "";
   
   const finalStyle = {
     color: color || "#067df7",
