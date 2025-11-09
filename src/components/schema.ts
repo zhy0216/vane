@@ -227,6 +227,12 @@ export const LinkPropsSchema = z.object({
   target: z.string()
     .optional()
     .describe("Specifies where to open the linked document"),
+  color: z.string()
+    .optional()
+    .describe("The color of the link text"),
+  textDecoration: z.string()
+    .optional()
+    .describe("Text decoration style (e.g., 'underline', 'none')"),
   style: z.record(z.string(), z.union([z.string(), z.number()]))
     .optional()
     .describe("CSS styles to apply to the link"),
@@ -312,6 +318,12 @@ export const TextPropsSchema = z.object({
   marginRight: z.string()
     .optional()
     .describe("Right margin"),
+  backgroundColor: z.string()
+    .optional()
+    .describe("Background color"),
+  padding: z.string()
+    .optional()
+    .describe("Padding value (e.g., '8px 0', '10px')"),
 });
 
 // Export type inferences

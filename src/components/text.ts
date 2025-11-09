@@ -1,5 +1,6 @@
 import { Component } from "../types";
 import { TextPropsSchema, type TextProps } from "./schema";
+import { renderComponent } from "../renderer";
 
 // Text 组件的 props
 
@@ -8,8 +9,7 @@ import { TextPropsSchema, type TextProps } from "./schema";
  * 生成兼容邮件客户端的 HTML
  */
 export function renderText(
-  props: TextProps,
-  renderComponent?: (component: Component) => string
+  props: TextProps
 ): string {
   const {
     children,
@@ -22,6 +22,8 @@ export function renderText(
     marginBottom = "16px",
     marginLeft,
     marginRight,
+    backgroundColor,
+    padding,
   } = props;
 
   // Process children - can be string or array of strings/components
@@ -32,12 +34,11 @@ export function renderText(
     text = children
       .map((child) => {
         if (typeof child === "string") {
-          return escapeHtml(child);
-        } else if (renderComponent) {
-          // Child is a Component, render it
+          return child;
+        } else {
+          // Render component children (e.g., inline links)
           return renderComponent(child);
         }
-        return "";
       })
       .join("");
   }
@@ -57,11 +58,20 @@ export function renderText(
 
   if (marginLeft) styles.push(`margin-left: ${marginLeft}`);
   if (marginRight) styles.push(`margin-right: ${marginRight}`);
+  if (backgroundColor) styles.push(`background-color: ${backgroundColor}`);
+  if (padding) {
+    // Override the default padding: 0 if padding is provided
+    const paddingIndex = styles.indexOf('padding: 0');
+    if (paddingIndex !== -1) {
+      styles[paddingIndex] = `padding: ${padding}`;
+    } else {
+      styles.push(`padding: ${padding}`);
+    }
+  }
 
   // 使用 <p> 标签包裹文本
-  // If children is an array, text is already escaped/rendered
-  const content = typeof children === "string" ? escapeHtml(text) : text;
-  return `<p style="${styles.join("; ")}">${content}</p>`;
+  // text is already escaped/rendered in the processing above
+  return `<p style="${styles.join("; ")}">${text}</p>`;
 }
 
 /**

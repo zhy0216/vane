@@ -1,0 +1,11 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`renderComponent should render nested section with text and inline link 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="text-align: center">
+  <tbody>
+    <tr>
+      <td><p style="color: #ffffff; font-size: 14px; font-weight: normal; text-align: left; line-height: 24px; margin: 0; padding: 8px 0; margin-top: 16px; margin-bottom: 16px; background-color: #008296">How about evaluating a previous purchase? <a href="#" target="_blank" style="color: #ffffff; text-decoration: underline">View more</a></p></td>
+    </tr>
+  </tbody>
+</table>"
+`;

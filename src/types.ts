@@ -4,7 +4,7 @@ import { z } from "zod";
 export interface Component {
   type: string;
   props?: Record<string, any>;
-  children?: Component[];
+  children?: string | (Component | string)[];
 }
 
 // Component Schema (递归定义，支持嵌套)
@@ -12,7 +12,10 @@ export const ComponentSchema: z.ZodType<Component> = z.lazy(() =>
   z.object({
     type: z.string(),
     props: z.record(z.string(), z.any()).optional(),
-    children: z.array(ComponentSchema).optional(),
+    children: z.union([
+      z.string(),
+      z.array(z.union([ComponentSchema, z.string()]))
+    ]).optional(),
   })
 );
 

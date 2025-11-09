@@ -21,72 +21,125 @@ import {
   RowPropsSchema,
   ColumnPropsSchema,
 } from "./components/schema";
+import { z } from "zod";
 
-const componentRenderers: Record<
-  string,
-  (props: any, children?: Component[]) => string
-> = {
-  text: (props) => {
-    const validatedProps = TextPropsSchema.parse(props);
-    return renderText(validatedProps, renderComponent);
-  },
-  container: (props, children) => {
-    const childrenHtml = children?.map(renderComponent).join("") || "";
-    const validatedProps = ContainerPropsSchema.parse({ ...props, children: childrenHtml });
-    return renderContainer(validatedProps);
-  },
-  section: (props, children) => {
-    const childrenHtml = children?.map(renderComponent).join("") || "";
-    const validatedProps = SectionPropsSchema.parse({ ...props, children: childrenHtml });
-    return renderSection(validatedProps);
-  },
-  heading: (props) => {
-    const validatedProps = HeadingPropsSchema.parse(props);
-    return renderHeading(validatedProps);
-  },
-  image: (props) => {
-    const validatedProps = ImgPropsSchema.parse(props);
-    return renderImg(validatedProps);
-  },
-  hr: (props) => {
-    const validatedProps = HrPropsSchema.parse(props);
-    return renderHr(validatedProps);
-  },
-  link: (props, children) => {
-    const validatedProps = LinkPropsSchema.parse(props);
-    return renderLink(validatedProps, renderComponent);
-  },
-  button: (props) => {
-    const validatedProps = ButtonPropsSchema.parse(props);
-    return renderButton(validatedProps);
-  },
-  row: (props, children) => {
-    const childrenHtml = children?.map(renderComponent).join("") || "";
-    const validatedProps = RowPropsSchema.parse({ ...props, children: childrenHtml });
-    return renderRow(validatedProps);
-  },
-  column: (props, children) => {
-    const childrenHtml = children?.map(renderComponent).join("") || "";
-    const validatedProps = ColumnPropsSchema.parse({ ...props, children: childrenHtml });
-    return renderColumn(validatedProps);
-  },
-};
+/**
+ * Component registration interface
+ */
+interface ComponentRegistration {
+  schema: z.ZodSchema<any>;
+  render: (validatedProps: any) => string;
+}
 
+/**
+ * Component registry
+ */
+const componentRegistry = new Map<string, ComponentRegistration>();
+
+/**
+ * Register a component with its schema and render function
+ */
+export function registerComponent(
+  name: string,
+  registration: ComponentRegistration
+): void {
+  componentRegistry.set(name, registration);
+}
+
+/**
+ * Register all built-in components
+ */
+registerComponent("text", {
+  schema: TextPropsSchema,
+  render: (props) => renderText(props),
+});
+
+registerComponent("container", {
+  schema: ContainerPropsSchema,
+  render: (props) => renderContainer(props),
+});
+
+registerComponent("section", {
+  schema: SectionPropsSchema,
+  render: (props) => renderSection(props),
+});
+
+registerComponent("heading", {
+  schema: HeadingPropsSchema,
+  render: (props) => renderHeading(props),
+});
+
+registerComponent("image", {
+  schema: ImgPropsSchema,
+  render: (props) => renderImg(props),
+});
+
+registerComponent("hr", {
+  schema: HrPropsSchema,
+  render: (props) => renderHr(props),
+});
+
+registerComponent("link", {
+  schema: LinkPropsSchema,
+  render: (props) => renderLink(props),
+});
+
+registerComponent("button", {
+  schema: ButtonPropsSchema,
+  render: (props) => renderButton(props),
+});
+
+registerComponent("row", {
+  schema: RowPropsSchema,
+  render: (props) => renderRow(props),
+});
+
+registerComponent("column", {
+  schema: ColumnPropsSchema,
+  render: (props) => renderColumn(props),
+});
+
+/**
+ * Helper function to render a child that can be either a Component or a string
+ */
+function renderChild(child: Component | string): string {
+  if (typeof child === "string") {
+    return escapeHtml(child);
+  }
+  return renderComponent(child);
+}
+
+/**
+ * Render a component using the registration system
+ */
 export function renderComponent(component: Component): string {
   const { type, props, children } = component;
 
-  const renderer = componentRenderers[type];
-  if (!renderer) {
+  const registration = componentRegistry.get(type);
+  if (!registration) {
     return renderHtmlTag(type, props, children);
   }
 
-  return renderer(props || {}, children);
+  // Inject rendered children into props
+  let propsToValidate = props || {};
+  if (children) {
+    // Normalize children to array
+    const childrenArray = typeof children === "string" ? [children] : children;
+    const childrenHtml = childrenArray.map(renderChild).join("");
+    propsToValidate = { ...propsToValidate, children: childrenHtml };
+  }
+
+  // Validate props with schema
+  const validatedProps = registration.schema.parse(propsToValidate);
+
+  // Render with the registered render function
+  return registration.render(validatedProps);
 }
 
 function renderHtmlTag(
   tag: string,
   props?: Record<string, any>,
-  children?: Component[]
+  children?: string | (Component | string)[]
 ): string {
   // Convert props to HTML attributes
   const attributes = props
@@ -118,7 +171,9 @@ function renderHtmlTag(
     : "";
 
   // Render children recursively
-  const childrenHtml = children?.map(renderComponent).join("") || "";
+  // Normalize children to array if it's a string
+  const childrenArray = typeof children === "string" ? [children] : children;
+  const childrenHtml = childrenArray?.map(renderChild).join("") || "";
 
   // Self-closing tags
   const selfClosingTags = ["img", "br", "hr", "input", "meta", "link"];

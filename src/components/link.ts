@@ -1,37 +1,43 @@
 import { Component } from "../types";
 import { styleToString, escapeHtml } from "./utils";
-import { LinkPropsSchema, type LinkProps } from "./schema";
+import { type LinkProps } from "./schema";
+import { renderComponent } from "../renderer";
 
 /**
  * Link component - Anchor tag with email-safe defaults
  */
 export function renderLink(
-  props: LinkProps,
-  renderComponent?: (component: Component) => string
+  props: LinkProps
 ): string {
-  const { href, children, target = "_blank", style = {} } = props;
+  const { 
+    href, 
+    children, 
+    target = "_blank", 
+    color,
+    textDecoration,
+    style = {} 
+  } = props;
   
   // Process children - can be string or array of strings/components
   let content = "";
   if (typeof children === "string") {
-    content = escapeHtml(children);
+    content = children;
   } else if (Array.isArray(children)) {
     content = children
       .map((child) => {
         if (typeof child === "string") {
-          return escapeHtml(child);
-        } else if (renderComponent) {
-          // Child is a Component, render it
+          return child;
+        } else {
+          // Render component children (e.g., nested components)
           return renderComponent(child);
         }
-        return "";
       })
       .join("");
   }
   
   const finalStyle = {
-    color: "#067df7",
-    textDecorationLine: "none",
+    color: color || "#067df7",
+    textDecoration: textDecoration || "none",
     ...style,
   };
   
