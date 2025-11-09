@@ -9,6 +9,7 @@ import { renderLink } from "./components/link";
 import { renderButton } from "./components/button";
 import { renderRow } from "./components/row";
 import { renderColumn } from "./components/column";
+import { renderMarkdown } from "./components/markdown";
 import {
   TextPropsSchema,
   ContainerPropsSchema,
@@ -20,6 +21,7 @@ import {
   ButtonPropsSchema,
   RowPropsSchema,
   ColumnPropsSchema,
+  MarkdownPropsSchema,
 } from "./components/schema";
 import { z } from "zod";
 
@@ -97,6 +99,11 @@ registerComponent("row", {
 registerComponent("column", {
   schema: ColumnPropsSchema,
   render: (props) => renderColumn(props),
+});
+
+registerComponent("markdown", {
+  schema: MarkdownPropsSchema,
+  render: (props) => renderMarkdown(props),
 });
 
 /**

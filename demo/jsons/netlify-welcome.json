@@ -58,9 +58,9 @@
             ]
           },
           {
-            "type": "text",
+            "type": "markdown",
             "props": {
-              "children": "• Deploy your first project. Connect to Git, choose a template, or manually deploy a project you've been working on locally.\n\n• Check your deploy logs. Find out what's included in your build and watch for errors or failed deploys.\n\n• Choose an integration. Quickly discover, connect, and configure the right tools for your project with 150+ integrations to choose from.\n\n• Set up a custom domain. You can register a new domain and buy it through Netlify or assign a domain you already own to your site.",
+              "children": "* Deploy your first project. Connect to Git, choose a template, or manually deploy a project you've been working on locally.\n* Check your deploy logs. Find out what's included in your build and watch for errors or failed deploys.\n* Choose an integration. Quickly discover, connect, and configure the right tools for your project with 150+ integrations to choose from.\n* Set up a custom domain. You can register a new domain and buy it through Netlify or assign a domain you already own to your site.",
               "fontSize": "16px",
               "lineHeight": "24px",
               "marginBottom": "20px"
@@ -92,7 +92,7 @@
           {
             "type": "section",
             "props": {
-              "marginTop": "45px"
+              "padding": "45px 0 0"
             },
             "children": [
               {
@@ -114,11 +114,13 @@
                         }
                       },
                       {
-                        "type": "text",
+                        "type": "span",
                         "props": {
                           "children": " →",
-                          "color": "#00ff00",
-                          "display": "inline"
+                          "style": {
+                            "color": "#00ff00",
+                            "display": "inline"
+                          }
                         }
                       }
                     ]
@@ -138,11 +140,13 @@
                         }
                       },
                       {
-                        "type": "text",
+                        "type": "span",
                         "props": {
                           "children": " →",
-                          "color": "#00ff00",
-                          "display": "inline"
+                          "style": {
+                            "color": "#00ff00",
+                            "display": "inline"
+                          }
                         }
                       }
                     ]
@@ -162,11 +166,13 @@
                         }
                       },
                       {
-                        "type": "text",
+                        "type": "span",
                         "props": {
                           "children": " →",
-                          "color": "#00ff00",
-                          "display": "inline"
+                          "style": {
+                            "color": "#00ff00",
+                            "display": "inline"
+                          }
                         }
                       }
                     ]

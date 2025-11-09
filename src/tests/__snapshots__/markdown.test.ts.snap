@@ -1,0 +1,115 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`Markdown Component Basic Rendering should render plain text 1`] = `"<div data-id="react-email-markdown"><p>This is plain text</p></div>"`;
+
+exports[`Markdown Component Headers should render h1 headers 1`] = `"<div data-id="react-email-markdown"><h1 style="font-size:2.5rem;font-weight:500;padding-top:20px">Heading 1</h1></div>"`;
+
+exports[`Markdown Component Headers should render h2 headers 1`] = `"<div data-id="react-email-markdown"><h2 style="font-size:2rem;font-weight:500;padding-top:20px">Heading 2</h2></div>"`;
+
+exports[`Markdown Component Headers should render h3 headers 1`] = `"<div data-id="react-email-markdown"><h3 style="font-size:1.75rem;font-weight:500;padding-top:20px">Heading 3</h3></div>"`;
+
+exports[`Markdown Component Headers should render multiple headers 1`] = `"<div data-id="react-email-markdown"><h1 style="font-size:2.5rem;font-weight:500;padding-top:20px">Title</h1><br /><h2 style="font-size:2rem;font-weight:500;padding-top:20px">Subtitle</h2><br /><h3 style="font-size:1.75rem;font-weight:500;padding-top:20px">Section</h3></div>"`;
+
+exports[`Markdown Component Text Formatting should render bold text 1`] = `"<div data-id="react-email-markdown"><p>This is <strong style="font-weight:bold">bold</strong> text</p></div>"`;
+
+exports[`Markdown Component Text Formatting should render italic text 1`] = `"<div data-id="react-email-markdown"><p>This is <em style="font-style:italic">italic</em> text</p></div>"`;
+
+exports[`Markdown Component Text Formatting should render both bold and italic 1`] = `"<div data-id="react-email-markdown"><strong style="font-weight:bold">bold</strong> and <em style="font-style:italic">italic</em> text</div>"`;
+
+exports[`Markdown Component Text Formatting should handle nested formatting 1`] = `"<div data-id="react-email-markdown"><p>This is <strong style="font-weight:bold">bold with <em style="font-style:italic">italic</em> inside</strong></p></div>"`;
+
+exports[`Markdown Component Code Blocks should render inline code 1`] = `"<div data-id="react-email-markdown"><p>Use <code style="color:#212529;font-size:87.5%;display:inline;background:#f8f8f8;font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;word-wrap:break-word">console.log()</code> to debug</p></div>"`;
+
+exports[`Markdown Component Code Blocks should render code blocks 1`] = `"<div data-id="react-email-markdown"><pre style="color:#212529;font-size:87.5%;display:block;padding-top:10px;padding-right:10px;padding-left:10px;padding-bottom:1px;margin-bottom:20px;background:#f8f8f8;font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;word-wrap:break-word"><code>const x = 42;<br />console.log(x);</code></pre></div>"`;
+
+exports[`Markdown Component Code Blocks should render code block with language 1`] = `"<div data-id="react-email-markdown"><pre style="color:#212529;font-size:87.5%;display:block;padding-top:10px;padding-right:10px;padding-left:10px;padding-bottom:1px;margin-bottom:20px;background:#f8f8f8;font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;word-wrap:break-word"><code>javascript<br />const x = 42;</code></pre></div>"`;
+
+exports[`Markdown Component Code Blocks should handle multiple inline code snippets 1`] = `"<div data-id="react-email-markdown"><p>Use <code style="color:#212529;font-size:87.5%;display:inline;background:#f8f8f8;font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;word-wrap:break-word">const</code> or <code style="color:#212529;font-size:87.5%;display:inline;background:#f8f8f8;font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;word-wrap:break-word">let</code> for variables</p></div>"`;
+
+exports[`Markdown Component Links should render links 1`] = `"<div data-id="react-email-markdown"><a href="https://example.com" target="_blank" style="color:#007bff;text-decoration:underline;background-color:transparent">Click here</a></div>"`;
+
+exports[`Markdown Component Links should render multiple links 1`] = `"<div data-id="react-email-markdown"><p>Visit <a href="https://google.com" target="_blank" style="color:#007bff;text-decoration:underline;background-color:transparent">Google</a> or <a href="https://github.com" target="_blank" style="color:#007bff;text-decoration:underline;background-color:transparent">GitHub</a></p></div>"`;
+
+exports[`Markdown Component Links should handle links with special characters in URL 1`] = `"<div data-id="react-email-markdown"><a href="https://example.com/search?q=test&lang=en" target="_blank" style="color:#007bff;text-decoration:underline;background-color:transparent">Search</a></div>"`;
+
+exports[`Markdown Component Line Breaks should convert double newlines to paragraph breaks 1`] = `"<div data-id="react-email-markdown"><p>First paragraph</p><p>Second paragraph</p></div>"`;
+
+exports[`Markdown Component Line Breaks should convert single newlines to br tags 1`] = `"<div data-id="react-email-markdown"><p>First line<br />Second line</p></div>"`;
+
+exports[`Markdown Component Line Breaks should handle multiple line breaks 1`] = `"<div data-id="react-email-markdown"><p>Line 1<br />Line 2</p><p>Paragraph 2</p></div>"`;
+
+exports[`Markdown Component Complex Content should render mixed markdown elements 1`] = `"<div data-id="react-email-markdown"><h1 style="font-size:2.5rem;font-weight:500;padding-top:20px">Welcome</h1></p><p>This is <strong style="font-weight:bold">bold</strong> and <em style="font-style:italic">italic</em>.</p><p><a href="https://example.com" target="_blank" style="color:#007bff;text-decoration:underline;background-color:transparent">Link</a></div>"`;
+
+exports[`Markdown Component Complex Content should handle markdown with code and links 1`] = `"<div data-id="react-email-markdown"><p>Use <code style="color:#212529;font-size:87.5%;display:inline;background:#f8f8f8;font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;word-wrap:break-word">npm install</code> from <a href="https://npmjs.com" target="_blank" style="color:#007bff;text-decoration:underline;background-color:transparent">npm</a></p></div>"`;
+
+exports[`Markdown Component Complex Content should render full email-like content 1`] = `"<div data-id="react-email-markdown"><h1 style="font-size:2.5rem;font-weight:500;padding-top:20px">Welcome to Our Service</h1></p><p><strong style="font-weight:bold">Thank you</strong> for signing up!</p><p>Get started by visiting <a href="https://example.com/docs" target="_blank" style="color:#007bff;text-decoration:underline;background-color:transparent">our docs</a>.</p><p><pre style="color:#212529;font-size:87.5%;display:block;padding-top:10px;padding-right:10px;padding-left:10px;padding-bottom:1px;margin-bottom:20px;background:#f8f8f8;font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;word-wrap:break-word"><code>npm install example</code></pre></div>"`;
+
+exports[`Markdown Component Custom Styles should apply custom styles to h1 1`] = `"<div data-id="react-email-markdown"><h1 style="font-size:3rem;color:#ff0000">Heading</h1></div>"`;
+
+exports[`Markdown Component Custom Styles should apply custom styles to multiple elements 1`] = `"<div data-id="react-email-markdown"><h1 style="font-size:2rem">Heading</h1></p><p><strong style="color:#0000ff">Bold text</strong></div>"`;
+
+exports[`Markdown Component Custom Styles should override default styles 1`] = `"<div data-id="react-email-markdown"><code style="background:#000000;color:#ffffff">code</code></div>"`;
+
+exports[`Markdown Component Custom Styles should merge custom styles with defaults 1`] = `"<div data-id="react-email-markdown"><strong style="color:red">bold</strong></div>"`;
+
+exports[`Markdown Component Container Styles should apply container styles 1`] = `"<div data-id="react-email-markdown" style="padding:20px;background-color:#f5f5f5"><p>Content</p></div>"`;
+
+exports[`Markdown Component Container Styles should handle empty container styles 1`] = `"<div data-id="react-email-markdown"><p>Content</p></div>"`;
+
+exports[`Markdown Component Container Styles should handle numeric container style values 1`] = `"<div data-id="react-email-markdown" style="padding:20px;margin:10px"><p>Content</p></div>"`;
+
+exports[`Markdown Component Container Styles should handle camelCase style properties 1`] = `"<div data-id="react-email-markdown" style="background-color:#ffffff;border-radius:5px"><p>Content</p></div>"`;
+
+exports[`Markdown Component Edge Cases should handle empty string 1`] = `"<div data-id="react-email-markdown"><p></p></div>"`;
+
+exports[`Markdown Component Edge Cases should handle markdown without matches 1`] = `"<div data-id="react-email-markdown"><p>Just plain text without any markdown</p></div>"`;
+
+exports[`Markdown Component Edge Cases should handle special characters 1`] = `"<div data-id="react-email-markdown"><p>Special chars: & < > " '</p></div>"`;
+
+exports[`Markdown Component Edge Cases should handle incomplete markdown syntax 1`] = `"<div data-id="react-email-markdown"><p>This has *incomplete italic</p></div>"`;
+
+exports[`Markdown Component Edge Cases should handle backticks without closing 1`] = `"<div data-id="react-email-markdown"><p>Code: \`incomplete</p></div>"`;
+
+exports[`Markdown Component Edge Cases should handle malformed links 1`] = `"<div data-id="react-email-markdown"><p>[Link without URL</p></div>"`;
+
+exports[`Markdown Component Edge Cases should handle very long content 1`] = `"<div data-id="react-email-markdown"><p>Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum </p></div>"`;
+
+exports[`Markdown Component Edge Cases should handle content starting with tag-like structure 1`] = `"<div data-id="react-email-markdown"><h1 style="font-size:2.5rem;font-weight:500;padding-top:20px">Header</h1></div>"`;
+
+exports[`Markdown Component Edge Cases should handle only whitespace 1`] = `"<div data-id="react-email-markdown"><p>   </p><p>   </p></div>"`;
+
+exports[`Markdown Component CSS to Inline Conversion should convert camelCase to kebab-case 1`] = `"<div data-id="react-email-markdown" style="background-color:#fff;font-size:14px;font-weight:bold"><p>Test</p></div>"`;
+
+exports[`Markdown Component CSS to Inline Conversion should handle numeric values correctly 1`] = `"<div data-id="react-email-markdown" style="width:100px;opacity:0.5;z-index:10;font-weight:700"><p>Test</p></div>"`;
+
+exports[`Markdown Component Custom Styles should replace element styles when custom styles provided 1`] = `"<div data-id="react-email-markdown"><strong style="color:red">bold</strong></div>"`;
+
+exports[`Markdown Component Lists should render unordered list with dash 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">Item 1</li><li style="margin-bottom:5px">Item 2</li><li style="margin-bottom:5px">Item 3</li></ul></div>"`;
+
+exports[`Markdown Component Lists should render unordered list with asterisk 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">Item 1</li><li style="margin-bottom:5px">Item 2</li><li style="margin-bottom:5px">Item 3</li></ul></div>"`;
+
+exports[`Markdown Component Lists should render unordered list with plus 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">Item 1</li><li style="margin-bottom:5px">Item 2</li><li style="margin-bottom:5px">Item 3</li></ul></div>"`;
+
+exports[`Markdown Component Lists should render ordered list 1`] = `"<div data-id="react-email-markdown"><ol style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">First item</li><li style="margin-bottom:5px">Second item</li><li style="margin-bottom:5px">Third item</li></ol></div>"`;
+
+exports[`Markdown Component Lists should render ordered list with non-sequential numbers 1`] = `"<div data-id="react-email-markdown"><ol style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">First</li><li style="margin-bottom:5px">Second</li><li style="margin-bottom:5px">Third</li></ol></div>"`;
+
+exports[`Markdown Component Lists should handle list items with inline formatting 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px"><strong style="font-weight:bold">Bold</strong> item</li><li style="margin-bottom:5px"><em style="font-style:italic">Italic</em> item</li><li style="margin-bottom:5px"><code style="color:#212529;font-size:87.5%;display:inline;background:#f8f8f8;font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;word-wrap:break-word">Code</code> item</li></ul></div>"`;
+
+exports[`Markdown Component Lists should handle list items with links 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">Visit <a href="https://google.com" target="_blank" style="color:#007bff;text-decoration:underline;background-color:transparent">Google</a></li><li style="margin-bottom:5px">Check <a href="https://github.com" target="_blank" style="color:#007bff;text-decoration:underline;background-color:transparent">GitHub</a></li></ul></div>"`;
+
+exports[`Markdown Component Lists should render single list item 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">Single item</li></ul></div>"`;
+
+exports[`Markdown Component Lists should handle multiple separate lists 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">List 1 Item 1</li><li style="margin-bottom:5px">List 1 Item 2</li></ul><br />Text between</p><p><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">List 2 Item 1</li><li style="margin-bottom:5px">List 2 Item 2</li></ul></div>"`;
+
+exports[`Markdown Component Lists should apply custom styles to ul 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:40px;color:blue"><li style="margin-bottom:5px">Item 1</li><li style="margin-bottom:5px">Item 2</li></ul></div>"`;
+
+exports[`Markdown Component Lists should apply custom styles to ol 1`] = `"<div data-id="react-email-markdown"><ol style="padding-left:30px;font-weight:bold"><li style="margin-bottom:5px">Item 1</li><li style="margin-bottom:5px">Item 2</li></ol></div>"`;
+
+exports[`Markdown Component Lists should apply custom styles to li 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:15px;color:red">Item 1</li><li style="margin-bottom:15px;color:red">Item 2</li></ul></div>"`;
+
+exports[`Markdown Component Lists should handle long list items 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">This is a very long list item that contains a lot of text to test wrapping</li><li style="margin-bottom:5px">Another long item</li></ul></div>"`;
+
+exports[`Markdown Component Lists should handle mixed list types 1`] = `"<div data-id="react-email-markdown"><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">Unordered item</li></ul><br /><ol style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">Ordered item</li><li style="margin-bottom:5px">Another ordered</li></ol></div>"`;
+
+exports[`Markdown Component Complex Content should render content with lists and other elements 1`] = `"<div data-id="react-email-markdown"><h1 style="font-size:2.5rem;font-weight:500;padding-top:20px">Getting Started</h1></p><p>Follow these steps:</p><p><ol style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">Install the package: <code style="color:#212529;font-size:87.5%;display:inline;background:#f8f8f8;font-family:SFMono-Regular,Menlo,Monaco,Consolas,monospace;word-wrap:break-word">npm install</code></li><li style="margin-bottom:5px">Configure your <strong style="font-weight:bold">settings</strong></li><li style="margin-bottom:5px">Visit <a href="https://example.com" target="_blank" style="color:#007bff;text-decoration:underline;background-color:transparent">documentation</a></li></ol><br />Features:</p><p><ul style="padding-left:20px;margin-top:10px;margin-bottom:10px"><li style="margin-bottom:5px">Fast and reliable</li><li style="margin-bottom:5px">Easy to use</li><li style="margin-bottom:5px"><em style="font-style:italic">Open source</em></li></ul></div>"`;

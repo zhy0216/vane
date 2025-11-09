@@ -54,6 +54,19 @@ const defaultStyles = {
     textDecoration: 'underline', 
     backgroundColor: 'transparent' 
   },
+  ul: {
+    paddingLeft: '20px',
+    marginTop: '10px',
+    marginBottom: '10px',
+  },
+  ol: {
+    paddingLeft: '20px',
+    marginTop: '10px',
+    marginBottom: '10px',
+  },
+  li: {
+    marginBottom: '5px',
+  },
 };
 
 /**
@@ -79,7 +92,7 @@ function cssToInline(css: Record<string, any>): string {
 function simpleMarkdownToHtml(markdown: string, styles: typeof defaultStyles): string {
   let html = markdown;
 
-  // Headers
+  // Headers (process h3 first to avoid conflicts)
   html = html.replace(/^### (.*$)/gim, (match, content) => 
     `<h3 style="${cssToInline(styles.h3)}">${content}</h3>`);
   html = html.replace(/^## (.*$)/gim, (match, content) => 
@@ -108,6 +121,24 @@ function simpleMarkdownToHtml(markdown: string, styles: typeof defaultStyles): s
   // Links
   html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (match, text, url) => 
     `<a href="${url}" target="_blank" style="${cssToInline(styles.link)}">${text}</a>`);
+
+  // Ordered lists
+  html = html.replace(/(?:^\d+\.\s+.+$\n?)+/gim, (match) => {
+    const items = match.trim().split('\n').map(line => {
+      const content = line.replace(/^\d+\.\s+/, '');
+      return `<li style="${cssToInline(styles.li)}">${content}</li>`;
+    }).join('');
+    return `<ol style="${cssToInline(styles.ol)}">${items}</ol>`;
+  });
+
+  // Unordered lists
+  html = html.replace(/(?:^[-*+]\s+.+$\n?)+/gim, (match) => {
+    const items = match.trim().split('\n').map(line => {
+      const content = line.replace(/^[-*+]\s+/, '');
+      return `<li style="${cssToInline(styles.li)}">${content}</li>`;
+    }).join('');
+    return `<ul style="${cssToInline(styles.ul)}">${items}</ul>`;
+  });
 
   // Line breaks
   html = html.replace(/\n\n/g, '</p><p>');
