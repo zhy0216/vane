@@ -122,9 +122,14 @@ export function renderComponent(component: Component): string {
 
   // Inject rendered children into props
   let propsToValidate = props || {};
-  if (children) {
+  
+  // Handle children from either component level or props level
+  // Priority: component-level children > props.children
+  const childrenToRender = children !== undefined ? children : propsToValidate.children;
+  
+  if (childrenToRender !== undefined) {
     // Normalize children to array
-    const childrenArray = typeof children === "string" ? [children] : children;
+    const childrenArray = typeof childrenToRender === "string" ? [childrenToRender] : childrenToRender;
     const childrenHtml = childrenArray.map(renderChild).join("");
     propsToValidate = { ...propsToValidate, children: childrenHtml };
   }
@@ -141,9 +146,14 @@ function renderHtmlTag(
   props?: Record<string, any>,
   children?: string | (Component | string)[]
 ): string {
-  // Convert props to HTML attributes
+  // Handle children from either parameter or props
+  // Priority: parameter children > props.children
+  const childrenToRender = children !== undefined ? children : props?.children;
+  
+  // Convert props to HTML attributes (excluding children)
   const attributes = props
     ? Object.entries(props)
+        .filter(([key]) => key !== "children") // Don't render children as an HTML attribute
         .map(([key, value]) => {
           // Convert camelCase to kebab-case for CSS properties in style
           if (key === "style" && typeof value === "object") {
@@ -172,7 +182,7 @@ function renderHtmlTag(
 
   // Render children recursively
   // Normalize children to array if it's a string
-  const childrenArray = typeof children === "string" ? [children] : children;
+  const childrenArray = typeof childrenToRender === "string" ? [childrenToRender] : childrenToRender;
   const childrenHtml = childrenArray?.map(renderChild).join("") || "";
 
   // Self-closing tags

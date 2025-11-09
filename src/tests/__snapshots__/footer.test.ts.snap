@@ -1,0 +1,41 @@
+// Bun Snapshot v1, https://bun.sh/docs/test/snapshots
+
+exports[`Footer Component Stack Overflow Email Footer should render complete footer section with links and company info 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding: 0 30px">
+  <tbody>
+    <tr>
+      <td><p style="color: #9199a1; font-size: 12px; font-weight: normal; text-align: left; line-height: 15px; margin: 0; padding: 0; margin-top: 0; margin-bottom: 0">You&#39;re receiving this email because your Stack Overflow activity triggered this tip or reminder.</p><p style="color: #000000; font-size: 12px; font-weight: normal; text-align: left; line-height: 24px; margin: 0; padding: 0; margin-top: 8px; margin-bottom: 16px"><a href="/" target="_blank" style="color: #9199a1; text-decoration: underline">Unsubscribe from emails like this</a> | <a href="/" target="_blank" style="color: #9199a1; text-decoration: underline">Edit email settings</a> | <a href="/" target="_blank" style="color: #9199a1; text-decoration: underline">Contact us</a> | <a href="/" target="_blank" style="color: #9199a1; text-decoration: underline">Privacy</a></p><hr style="width: 100%; border: none; border-top: 1px solid #d6d8db" /><img src="/stack-overflow-logo-sm.png" alt="Stack Overflow" width="111" style="display: block; outline: none; border: none; text-decoration: none" /><p style="color: #9199a1; font-size: 12px; font-weight: normal; text-align: left; line-height: 15px; margin: 0; padding: 0; margin-top: 4px; margin-bottom: 32px">Stack Overflow, 110 William Street, 28th Floor, New York, NY 10038</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Footer Component Stack Overflow Email Footer should render simplified footer with common styles 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding: 0 30px">
+  <tbody>
+    <tr>
+      <td><p style="color: #9199a1; font-size: 12px; font-weight: normal; text-align: left; line-height: 15px; margin: 0; padding: 0; margin-top: 0; margin-bottom: 0">You&#39;re receiving this email because your Stack Overflow activity triggered this tip or reminder.</p><p style="color: #000000; font-size: 12px; font-weight: normal; text-align: left; line-height: 24px; margin: 0; padding: 0; margin-top: 8px; margin-bottom: 16px"><a href="/" target="_blank" style="color: #9199a1; text-decoration: underline">Unsubscribe</a> | <a href="/" target="_blank" style="color: #9199a1; text-decoration: underline">Settings</a> | <a href="/" target="_blank" style="color: #9199a1; text-decoration: underline">Contact</a> | <a href="/" target="_blank" style="color: #9199a1; text-decoration: underline">Privacy</a></p><hr style="width: 100%; border: none; border-top: 1px solid #d6d8db" /><img src="/stack-overflow-logo-sm.png" alt="Stack Overflow" width="111" style="display: block; outline: none; border: none; text-decoration: none" /><p style="color: #9199a1; font-size: 12px; font-weight: normal; text-align: left; line-height: 15px; margin: 0; padding: 0; margin-top: 4px; margin-bottom: 32px">Stack Overflow, 110 William Street, 28th Floor, New York, NY 10038</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Footer Component Stack Overflow Email Footer should handle minimal footer structure 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding: 20px">
+  <tbody>
+    <tr>
+      <td><p style="color: #888; font-size: 11px; font-weight: normal; text-align: left; line-height: 24px; margin: 0; padding: 0; margin-top: 16px; margin-bottom: 16px">© 2024 Company. All rights reserved.</p><hr style="width: 100%; border: none; border-top: 1px solid #ccc" /><p style="color: #888; font-size: 11px; font-weight: normal; text-align: left; line-height: 24px; margin: 0; padding: 0; margin-top: 16px; margin-bottom: 16px">123 Main St, City, State 12345</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
+
+exports[`Footer Component Stack Overflow Email Footer should handle children inside props object 1`] = `
+"<table align="center" width="100%" border="0" cellpadding="0" cellspacing="0" role="presentation" style="padding: 20px">
+  <tbody>
+    <tr>
+      <td><p style="color: #888; font-size: 11px; font-weight: normal; text-align: left; line-height: 24px; margin: 0; padding: 0; margin-top: 16px; margin-bottom: 16px">© 2024 Company. All rights reserved.</p><hr style="width: 100%; border: none; border-top: 1px solid #ccc" /><p style="color: #888; font-size: 11px; font-weight: normal; text-align: left; line-height: 24px; margin: 0; padding: 0; margin-top: 16px; margin-bottom: 16px">123 Main St, City, State 12345</p></td>
+    </tr>
+  </tbody>
+</table>"
+`;
