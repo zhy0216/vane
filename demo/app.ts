@@ -77,6 +77,11 @@ function renderTemplatesList() {
  * Fix image paths to include the base URL
  */
 function fixImagePaths(component: any): any {
+  // Return strings as-is - they don't need path fixing
+  if (typeof component === 'string') {
+    return component;
+  }
+  
   if (!component) return component;
   
   const fixed = { ...component };
